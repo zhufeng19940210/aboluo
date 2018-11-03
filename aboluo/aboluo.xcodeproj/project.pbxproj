@@ -82,6 +82,10 @@
 		F00E07BB218D2A920079D952 /* aboluo */ = {
 			isa = PBXGroup;
 			children = (
+				F0F0E453218D51F300B4ABCE /* Classes */,
+				F0F0E452218D51F300B4ABCE /* Category */,
+				F0F0E467218D51F300B4ABCE /* Rescoure */,
+				F0F0E468218D51F300B4ABCE /* Vendor */,
 				F00E07BC218D2A920079D952 /* AppDelegate.h */,
 				F00E07BD218D2A920079D952 /* AppDelegate.m */,
 				F00E07BF218D2A920079D952 /* ViewController.h */,
@@ -93,6 +97,186 @@
 				F00E07CB218D2A930079D952 /* main.m */,
 			);
 			path = aboluo;
+			sourceTree = "<group>";
+		};
+		F0F0E452218D51F300B4ABCE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F0F0E453218D51F300B4ABCE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F0F0E454218D51F300B4ABCE /* Order */,
+				F0F0E459218D51F300B4ABCE /* Home */,
+				F0F0E45E218D51F300B4ABCE /* Setting */,
+				F0F0E463218D51F300B4ABCE /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F0F0E454218D51F300B4ABCE /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				F0F0E455218D51F300B4ABCE /* Other */,
+				F0F0E456218D51F300B4ABCE /* Controller */,
+				F0F0E457218D51F300B4ABCE /* Model */,
+				F0F0E458218D51F300B4ABCE /* View */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		F0F0E455218D51F300B4ABCE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F0F0E456218D51F300B4ABCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0F0E457218D51F300B4ABCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0F0E458218D51F300B4ABCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0F0E459218D51F300B4ABCE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F0F0E45A218D51F300B4ABCE /* Other */,
+				F0F0E45B218D51F300B4ABCE /* Controller */,
+				F0F0E45C218D51F300B4ABCE /* Model */,
+				F0F0E45D218D51F300B4ABCE /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F0F0E45A218D51F300B4ABCE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F0F0E45B218D51F300B4ABCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0F0E45C218D51F300B4ABCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0F0E45D218D51F300B4ABCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0F0E45E218D51F300B4ABCE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F0F0E45F218D51F300B4ABCE /* Other */,
+				F0F0E460218D51F300B4ABCE /* Controller */,
+				F0F0E461218D51F300B4ABCE /* Model */,
+				F0F0E462218D51F300B4ABCE /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		F0F0E45F218D51F300B4ABCE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F0F0E460218D51F300B4ABCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0F0E461218D51F300B4ABCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0F0E462218D51F300B4ABCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0F0E463218D51F300B4ABCE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F0F0E464218D51F300B4ABCE /* Controller */,
+				F0F0E465218D51F300B4ABCE /* Model */,
+				F0F0E466218D51F300B4ABCE /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F0F0E464218D51F300B4ABCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0F0E465218D51F300B4ABCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0F0E466218D51F300B4ABCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0F0E467218D51F300B4ABCE /* Rescoure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rescoure;
+			sourceTree = "<group>";
+		};
+		F0F0E468218D51F300B4ABCE /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,15 +351,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-aboluo-checkManifestLockResult.txt",
 			);
@@ -337,13 +517,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R48RV923F;
 				INFOPLIST_FILE = aboluo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bailing.aboluo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,13 +536,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R48RV923F;
 				INFOPLIST_FILE = aboluo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bailing.aboluo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
