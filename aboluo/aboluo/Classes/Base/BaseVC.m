@@ -158,8 +158,6 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
-
-
 - (void)setViewRefresh:(UITableView *)tableView withHeaderAction:(SEL)hAction andFooterAction:(SEL)fAction target:(id)target{
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:target refreshingAction:hAction];
     header.lastUpdatedTimeLabel.hidden = YES;

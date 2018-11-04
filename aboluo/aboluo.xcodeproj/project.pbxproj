@@ -13,6 +13,8 @@
 		F00E07C6218D2A930079D952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00E07C5218D2A930079D952 /* Assets.xcassets */; };
 		F00E07C9218D2A930079D952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00E07C7218D2A930079D952 /* LaunchScreen.storyboard */; };
 		F00E07CC218D2A930079D952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F00E07CB218D2A930079D952 /* main.m */; };
+		F0113CC5218EE1BE006521B0 /* BindVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0113CC3218EE1BE006521B0 /* BindVC.m */; };
+		F0113CC6218EE1BE006521B0 /* BindVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0113CC4218EE1BE006521B0 /* BindVC.xib */; };
 		F0F0E484218D557100B4ABCE /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E483218D557100B4ABCE /* BaseVC.m */; };
 		F0F0E489218D558D00B4ABCE /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E487218D558D00B4ABCE /* LoginVC.m */; };
 		F0F0E48A218D558D00B4ABCE /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F0E488218D558D00B4ABCE /* LoginVC.xib */; };
@@ -109,6 +111,9 @@
 		F00E07C8218D2A930079D952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F00E07CA218D2A930079D952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F00E07CB218D2A930079D952 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0113CC2218EE1BE006521B0 /* BindVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindVC.h; sourceTree = "<group>"; };
+		F0113CC3218EE1BE006521B0 /* BindVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindVC.m; sourceTree = "<group>"; };
+		F0113CC4218EE1BE006521B0 /* BindVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindVC.xib; sourceTree = "<group>"; };
 		F0F0E482218D557100B4ABCE /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		F0F0E483218D557100B4ABCE /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		F0F0E486218D558D00B4ABCE /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
@@ -581,6 +586,9 @@
 				F0F0E490218D55B000B4ABCE /* ForgetPwdVC.h */,
 				F0F0E491218D55B000B4ABCE /* ForgetPwdVC.m */,
 				F0F0E492218D55B000B4ABCE /* ForgetPwdVC.xib */,
+				F0113CC2218EE1BE006521B0 /* BindVC.h */,
+				F0113CC3218EE1BE006521B0 /* BindVC.m */,
+				F0113CC4218EE1BE006521B0 /* BindVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -926,6 +934,7 @@
 				F0F0E5C9218D77E200B4ABCE /* car2@2x.png in Resources */,
 				F0F0E5CE218D77E200B4ABCE /* 失败图片@2x.png in Resources */,
 				F0F0E61C218D95C300B4ABCE /* SettingVC.xib in Resources */,
+				F0113CC6218EE1BE006521B0 /* BindVC.xib in Resources */,
 				F0F0E617218D95AA00B4ABCE /* OrderVC.xib in Resources */,
 				F0F0E5CD218D77E200B4ABCE /* car3@2x.png in Resources */,
 				F00E07C4218D2A920079D952 /* Main.storyboard in Resources */,
@@ -1003,6 +1012,7 @@
 				F0F0E5D3218D77E200B4ABCE /* TZAssetModel.m in Sources */,
 				F0F0E5EB218D77F800B4ABCE /* NetWorkTool.m in Sources */,
 				F00E07CC218D2A930079D952 /* main.m in Sources */,
+				F0113CC5218EE1BE006521B0 /* BindVC.m in Sources */,
 				F0F0E5E8218D77F800B4ABCE /* ZFCustomView.m in Sources */,
 				F0F0E5BF218D77E200B4ABCE /* YTKNetworkConfig.m in Sources */,
 				F0F0E5AB218D77E200B4ABCE /* SYPlaceHolderTextView.m in Sources */,

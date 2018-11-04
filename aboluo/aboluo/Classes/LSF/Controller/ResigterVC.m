@@ -33,7 +33,6 @@
     if ([pwd isEqualToString:@""] || pwd.length == 0) {
         
     }
-    //todo执行登录的操作了
-    
+    //todo执行登录的操作
 }
 @end

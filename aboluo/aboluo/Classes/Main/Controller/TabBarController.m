@@ -48,7 +48,6 @@
     SettingVC  *settingvc = [[SettingVC alloc]init];
     [self setupChildViewVC:settingvc title:@"设置" norImage:@"home_my" selectImage:@"home_xz_my"];
 }
-
 /**
  *  初始化一个子控制的方法
  */

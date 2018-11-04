@@ -4,6 +4,9 @@
 //  Copyright © 2018年 zhufeng. All rights reserved.
 #import "LoginVC.h"
 #import "ResigterVC.h"
+#import "ForgetPwdVC.h"
+#import "TabBarController.h"
+#import "AppDelegate.h"
 @interface LoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *phone_tf;
 @property (weak, nonatomic) IBOutlet UITextField *pwd_tf;
@@ -27,13 +30,20 @@
  @param sender 登录方法
  */
 - (IBAction)actionLoginBtn:(UIButton *)sender {
-    NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@""] = @"";
-    param[@""] = @"";
-    [[NetWorkTool shareInstacne]postWithURLString:@"" parameters:param success:^(id  _Nonnull responseObject) {
-        NSLog(@"resopeobjec:%@",responseObject);
+    NSString *url = [NSString stringWithFormat:@"%@",@"http://106.12.192.149:8080/Single/user/login?phone=15914098345&password=111"];
+    [[NetWorkTool shareInstacne]getWithURLString:url parameters:nil success:^(id  _Nonnull responseObject) {
+        NSLog(@"id:%@",responseObject);
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"error:%@",error);
     }];
+}
+/**
+ 用户忘记密码
+ @param sender 用户忘记密码
+ */
+- (IBAction)actionForgetPwdBtn:(UIButton *)sender
+{
+    ForgetPwdVC *forgetpwdvc = [[ForgetPwdVC alloc]init];
+    [self.navigationController pushViewController:forgetpwdvc animated:YES];
 }
 @end
