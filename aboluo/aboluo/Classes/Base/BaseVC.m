@@ -8,21 +8,23 @@
 @interface BaseVC ()<DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 @end
 @implementation BaseVC
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
+    //  NSFontAttributeName:[UIFont boldSystemFontOfSize:17]
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
     {   self.edgesForExtendedLayout = UIRectEdgeNone;
-        NSDictionary * attributes = @{NSForegroundColorAttributeName:[UIColor blackColor],
-                                      NSFontAttributeName:[UIFont boldSystemFontOfSize:17]};
+        NSDictionary * attributes = @{
+                                      NSForegroundColorAttributeName:[UIColor blackColor],
+                                      NSFontAttributeName:[UIFont systemFontOfSize:15]
+                        };
         [self.navigationController.navigationBar setTitleTextAttributes:attributes];
         // 设置状态栏覆盖
         [self.navigationController.navigationBar setTranslucent:NO];
         // shadowline
-        [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-        self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+//        [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+//        self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
         //self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
         [self setNeedsStatusBarAppearanceUpdate];
     }
@@ -50,7 +52,6 @@
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     }
 }
-
 #pragma mark - NavigationItem
 - (void)setLeftButton:(UIImage *)image
 {

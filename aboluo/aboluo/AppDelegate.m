@@ -5,6 +5,9 @@
 #import "AppDelegate.h"
 #import "LoginVC.h"
 #import "TabBarController.h"
+#import "GuideVC.h"
+#import "GuideVC.h"
+#import "MyNavigationController.h"
 @interface AppDelegate ()
 @end
 @implementation AppDelegate
@@ -14,12 +17,20 @@
     UIViewController *rootController = nil;
     BOOL isFirst = [[NSUserDefaults standardUserDefaults]boolForKey:@"isFirst"];
     if (isFirst) {
-        TabBarController *tabbarvc = [[TabBarController alloc]init];
-        rootController =  tabbarvc;
+        if ([UserModel isOnline]) {
+            //登录成功
+            TabBarController *tabbarvc = [[TabBarController alloc]init];
+            rootController =  tabbarvc;
+        }else{
+            //登录界面
+            LoginVC *loginvc = [[LoginVC alloc]init];
+            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginvc];
+            rootController = nav;
+        }
     }else{
-        LoginVC *loginvc = [[LoginVC alloc]init];
-        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginvc];
-        rootController = nav;
+         //引导页
+        GuideVC *guidevc = [[GuideVC alloc]init];
+        rootController = guidevc;
     }
     self.window.rootViewController = rootController;
     [self.window makeKeyAndVisible];
@@ -38,7 +49,6 @@
 
 }
 - (void)applicationWillTerminate:(UIApplication *)application {
-
+    
 }
-
 @end

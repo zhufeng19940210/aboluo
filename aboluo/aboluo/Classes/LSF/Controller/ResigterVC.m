@@ -24,15 +24,38 @@
     NSString *code  = self.code_tf.text;
     NSString *pwd   = self.pwd_tf.text;
     if ([phone isEqualToString:@""] || phone.length == 0) {
-        [SVProgressHUD showInfoWithStatus:@""];
+        [self showHint:@"手机号码不能为空" yOffset:-200];
+        return;
+    }
+    if (![LCUtil isMobileNumber:phone]) {
+        [self showHint:@"手机号码有误" yOffset:-200];
         return;
     }
     if ([code isEqualToString:@""] || code.length == 0) {
-        
+        [self showHint:@"验证码有误" yOffset:-200];
+        return;
     }
     if ([pwd isEqualToString:@""] || pwd.length == 0) {
-        
+        [self showHint:@"密码不能为空" yOffset:-200];
+        return;
     }
     //todo执行登录的操作
+}
+/**
+ 获取验证码
+ @param sender 获取验证码
+ */
+- (IBAction)actionCodeBtn:(UIButton *)sender
+{
+    NSString *phone = self.phoe_tf.text;
+    if (phone.length == 0 || [phone isEqualToString:@""]) {
+        [self showHint:@"手机号码不能为空" yOffset:-200];
+        return;
+    }
+    if (![LCUtil isMobileNumber:phone]) {
+        [self showHint:@"手机号码有误" yOffset:-200];
+        return;
+    }
+    //todo去执接下来的操作
 }
 @end

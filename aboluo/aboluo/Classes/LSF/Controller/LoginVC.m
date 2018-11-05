@@ -12,6 +12,17 @@
 @property (weak, nonatomic) IBOutlet UITextField *pwd_tf;
 @end
 @implementation LoginVC
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -29,13 +40,14 @@
  登录方法
  @param sender 登录方法
  */
-- (IBAction)actionLoginBtn:(UIButton *)sender {
-    NSString *url = [NSString stringWithFormat:@"%@",@"http://106.12.192.149:8080/Single/user/login?phone=15914098345&password=111"];
-    [[NetWorkTool shareInstacne]getWithURLString:url parameters:nil success:^(id  _Nonnull responseObject) {
-        NSLog(@"id:%@",responseObject);
-    } failure:^(NSError * _Nonnull error) {
-        NSLog(@"error:%@",error);
-    }];
+- (IBAction)actionLoginBtn:(UIButton *)sender
+{
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    app.window.backgroundColor = [UIColor whiteColor];
+    TabBarController *tabbar = [[TabBarController alloc]init];
+    app.window.backgroundColor = [UIColor whiteColor];
+    app.window.rootViewController = tabbar;
+    [app.window makeKeyAndVisible];
 }
 /**
  用户忘记密码
