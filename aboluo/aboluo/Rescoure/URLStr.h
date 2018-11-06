@@ -4,13 +4,11 @@
 //  Copyright © 2018 HuiC. All rights reserved.
 #ifndef URLStr_h
 #define URLStr_h
-#define BaseUrl @"http://223.84.156.187:806/api"
-///登录接口
-#define User_Login_URL [BaseUrl stringByAppendingString:@"/User/UserLogin"]
+#define BaseUrl @"http://106.12.192.149:8080"
+///登录注册接口
+#define User_Login_URL [BaseUrl stringByAppendingString:@"/Single/user/login"]
 ///注册接口
-#define User_Register_URL [BaseUrl stringByAppendingString:@"/Index/GetMenu"]
-///绑定接口
-#define User_Bind_URL [BaseUrl stringByAppendingString:@"/School/GetSchoolList"]
-///忘记密码
-#define User_ForgetPwd_URL [BaseUrl stringByAppendingString:@"/School/GetSchoolList"]
+#define User_Register_URL [BaseUrl stringByAppendingString:@"/Single/user/register"]
+///获取验证码
+#define User_Get_Code [BaseUrl stringByAppendingString:@"/Single/user/code"]
 #endif /* URLStr_h */

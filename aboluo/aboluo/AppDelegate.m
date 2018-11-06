@@ -28,9 +28,12 @@
             rootController = nav;
         }
     }else{
+        LoginVC *loginvc = [[LoginVC alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginvc];
+        rootController = nav;
          //引导页
-        GuideVC *guidevc = [[GuideVC alloc]init];
-        rootController = guidevc;
+//        GuideVC *guidevc = [[GuideVC alloc]init];
+//        rootController = guidevc;
     }
     self.window.rootViewController = rootController;
     [self.window makeKeyAndVisible];

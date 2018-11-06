@@ -42,12 +42,58 @@
  */
 - (IBAction)actionLoginBtn:(UIButton *)sender
 {
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-    app.window.backgroundColor = [UIColor whiteColor];
-    TabBarController *tabbar = [[TabBarController alloc]init];
-    app.window.backgroundColor = [UIColor whiteColor];
-    app.window.rootViewController = tabbar;
-    [app.window makeKeyAndVisible];
+    NSString *phone = self.phone_tf.text;
+    NSString *pwd   = self.pwd_tf.text;
+    if (phone.length == 0 || [phone isEqualToString:@""]) {
+        [self showHint:@"手机号码不能为空" yOffset:-200];
+        return;
+    }
+    if (pwd.length == 0 || [pwd isEqualToString:@""]) {
+        [self showHint:@"密码不能为空" yOffset:-200];
+        return;
+    }
+    //开始去登录
+    [self loginWithPhone:phone withPwd:pwd];
+}
+/**
+ 登录方法
+ @param phone 电话号码
+ @param pwd 密码
+ */
+-(void)loginWithPhone:(NSString *)phone withPwd:(NSString *)pwd
+{
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"phone"] = phone;
+    param[@"password"] = pwd;
+    [SVProgressHUD showWithStatus:@"正在登录中。。。"];
+    [[NetWorkTool shareInstacne]postWithURLString:User_Login_URL parameters:param success:^(id  _Nonnull responseObject) {
+        NSLog(@"resoponseObject:%@",responseObject);
+        [SVProgressHUD dismiss];
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if ([res.code isEqualToString:@"1"]) {
+            [ZFCustomView showWithSuccess:@"登录成功"];
+            //请求成功
+            [[NSUserDefaults standardUserDefaults]setValue:res.data[@"token"] forKey:Token];
+            [[NSUserDefaults standardUserDefaults]synchronize];
+            UserModel *user = [UserModel mj_objectWithKeyValues:res.data[@"user"]];
+            [UserModel save:user];
+            //跳转到首页
+            AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+            app.window.backgroundColor = [UIColor whiteColor];
+            TabBarController *tabbar = [[TabBarController alloc]init];
+            app.window.backgroundColor = [UIColor whiteColor];
+            app.window.rootViewController = tabbar;
+            [app.window makeKeyAndVisible];
+        }else{
+            //请求失败
+            [ZFCustomView showWithText:res.msg WithDurations:0.5];
+            return;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [ZFCustomView showWithText:FailRequestTip WithDurations:0.5];
+        return;
+    }];
 }
 /**
  用户忘记密码

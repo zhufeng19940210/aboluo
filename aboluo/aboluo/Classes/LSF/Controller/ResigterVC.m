@@ -40,6 +40,37 @@
         return;
     }
     //todo执行登录的操作
+    [self RegisterWithPhone:phone WithCode:code WithPwd:pwd];
+}
+
+/**
+ 注册的方法
+ @param phone 电话号码
+ @param code 验证码
+ @param pwd 密码
+ */
+-(void)RegisterWithPhone:(NSString *)phone WithCode:(NSString *)code WithPwd:(NSString *)pwd
+{
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"phone"] = phone;
+    param[@"password"] = pwd;
+    [SVProgressHUD showWithStatus:@"正在注册"];
+    [[NetWorkTool shareInstacne]postWithURLString:User_Register_URL parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
+        NSLog(@"responseObject:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if ([res.code isEqualToString:@"1"]) {
+            [ZFCustomView showWithSuccess:res.msg];
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            [ZFCustomView showWithText:res.msg WithDurations:0.5];
+            return;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        return;
+    }];
 }
 /**
  获取验证码
@@ -56,6 +87,20 @@
         [self showHint:@"手机号码有误" yOffset:-200];
         return;
     }
-    //todo去执接下来的操作
+    //获取验证码
+    [self getCodeWithPhone:phone];
+}
+/**
+ 获取验证码
+ @param phone 获取验证码
+ */
+-(void)getCodeWithPhone:(NSString *)phone
+{
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [[NetWorkTool shareInstacne]postWithURLString:User_Get_Code parameters:param success:^(id  _Nonnull responseObject) {
+        NSLog(@"responseobject:%@",responseObject);
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"error:%@",error);
+    }];
 }
 @end
