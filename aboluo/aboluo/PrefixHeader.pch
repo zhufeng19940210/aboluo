@@ -25,4 +25,6 @@
 #import "NetWorkTool.h"
 #import "URLStr.h"
 #import "ResponeModel.h"
+#import "IQKeyboardManager.h"
+#import <ShareSDK/ShareSDK.h>
 #endif /* PrefixHeader_pch */

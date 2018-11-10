@@ -50,6 +50,7 @@
 #define RGBA(A,B,C,D) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:D]
 
 //全局的颜色
+#define MainThemeColor HEXCOLOR(0x0099D7)
 #define ZF_Global_Color HEXCOLOR(0x65C4C7)
 #define Gold1Color HEXCOLOR(0x905f3a)
 #define Gold2Color HEXCOLOR(0xc4a486)
@@ -98,9 +99,13 @@
 #define Height_StatusBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 44.0 : 20.0)
 #define Height_NavBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 88.0 : 64.0)
 #define Height_TabBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 83.0 : 49.0)
-
-
+//通用的协议
 #define FailRequestTip @"服务器繁忙"
+//经纬度
+#define ZF_Latitude    @"lattiude"
+#define ZF_Longitude   @"longitude"
+//地址
+#define ZF_Location_Add  @"location_addr"
 
 //通知类型的key   === ZF 7月5日
 #define ISFirst       @"isFirstRun"

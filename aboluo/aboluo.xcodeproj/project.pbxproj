@@ -115,11 +115,20 @@
 		F0F0E5EB218D77F800B4ABCE /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E5E6218D77F800B4ABCE /* NetWorkTool.m */; };
 		F0F0E611218D959600B4ABCE /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E60F218D959600B4ABCE /* HomeVC.m */; };
 		F0F0E612218D959600B4ABCE /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F0E610218D959600B4ABCE /* HomeVC.xib */; };
-		F0F0E616218D95AA00B4ABCE /* OrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E614218D95AA00B4ABCE /* OrderVC.m */; };
-		F0F0E617218D95AA00B4ABCE /* OrderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F0E615218D95AA00B4ABCE /* OrderVC.xib */; };
 		F0F0E61B218D95C300B4ABCE /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E619218D95C300B4ABCE /* SettingVC.m */; };
 		F0F0E61C218D95C300B4ABCE /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F0E61A218D95C300B4ABCE /* SettingVC.xib */; };
 		F0F0E61F218D964800B4ABCE /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E61E218D964800B4ABCE /* MyNavigationController.m */; };
+		F0FD361C2196B8B000F6C93B /* RoleSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD361A2196B8B000F6C93B /* RoleSelectVC.m */; };
+		F0FD361D2196B8B000F6C93B /* RoleSelectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FD361B2196B8B000F6C93B /* RoleSelectVC.xib */; };
+		F0FD36212196BF5800F6C93B /* AgreeProtolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD361F2196BF5800F6C93B /* AgreeProtolVC.m */; };
+		F0FD36222196BF5800F6C93B /* AgreeProtolVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FD36202196BF5800F6C93B /* AgreeProtolVC.xib */; };
+		F0FD36242196C0B600F6C93B /* 协议.html in Resources */ = {isa = PBXBuildFile; fileRef = F0FD36232196C0B600F6C93B /* 协议.html */; };
+		F0FD363D2196D49700F6C93B /* ServerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD363B2196D49700F6C93B /* ServerVC.m */; };
+		F0FD363E2196D49700F6C93B /* ServerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FD363C2196D49700F6C93B /* ServerVC.xib */; };
+		F0FD36422196D4B700F6C93B /* StoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD36402196D4B700F6C93B /* StoreVC.m */; };
+		F0FD36432196D4B700F6C93B /* StoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FD36412196D4B700F6C93B /* StoreVC.xib */; };
+		F0FD36452196DBA400F6C93B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FD36442196DBA400F6C93B /* CoreLocation.framework */; };
+		F0FD36482196DF5B00F6C93B /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD36472196DF5B00F6C93B /* ImageCodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -315,14 +324,27 @@
 		F0F0E60E218D959600B4ABCE /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		F0F0E60F218D959600B4ABCE /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		F0F0E610218D959600B4ABCE /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
-		F0F0E613218D95AA00B4ABCE /* OrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderVC.h; sourceTree = "<group>"; };
-		F0F0E614218D95AA00B4ABCE /* OrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderVC.m; sourceTree = "<group>"; };
-		F0F0E615218D95AA00B4ABCE /* OrderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderVC.xib; sourceTree = "<group>"; };
 		F0F0E618218D95C300B4ABCE /* SettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingVC.h; sourceTree = "<group>"; };
 		F0F0E619218D95C300B4ABCE /* SettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
 		F0F0E61A218D95C300B4ABCE /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		F0F0E61D218D964800B4ABCE /* MyNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
 		F0F0E61E218D964800B4ABCE /* MyNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
+		F0FD36192196B8B000F6C93B /* RoleSelectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleSelectVC.h; sourceTree = "<group>"; };
+		F0FD361A2196B8B000F6C93B /* RoleSelectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoleSelectVC.m; sourceTree = "<group>"; };
+		F0FD361B2196B8B000F6C93B /* RoleSelectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoleSelectVC.xib; sourceTree = "<group>"; };
+		F0FD361E2196BF5800F6C93B /* AgreeProtolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgreeProtolVC.h; sourceTree = "<group>"; };
+		F0FD361F2196BF5800F6C93B /* AgreeProtolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgreeProtolVC.m; sourceTree = "<group>"; };
+		F0FD36202196BF5800F6C93B /* AgreeProtolVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgreeProtolVC.xib; sourceTree = "<group>"; };
+		F0FD36232196C0B600F6C93B /* 协议.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "协议.html"; sourceTree = "<group>"; };
+		F0FD363A2196D49700F6C93B /* ServerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerVC.h; sourceTree = "<group>"; };
+		F0FD363B2196D49700F6C93B /* ServerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerVC.m; sourceTree = "<group>"; };
+		F0FD363C2196D49700F6C93B /* ServerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerVC.xib; sourceTree = "<group>"; };
+		F0FD363F2196D4B700F6C93B /* StoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreVC.h; sourceTree = "<group>"; };
+		F0FD36402196D4B700F6C93B /* StoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreVC.m; sourceTree = "<group>"; };
+		F0FD36412196D4B700F6C93B /* StoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreVC.xib; sourceTree = "<group>"; };
+		F0FD36442196DBA400F6C93B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F0FD36462196DF5B00F6C93B /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
+		F0FD36472196DF5B00F6C93B /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +352,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FD36452196DBA400F6C93B /* CoreLocation.framework in Frameworks */,
 				F0B50AB5218FF12A0027BB61 /* libc++.tbd in Frameworks */,
 				F0B50AB3218FF1190027BB61 /* libz.tbd in Frameworks */,
 				F0B50AB1218FF10A0027BB61 /* libsqlite3.0.tbd in Frameworks */,
@@ -357,6 +380,7 @@
 		0170967C26B314E1E7495D67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0FD36442196DBA400F6C93B /* CoreLocation.framework */,
 				F0B50AB4218FF12A0027BB61 /* libc++.tbd */,
 				F0B50AB2218FF1190027BB61 /* libz.tbd */,
 				F0B50AB0218FF10A0027BB61 /* libsqlite3.0.tbd */,
@@ -532,57 +556,16 @@
 		F0F0E453218D51F300B4ABCE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F0FD36262196D46800F6C93B /* Server */,
+				F0FD362E2196D46800F6C93B /* Store */,
 				F0F0E485218D557900B4ABCE /* Guide */,
 				F0F0E481218D555100B4ABCE /* Base */,
 				F0F0E480218D553800B4ABCE /* LSF */,
-				F0F0E454218D51F300B4ABCE /* Order */,
 				F0F0E459218D51F300B4ABCE /* Home */,
 				F0F0E45E218D51F300B4ABCE /* Setting */,
 				F0F0E463218D51F300B4ABCE /* Main */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		F0F0E454218D51F300B4ABCE /* Order */ = {
-			isa = PBXGroup;
-			children = (
-				F0F0E455218D51F300B4ABCE /* Other */,
-				F0F0E456218D51F300B4ABCE /* Controller */,
-				F0F0E457218D51F300B4ABCE /* Model */,
-				F0F0E458218D51F300B4ABCE /* View */,
-			);
-			path = Order;
-			sourceTree = "<group>";
-		};
-		F0F0E455218D51F300B4ABCE /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		F0F0E456218D51F300B4ABCE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F0F0E613218D95AA00B4ABCE /* OrderVC.h */,
-				F0F0E614218D95AA00B4ABCE /* OrderVC.m */,
-				F0F0E615218D95AA00B4ABCE /* OrderVC.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F0F0E457218D51F300B4ABCE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F0F0E458218D51F300B4ABCE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F0F0E459218D51F300B4ABCE /* Home */ = {
@@ -707,6 +690,7 @@
 		F0F0E467218D51F300B4ABCE /* Rescoure */ = {
 			isa = PBXGroup;
 			children = (
+				F0FD36232196C0B600F6C93B /* 协议.html */,
 				F0F0E4E7218D77C500B4ABCE /* URLStr.h */,
 			);
 			path = Rescoure;
@@ -774,6 +758,12 @@
 				F0113CC2218EE1BE006521B0 /* BindVC.h */,
 				F0113CC3218EE1BE006521B0 /* BindVC.m */,
 				F0113CC4218EE1BE006521B0 /* BindVC.xib */,
+				F0FD36192196B8B000F6C93B /* RoleSelectVC.h */,
+				F0FD361A2196B8B000F6C93B /* RoleSelectVC.m */,
+				F0FD361B2196B8B000F6C93B /* RoleSelectVC.xib */,
+				F0FD361E2196BF5800F6C93B /* AgreeProtolVC.h */,
+				F0FD361F2196BF5800F6C93B /* AgreeProtolVC.m */,
+				F0FD36202196BF5800F6C93B /* AgreeProtolVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -781,6 +771,8 @@
 		F0F0E4BB218D666900B4ABCE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0FD36462196DF5B00F6C93B /* ImageCodeView.h */,
+				F0FD36472196DF5B00F6C93B /* ImageCodeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1048,6 +1040,90 @@
 			path = include;
 			sourceTree = "<group>";
 		};
+		F0FD36262196D46800F6C93B /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				F0FD36272196D46800F6C93B /* Other */,
+				F0FD36282196D46800F6C93B /* Controller */,
+				F0FD362C2196D46800F6C93B /* Model */,
+				F0FD362D2196D46800F6C93B /* View */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		F0FD36272196D46800F6C93B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F0FD36282196D46800F6C93B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0FD363A2196D49700F6C93B /* ServerVC.h */,
+				F0FD363B2196D49700F6C93B /* ServerVC.m */,
+				F0FD363C2196D49700F6C93B /* ServerVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0FD362C2196D46800F6C93B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0FD362D2196D46800F6C93B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0FD362E2196D46800F6C93B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				F0FD362F2196D46800F6C93B /* Other */,
+				F0FD36302196D46800F6C93B /* Controller */,
+				F0FD36342196D46800F6C93B /* Model */,
+				F0FD36352196D46800F6C93B /* View */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		F0FD362F2196D46800F6C93B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F0FD36302196D46800F6C93B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0FD363F2196D4B700F6C93B /* StoreVC.h */,
+				F0FD36402196D4B700F6C93B /* StoreVC.m */,
+				F0FD36412196D4B700F6C93B /* StoreVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0FD36342196D46800F6C93B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0FD36352196D46800F6C93B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1113,9 +1189,12 @@
 				F0B50AA5218FF0F70027BB61 /* ShareSDKUI.bundle in Resources */,
 				F0F0E5C8218D77E200B4ABCE /* car4@2x.png in Resources */,
 				F0B50AA4218FF0F70027BB61 /* ShareSDK.bundle in Resources */,
+				F0FD361D2196B8B000F6C93B /* RoleSelectVC.xib in Resources */,
 				F0F0E494218D55B000B4ABCE /* ForgetPwdVC.xib in Resources */,
 				F00E07C9218D2A930079D952 /* LaunchScreen.storyboard in Resources */,
+				F0FD363E2196D49700F6C93B /* ServerVC.xib in Resources */,
 				F00E07C6218D2A930079D952 /* Assets.xcassets in Resources */,
+				F0FD36222196BF5800F6C93B /* AgreeProtolVC.xib in Resources */,
 				F0B50A9E218FF0F70027BB61 /* WeiboSDK.bundle in Resources */,
 				F0F0E597218D77E200B4ABCE /* IQKeyboardManager.bundle in Resources */,
 				F0F0E48A218D558D00B4ABCE /* LoginVC.xib in Resources */,
@@ -1123,12 +1202,13 @@
 				F0F0E5CE218D77E200B4ABCE /* 失败图片@2x.png in Resources */,
 				F0F0E61C218D95C300B4ABCE /* SettingVC.xib in Resources */,
 				F0113CC6218EE1BE006521B0 /* BindVC.xib in Resources */,
-				F0F0E617218D95AA00B4ABCE /* OrderVC.xib in Resources */,
 				F0F0E5CD218D77E200B4ABCE /* car3@2x.png in Resources */,
 				F00E07C4218D2A920079D952 /* Main.storyboard in Resources */,
 				F0F0E612218D959600B4ABCE /* HomeVC.xib in Resources */,
 				F0B50AA9218FF0F80027BB61 /* ShareSDKConfigFile.bundle in Resources */,
+				F0FD36242196C0B600F6C93B /* 协议.html in Resources */,
 				F0B50AF421900EDA0027BB61 /* GuideVC.xib in Resources */,
+				F0FD36432196D4B700F6C93B /* StoreVC.xib in Resources */,
 				F0F0E5D7218D77E200B4ABCE /* TZImagePickerController.bundle in Resources */,
 				F0B50AA1218FF0F70027BB61 /* README.txt in Resources */,
 				F0F0E5CF218D77E200B4ABCE /* car1@2x.png in Resources */,
@@ -1200,17 +1280,18 @@
 				F0F0E593218D77E200B4ABCE /* IQTitleBarButtonItem.m in Sources */,
 				F0F0E59F218D77E200B4ABCE /* IQKeyboardReturnKeyHandler.m in Sources */,
 				F0F0E5D8218D77E200B4ABCE /* TZProgressView.m in Sources */,
+				F0FD36212196BF5800F6C93B /* AgreeProtolVC.m in Sources */,
 				F0F0E5C7218D77E200B4ABCE /* YTKRequest.m in Sources */,
 				F0F0E5D3218D77E200B4ABCE /* TZAssetModel.m in Sources */,
 				F0F0E5EB218D77F800B4ABCE /* NetWorkTool.m in Sources */,
 				F00E07CC218D2A930079D952 /* main.m in Sources */,
 				F0113CC5218EE1BE006521B0 /* BindVC.m in Sources */,
 				F0F0E5E8218D77F800B4ABCE /* ZFCustomView.m in Sources */,
+				F0FD36422196D4B700F6C93B /* StoreVC.m in Sources */,
 				F0F0E5BF218D77E200B4ABCE /* YTKNetworkConfig.m in Sources */,
 				F0F0E5AB218D77E200B4ABCE /* SYPlaceHolderTextView.m in Sources */,
 				F0F0E5C3218D77E200B4ABCE /* YTKBatchRequest.m in Sources */,
 				F0F0E5A4218D77E200B4ABCE /* ZJCollectionView.m in Sources */,
-				F0F0E616218D95AA00B4ABCE /* OrderVC.m in Sources */,
 				F0F0E5A6218D77E200B4ABCE /* ZJScrollSegmentView.m in Sources */,
 				F0F0E59A218D77E200B4ABCE /* IQUIWindow+Hierarchy.m in Sources */,
 				F0F0E595218D77E200B4ABCE /* IQUIView+IQKeyboardToolbar.m in Sources */,
@@ -1246,11 +1327,14 @@
 				F0F0E5DA218D77E200B4ABCE /* TZPhotoPickerController.m in Sources */,
 				F0F0E4C2218D669800B4ABCE /* ResponeModel.m in Sources */,
 				F0F0E5D5218D77E200B4ABCE /* UIView+Layout.m in Sources */,
+				F0FD363D2196D49700F6C93B /* ServerVC.m in Sources */,
 				F0F0E484218D557100B4ABCE /* BaseVC.m in Sources */,
 				F0F0E5DC218D77E200B4ABCE /* TZImagePickerController.m in Sources */,
 				F0F0E5A1218D77E200B4ABCE /* ZJTitleView.m in Sources */,
 				F0F0E48E218D559E00B4ABCE /* ResigterVC.m in Sources */,
+				F0FD361C2196B8B000F6C93B /* RoleSelectVC.m in Sources */,
 				F0F0E4BF218D668300B4ABCE /* UserModel.m in Sources */,
+				F0FD36482196DF5B00F6C93B /* ImageCodeView.m in Sources */,
 				F0F0E5A7218D77E200B4ABCE /* ZJScrollPageView.m in Sources */,
 				F0F0E5AC218D77E200B4ABCE /* UIScrollView+EmptyDataSet.m in Sources */,
 				F0F0E493218D55B000B4ABCE /* ForgetPwdVC.m in Sources */,

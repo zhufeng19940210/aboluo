@@ -7,6 +7,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *phone_tf;
 @property (weak, nonatomic) IBOutlet UITextField *code_tf;
 @property (weak, nonatomic) IBOutlet UITextField *pwd_tf;
+@property (weak, nonatomic) IBOutlet UIButton *eye_btn;
 @end
 @implementation BindVC
 
@@ -57,5 +58,21 @@
         return;
     }
     //todo执行接下来的操作
+}
+
+/**
+ 显示密码功能
+ @param sender 显示密码功能
+ */
+- (IBAction)actinoEyeBtn:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        self.pwd_tf.secureTextEntry = NO;
+        [self.eye_btn setImage:[UIImage imageNamed:@"eye_sel"] forState:UIControlStateNormal];
+    }else{
+        self.pwd_tf.secureTextEntry = YES;
+        [self.eye_btn setImage:[UIImage imageNamed:@"eye_nor"] forState:UIControlStateNormal];
+    }
 }
 @end

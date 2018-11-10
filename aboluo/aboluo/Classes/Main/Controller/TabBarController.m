@@ -4,8 +4,9 @@
 //  Copyright © 2018年 zhufeng. All rights reserved.
 #import "TabBarController.h"
 #import "HomeVC.h"
-#import "OrderVC.h"
 #import "SettingVC.h"
+#import "ServerVC.h"
+#import "StoreVC.h"
 #import "MyNavigationController.h"
 @interface TabBarController ()
 @end
@@ -40,20 +41,23 @@
 {
     //首页
     HomeVC *homevc = [[HomeVC alloc]init];
-    [self setupChildViewVC:homevc title:@"首页" norImage:@"home_home" selectImage:@"home_xz_home"];
-    //订单
-    OrderVC *ordervc = [[OrderVC alloc]init];
-    [self setupChildViewVC:ordervc title:@"订单" norImage:@"" selectImage:@""];
-    //我的
+    [self setupChildViewVC:homevc title:@"首页" norImage:@"tabbar_home_nor" selectImage:@"tabbar_home_sel"];
+    //服务
+    ServerVC *servervc = [[ServerVC alloc]init];
+    [self setupChildViewVC:servervc title:@"服务" norImage:@"tabbar_server_nor" selectImage:@"tabbar_server_sel"];
+    //商城
+    StoreVC *storevc = [[StoreVC alloc]init];
+    [self setupChildViewVC:storevc title:@"商城" norImage:@"tabbar_store_nor" selectImage:@"tabbar_store_sel"];
+    //会员
     SettingVC  *settingvc = [[SettingVC alloc]init];
-    [self setupChildViewVC:settingvc title:@"设置" norImage:@"home_my" selectImage:@"home_xz_my"];
+    [self setupChildViewVC:settingvc title:@"设置" norImage:@"tabbar_setting_nor" selectImage:@"tabbar_setting_sel"];
 }
 /**
  *  初始化一个子控制的方法
  */
 - (void)setupChildViewVC:(UIViewController *)childVC title:(NSString *)title norImage:(NSString *)norName selectImage:(NSString *)selectImage
 {   // 标题
-    childVC.title = title;
+    //childVC.title = title;
     UIImage *norImage = [UIImage imageNamed:norName];
     // 普通状态下得图片
     childVC.tabBarItem.image = [norImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -67,5 +71,4 @@
     // 添加tarBarController的子控制器
     [self addChildViewController:nav];
 }
-
 @end

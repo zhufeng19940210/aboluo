@@ -1,5 +1,5 @@
 //
-//  OrderVC.h
+//  SettingVC.h
 //  aboluo
 //
 //  Created by zhufeng on 2018/11/3.
@@ -8,6 +8,6 @@
 
 #import "BaseVC.h"
 
-@interface OrderVC : BaseVC
+@interface SettingVC : BaseVC
 
 @end

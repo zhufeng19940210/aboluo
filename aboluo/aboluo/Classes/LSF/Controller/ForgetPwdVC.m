@@ -8,6 +8,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *code_tf;
 @property (weak, nonatomic) IBOutlet UITextField *pwd_tf;
 @property (weak, nonatomic) IBOutlet UITextField *pwd_again_tf;
+@property (weak, nonatomic) IBOutlet UIButton *eye_btn1;
+@property (weak, nonatomic) IBOutlet UIButton *eye_btn2;
+
 @end
 @implementation ForgetPwdVC
 - (void)viewDidLoad {
@@ -69,5 +72,36 @@
         return;
     }
     //todo执行接下来的操作
+}
+
+/**
+ 眼睛的隐藏
+ @param sender 眼睛的隐藏
+ */
+- (IBAction)actionEyeBtn:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        self.pwd_tf.secureTextEntry = NO;
+        [self.eye_btn2 setImage:[UIImage imageNamed:@"eye_sel"] forState:UIControlStateNormal];
+    }else{
+        self.pwd_tf.secureTextEntry = YES;
+        [self.eye_btn1 setImage:[UIImage imageNamed:@"eye_nor"] forState:UIControlStateNormal];
+    }
+}
+/**
+ 眼睛的隐藏
+ @param sender 眼睛的隐藏2
+ */
+- (IBAction)actionEyeBtn2:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        self.pwd_again_tf.secureTextEntry = NO;
+        [self.eye_btn2 setImage:[UIImage imageNamed:@"eye_sel"] forState:UIControlStateNormal];
+    }else{
+        self.pwd_again_tf.secureTextEntry = YES;
+        [self.eye_btn2 setImage:[UIImage imageNamed:@"eye_nor"] forState:UIControlStateNormal];
+    }
 }
 @end

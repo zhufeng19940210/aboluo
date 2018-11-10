@@ -7,9 +7,12 @@
 #import "ForgetPwdVC.h"
 #import "TabBarController.h"
 #import "AppDelegate.h"
+#import "RoleSelectVC.h"
 @interface LoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *phone_tf;
 @property (weak, nonatomic) IBOutlet UITextField *pwd_tf;
+@property (weak, nonatomic) IBOutlet UIButton *eye_btn;
+
 @end
 @implementation LoginVC
 -(void)viewWillAppear:(BOOL)animated
@@ -33,8 +36,8 @@
  */
 - (IBAction)actionRegisterBtn:(UIButton *)sender
 {
-    ResigterVC *registervc = [[ResigterVC alloc]init];
-    [self.navigationController pushViewController:registervc animated:YES];
+    RoleSelectVC *roleSelectvc = [[RoleSelectVC alloc]init];
+    [self.navigationController pushViewController:roleSelectvc animated:YES];
 }
 /**
  登录方法
@@ -103,5 +106,20 @@
 {
     ForgetPwdVC *forgetpwdvc = [[ForgetPwdVC alloc]init];
     [self.navigationController pushViewController:forgetpwdvc animated:YES];
+}
+/**
+ 眼睛的隐藏
+ @param sender 眼睛的隐藏
+ */
+- (IBAction)actionEyeBtn:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        self.pwd_tf.secureTextEntry = NO;
+        [self.eye_btn setImage:[UIImage imageNamed:@"eye_sel"] forState:UIControlStateNormal];
+    }else{
+        self.pwd_tf.secureTextEntry = YES;
+        [self.eye_btn setImage:[UIImage imageNamed:@"eye_nor"] forState:UIControlStateNormal];
+    }
 }
 @end
