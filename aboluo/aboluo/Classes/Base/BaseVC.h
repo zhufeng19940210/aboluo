@@ -21,10 +21,12 @@
 - (void)onLeftBtnAction:(UIButton *)button;
 //  设置导航栏右键点击事件
 - (void)onRightBtnAction:(UIButton *)button;
-
-- (void)showTipsView;
-
-- (void)setEmptyTableView:(UITableView *)tableView;
-
-- (void)setViewRefresh:(UITableView *)tableView withHeaderAction:(SEL)hAction andFooterAction:(SEL)fAction target:(id)target;
+//刷新列表(tableview)
+- (void)setViewRefreshTableView:(UITableView *)tableView withHeaderAction:(SEL)hAction andFooterAction:(SEL)fAction target:(id)target;
+//刷新列表(collectionView)
+- (void)setViewRefreshColletionView:(UICollectionView *)collectionView withHeaderAction:(SEL)hAction andFooterAction:(SEL)fAction target:(id)target;
+//显示数据为空
+-(void)setEmptyTableView:(UITableView *)tableView;
+-(void)setEmptyCollectionView:(UICollectionView *)colletionView;
+-(float)getLabelHeightWithText:(NSString *)text width:(float)width font: (float)font;
 @end

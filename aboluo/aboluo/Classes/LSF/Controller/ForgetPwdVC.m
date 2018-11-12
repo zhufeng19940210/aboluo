@@ -3,6 +3,7 @@
 //  Created by zhufeng on 2018/11/3.
 //  Copyright © 2018年 zhufeng. All rights reserved.
 #import "ForgetPwdVC.h"
+#import "UIButton+countDown.h"
 @interface ForgetPwdVC ()
 @property (weak, nonatomic) IBOutlet UITextField *phone_tf;
 @property (weak, nonatomic) IBOutlet UITextField *code_tf;
@@ -10,7 +11,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *pwd_again_tf;
 @property (weak, nonatomic) IBOutlet UIButton *eye_btn1;
 @property (weak, nonatomic) IBOutlet UIButton *eye_btn2;
-
+@property (nonatomic,copy)NSString *code_str; // 验证码Str
 @end
 @implementation ForgetPwdVC
 - (void)viewDidLoad {
@@ -35,14 +36,38 @@
         [self showHint:@"手机号码有误" yOffset:-200];
         return;
     }
-    //todo去执接下来的操作
+    //获取验证码
+    [SVProgressHUD showWithStatus:@"获取验证"];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"phone"] = phone;
+    [[NetWorkTool shareInstacne]postWithURLString:User_Get_Code parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
+        NSLog(@"responseobject:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if ([res.code isEqualToString:@"1"]) {
+            [SVProgressHUD showSuccessWithStatus:@"获取成功"];
+            self.code_str = res.data[@"msg"];
+            [sender startWithTime:59 title:@"获取验证码" countDownTitle:@"秒" mainColor:MainThemeColor countColor:[UIColor clearColor]];
+        }else{
+            [ZFCustomView showWithSuccess:res.data[@"error"]];
+            return;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        return;
+    }];
 }
 /**
  完成
  @param sender 完成
  */
 - (IBAction)actionCompleteBtn:(UIButton *)sender
-{
+{   //取消第一响应者
+    [self.phone_tf resignFirstResponder];
+    [self.code_tf resignFirstResponder];
+    [self.pwd_tf resignFirstResponder];
+    [self.pwd_again_tf resignFirstResponder];
     NSString *phone     = self.phone_tf.text;
     NSString *code      = self.code_tf.text;
     NSString *pwd       = self.pwd_tf.text;
@@ -59,6 +84,10 @@
         [self showHint:@"验证码不能为空" yOffset:-200];
         return;
     }
+    if (![code isEqualToString:self.code_str]) {
+        [self showHint:@"验证码有误" yOffset:-200];
+        return;
+    }
     if (pwd.length == 0 || [pwd isEqualToString:@""]) {
         [self showHint:@"密码不能为空" yOffset:-200];
         return;
@@ -71,9 +100,27 @@
         [self showHint:@"两次密码不一致" yOffset:-200];
         return;
     }
-    //todo执行接下来的操作
+    //开始去做修改密码
+    [SVProgressHUD showWithStatus:@"修改密码"];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"phone"] = phone;
+    param[@"password"] = pwd;
+    [[NetWorkTool shareInstacne]postWithURLString:User_Pwd_Forget parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if ([res.code isEqualToString:@"1"]) {
+            [ZFCustomView showWithText:@"修改成功" WithDurations:0.5];
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            [ZFCustomView showWithText:@"修改失败" WithDurations:0.5];
+            return;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [ZFCustomView showWithText:FailRequestTip WithDurations:0.5];
+        return;
+    }];
 }
-
 /**
  眼睛的隐藏
  @param sender 眼睛的隐藏

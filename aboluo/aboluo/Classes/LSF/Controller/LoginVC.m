@@ -12,7 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *phone_tf;
 @property (weak, nonatomic) IBOutlet UITextField *pwd_tf;
 @property (weak, nonatomic) IBOutlet UIButton *eye_btn;
-
 @end
 @implementation LoginVC
 -(void)viewWillAppear:(BOOL)animated
@@ -68,7 +67,7 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"phone"] = phone;
     param[@"password"] = pwd;
-    [SVProgressHUD showWithStatus:@"正在登录中。。。"];
+    [SVProgressHUD showWithStatus:@"正在登录"];
     [[NetWorkTool shareInstacne]postWithURLString:User_Login_URL parameters:param success:^(id  _Nonnull responseObject) {
         NSLog(@"resoponseObject:%@",responseObject);
         [SVProgressHUD dismiss];

@@ -23,15 +23,15 @@
         if (timeOut <= 0) {
             dispatch_source_cancel(_timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.backgroundColor = mColor;
+                //self.backgroundColor = mColor;
                 [self setTitle:title forState:UIControlStateNormal];
                 self.userInteractionEnabled = YES;
             });
         } else {
             int seconds = timeOut % 60;
-            NSString *timeStr = [NSString stringWithFormat:@"%0.2d", seconds];
+            NSString *timeStr = [NSString stringWithFormat:@"%d", seconds];
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.backgroundColor = color;
+                //self.backgroundColor = color;
                 [self setTitle:[NSString stringWithFormat:@"%@%@",timeStr,subTitle] forState:UIControlStateNormal];
                 self.userInteractionEnabled = NO;
             });

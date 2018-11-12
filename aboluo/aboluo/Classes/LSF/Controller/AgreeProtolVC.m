@@ -19,12 +19,10 @@
 }
 #pragma mark - uiwebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    NSLog(@"加载成功");
     [SVProgressHUD dismiss];
     [SVProgressHUD showSuccessWithStatus:@"加载成功"];
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    NSLog(@"失败了");
     [SVProgressHUD dismiss];
     [SVProgressHUD showErrorWithStatus:@"加载失败"];
 }

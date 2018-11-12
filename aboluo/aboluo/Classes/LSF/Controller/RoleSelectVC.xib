@@ -12,8 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoleSelectVC">
             <connections>
+                <outlet property="geren_agree_sel" destination="tnf-aR-D7O" id="eqd-X5-Ghd"/>
                 <outlet property="geren_img" destination="ENX-2N-6ye" id="Bm6-Cf-6xL"/>
                 <outlet property="geren_lab" destination="sXR-t0-tts" id="plw-0K-Zs4"/>
+                <outlet property="qiye_agree_sel" destination="kXv-17-hE1" id="v7y-b6-scw"/>
                 <outlet property="qiye_img" destination="vTo-FG-6Pd" id="peN-eX-bwT"/>
                 <outlet property="qiye_lab" destination="NBs-2R-mfu" id="e8z-IP-PMU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -92,10 +94,27 @@
                         <action selector="actionNextBtn:" destination="-1" eventType="touchUpInside" id="scZ-Ga-gD7"/>
                     </connections>
                 </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agree_sel" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-aR-D7O">
+                    <rect key="frame" x="333" y="75" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="8bs-ra-0en"/>
+                        <constraint firstAttribute="width" constant="25" id="Vuj-iH-dFR"/>
+                    </constraints>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agree_sel" translatesAutoresizingMaskIntoConstraints="NO" id="kXv-17-hE1">
+                    <rect key="frame" x="333" y="227" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="L5y-L2-5t3"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="ZgN-E7-Clo"/>
+                        <constraint firstAttribute="height" constant="25" id="b7s-fC-nYH"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="vaj-vN-Z69"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="NBs-2R-mfu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2Q1-Kv-3f7"/>
+                <constraint firstItem="kXv-17-hE1" firstAttribute="top" secondItem="eO4-Hj-0jj" secondAttribute="bottom" constant="24.5" id="2Ze-iu-5d4"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ED5-OF-eFC" secondAttribute="trailing" constant="16" id="4VQ-Ni-fSm"/>
                 <constraint firstItem="vp4-fQ-ADF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="4pn-cb-IAd"/>
                 <constraint firstItem="ED5-OF-eFC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9DG-a5-J4x"/>
@@ -104,11 +123,13 @@
                 <constraint firstItem="ED5-OF-eFC" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="E4B-zQ-g5E"/>
                 <constraint firstItem="eO4-Hj-0jj" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="52.5" id="FlG-Kr-XdW"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="vp4-fQ-ADF" secondAttribute="trailing" constant="16" id="HiW-Oh-xy2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kXv-17-hE1" secondAttribute="trailing" constant="17" id="KH3-1Z-y5I"/>
                 <constraint firstItem="ED5-OF-eFC" firstAttribute="top" secondItem="eO4-Hj-0jj" secondAttribute="bottom" constant="24" id="Mly-Cy-qfS"/>
                 <constraint firstItem="eO4-Hj-0jj" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="OA6-TK-DYK"/>
                 <constraint firstItem="sXR-t0-tts" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RDY-K5-YG5"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="eO4-Hj-0jj" secondAttribute="trailing" constant="16" id="adr-b1-Hg7"/>
                 <constraint firstItem="vTo-FG-6Pd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bZw-d7-U9V"/>
+                <constraint firstItem="tnf-aR-D7O" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="55" id="gwN-kV-NcS"/>
                 <constraint firstItem="vTo-FG-6Pd" firstAttribute="top" secondItem="eO4-Hj-0jj" secondAttribute="bottom" constant="35.5" id="kmV-YO-K7d"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="tic-Mx-Is5" secondAttribute="trailing" id="roZ-r3-2D9"/>
                 <constraint firstItem="tic-Mx-Is5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sr7-CT-g0I"/>
@@ -117,12 +138,14 @@
                 <constraint firstItem="NBs-2R-mfu" firstAttribute="top" secondItem="vTo-FG-6Pd" secondAttribute="bottom" constant="11" id="xIh-kK-7fN"/>
                 <constraint firstItem="tic-Mx-Is5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xMg-yG-XZx"/>
                 <constraint firstItem="sXR-t0-tts" firstAttribute="top" secondItem="ENX-2N-6ye" secondAttribute="bottom" constant="14" id="xRV-UR-IqL"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="tnf-aR-D7O" secondAttribute="trailing" constant="17" id="ydn-hp-TsX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>
     </objects>
     <resources>
+        <image name="agree_sel" width="25" height="25"/>
         <image name="bg" width="343" height="63"/>
         <image name="geren_nor" width="88" height="88"/>
         <image name="qiye_nor" width="88" height="88"/>

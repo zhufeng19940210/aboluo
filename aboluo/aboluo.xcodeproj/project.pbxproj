@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		75042ED22F4A9F356FFB7639 /* libPods-aboluo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6D0EF5E7F61EAE912E2678 /* libPods-aboluo.a */; };
+		F0007EAA21995E0700854DA3 /* HomeAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007EA821995E0600854DA3 /* HomeAdCell.m */; };
+		F0007EAB21995E0700854DA3 /* HomeAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0007EA921995E0600854DA3 /* HomeAdCell.xib */; };
+		F0007EAF21995E3200854DA3 /* HomeTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007EAD21995E3200854DA3 /* HomeTitleCell.m */; };
+		F0007EB021995E3200854DA3 /* HomeTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0007EAE21995E3200854DA3 /* HomeTitleCell.xib */; };
+		F0007EB421995E6100854DA3 /* HomeRecommandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007EB221995E6100854DA3 /* HomeRecommandCell.m */; };
+		F0007EB521995E6100854DA3 /* HomeRecommandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0007EB321995E6100854DA3 /* HomeRecommandCell.xib */; };
+		F0007EB921995F5700854DA3 /* HomeProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007EB721995F5700854DA3 /* HomeProjectCell.m */; };
+		F0007EBA21995F5700854DA3 /* HomeProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0007EB821995F5700854DA3 /* HomeProjectCell.xib */; };
+		F0007EC321995FA400854DA3 /* HomeMasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007EC121995FA400854DA3 /* HomeMasterCell.m */; };
+		F0007EC421995FA400854DA3 /* HomeMasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0007EC221995FA400854DA3 /* HomeMasterCell.xib */; };
+		F0007EC821995FF600854DA3 /* HomeMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007EC621995FF600854DA3 /* HomeMainCell.m */; };
+		F0007EC921995FF600854DA3 /* HomeMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0007EC721995FF600854DA3 /* HomeMainCell.xib */; };
+		F0007ECC2199799600854DA3 /* HomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007ECB2199799600854DA3 /* HomeTopView.m */; };
 		F00E07BE218D2A920079D952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F00E07BD218D2A920079D952 /* AppDelegate.m */; };
 		F00E07C4218D2A920079D952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00E07C2218D2A920079D952 /* Main.storyboard */; };
 		F00E07C6218D2A930079D952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00E07C5218D2A930079D952 /* Assets.xcassets */; };
@@ -135,6 +148,26 @@
 		77038B9CAC5E9EAA5922D6FA /* Pods-aboluo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboluo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aboluo/Pods-aboluo.debug.xcconfig"; sourceTree = "<group>"; };
 		AFCCC73D04ECCD08DB93DCC5 /* Pods-aboluo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aboluo.release.xcconfig"; path = "Pods/Target Support Files/Pods-aboluo/Pods-aboluo.release.xcconfig"; sourceTree = "<group>"; };
 		DE6D0EF5E7F61EAE912E2678 /* libPods-aboluo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aboluo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0007EA721995E0600854DA3 /* HomeAdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeAdCell.h; sourceTree = "<group>"; };
+		F0007EA821995E0600854DA3 /* HomeAdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeAdCell.m; sourceTree = "<group>"; };
+		F0007EA921995E0600854DA3 /* HomeAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeAdCell.xib; sourceTree = "<group>"; };
+		F0007EAC21995E3200854DA3 /* HomeTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTitleCell.h; sourceTree = "<group>"; };
+		F0007EAD21995E3200854DA3 /* HomeTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTitleCell.m; sourceTree = "<group>"; };
+		F0007EAE21995E3200854DA3 /* HomeTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTitleCell.xib; sourceTree = "<group>"; };
+		F0007EB121995E6100854DA3 /* HomeRecommandCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeRecommandCell.h; sourceTree = "<group>"; };
+		F0007EB221995E6100854DA3 /* HomeRecommandCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeRecommandCell.m; sourceTree = "<group>"; };
+		F0007EB321995E6100854DA3 /* HomeRecommandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommandCell.xib; sourceTree = "<group>"; };
+		F0007EB621995F5700854DA3 /* HomeProjectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeProjectCell.h; sourceTree = "<group>"; };
+		F0007EB721995F5700854DA3 /* HomeProjectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeProjectCell.m; sourceTree = "<group>"; };
+		F0007EB821995F5700854DA3 /* HomeProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProjectCell.xib; sourceTree = "<group>"; };
+		F0007EC021995FA400854DA3 /* HomeMasterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMasterCell.h; sourceTree = "<group>"; };
+		F0007EC121995FA400854DA3 /* HomeMasterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMasterCell.m; sourceTree = "<group>"; };
+		F0007EC221995FA400854DA3 /* HomeMasterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMasterCell.xib; sourceTree = "<group>"; };
+		F0007EC521995FF600854DA3 /* HomeMainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMainCell.h; sourceTree = "<group>"; };
+		F0007EC621995FF600854DA3 /* HomeMainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMainCell.m; sourceTree = "<group>"; };
+		F0007EC721995FF600854DA3 /* HomeMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMainCell.xib; sourceTree = "<group>"; };
+		F0007ECA2199799600854DA3 /* HomeTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTopView.h; sourceTree = "<group>"; };
+		F0007ECB2199799600854DA3 /* HomeTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTopView.m; sourceTree = "<group>"; };
 		F00E07B9218D2A920079D952 /* aboluo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aboluo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00E07BC218D2A920079D952 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F00E07BD218D2A920079D952 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -606,6 +639,26 @@
 		F0F0E45D218D51F300B4ABCE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0007EA721995E0600854DA3 /* HomeAdCell.h */,
+				F0007EA821995E0600854DA3 /* HomeAdCell.m */,
+				F0007EA921995E0600854DA3 /* HomeAdCell.xib */,
+				F0007EAC21995E3200854DA3 /* HomeTitleCell.h */,
+				F0007EAD21995E3200854DA3 /* HomeTitleCell.m */,
+				F0007EAE21995E3200854DA3 /* HomeTitleCell.xib */,
+				F0007EB121995E6100854DA3 /* HomeRecommandCell.h */,
+				F0007EB221995E6100854DA3 /* HomeRecommandCell.m */,
+				F0007EB321995E6100854DA3 /* HomeRecommandCell.xib */,
+				F0007EB621995F5700854DA3 /* HomeProjectCell.h */,
+				F0007EB721995F5700854DA3 /* HomeProjectCell.m */,
+				F0007EB821995F5700854DA3 /* HomeProjectCell.xib */,
+				F0007EC021995FA400854DA3 /* HomeMasterCell.h */,
+				F0007EC121995FA400854DA3 /* HomeMasterCell.m */,
+				F0007EC221995FA400854DA3 /* HomeMasterCell.xib */,
+				F0007EC521995FF600854DA3 /* HomeMainCell.h */,
+				F0007EC621995FF600854DA3 /* HomeMainCell.m */,
+				F0007EC721995FF600854DA3 /* HomeMainCell.xib */,
+				F0007ECA2199799600854DA3 /* HomeTopView.h */,
+				F0007ECB2199799600854DA3 /* HomeTopView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1183,27 +1236,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0007EC421995FA400854DA3 /* HomeMasterCell.xib in Resources */,
 				F0F0E48F218D559E00B4ABCE /* ResigterVC.xib in Resources */,
 				F0F0E5CA218D77E200B4ABCE /* 成功图片@2x.png in Resources */,
 				F0F0E5CB218D77E200B4ABCE /* car5@2x.png in Resources */,
 				F0B50AA5218FF0F70027BB61 /* ShareSDKUI.bundle in Resources */,
 				F0F0E5C8218D77E200B4ABCE /* car4@2x.png in Resources */,
+				F0007EB521995E6100854DA3 /* HomeRecommandCell.xib in Resources */,
 				F0B50AA4218FF0F70027BB61 /* ShareSDK.bundle in Resources */,
 				F0FD361D2196B8B000F6C93B /* RoleSelectVC.xib in Resources */,
 				F0F0E494218D55B000B4ABCE /* ForgetPwdVC.xib in Resources */,
 				F00E07C9218D2A930079D952 /* LaunchScreen.storyboard in Resources */,
 				F0FD363E2196D49700F6C93B /* ServerVC.xib in Resources */,
+				F0007EBA21995F5700854DA3 /* HomeProjectCell.xib in Resources */,
 				F00E07C6218D2A930079D952 /* Assets.xcassets in Resources */,
 				F0FD36222196BF5800F6C93B /* AgreeProtolVC.xib in Resources */,
 				F0B50A9E218FF0F70027BB61 /* WeiboSDK.bundle in Resources */,
+				F0007EAB21995E0700854DA3 /* HomeAdCell.xib in Resources */,
 				F0F0E597218D77E200B4ABCE /* IQKeyboardManager.bundle in Resources */,
 				F0F0E48A218D558D00B4ABCE /* LoginVC.xib in Resources */,
+				F0007EC921995FF600854DA3 /* HomeMainCell.xib in Resources */,
 				F0F0E5C9218D77E200B4ABCE /* car2@2x.png in Resources */,
 				F0F0E5CE218D77E200B4ABCE /* 失败图片@2x.png in Resources */,
 				F0F0E61C218D95C300B4ABCE /* SettingVC.xib in Resources */,
 				F0113CC6218EE1BE006521B0 /* BindVC.xib in Resources */,
 				F0F0E5CD218D77E200B4ABCE /* car3@2x.png in Resources */,
 				F00E07C4218D2A920079D952 /* Main.storyboard in Resources */,
+				F0007EB021995E3200854DA3 /* HomeTitleCell.xib in Resources */,
 				F0F0E612218D959600B4ABCE /* HomeVC.xib in Resources */,
 				F0B50AA9218FF0F80027BB61 /* ShareSDKConfigFile.bundle in Resources */,
 				F0FD36242196C0B600F6C93B /* 协议.html in Resources */,
@@ -1270,6 +1329,8 @@
 				F0F0E5DB218D77E200B4ABCE /* TZPhotoPreviewCell.m in Sources */,
 				F0F0E59B218D77E200B4ABCE /* IQUITextFieldView+Additions.m in Sources */,
 				F0F0E5AA218D77E200B4ABCE /* UIButton+POImagePosition.m in Sources */,
+				F0007EB421995E6100854DA3 /* HomeRecommandCell.m in Sources */,
+				F0007EAF21995E3200854DA3 /* HomeTitleCell.m in Sources */,
 				F0F0E59C218D77E200B4ABCE /* IQUIScrollView+Additions.m in Sources */,
 				F0F0E59E218D77E200B4ABCE /* IQUIViewController+Additions.m in Sources */,
 				F0F0E4B9218D661800B4ABCE /* TabBarController.m in Sources */,
@@ -1283,10 +1344,13 @@
 				F0FD36212196BF5800F6C93B /* AgreeProtolVC.m in Sources */,
 				F0F0E5C7218D77E200B4ABCE /* YTKRequest.m in Sources */,
 				F0F0E5D3218D77E200B4ABCE /* TZAssetModel.m in Sources */,
+				F0007EB921995F5700854DA3 /* HomeProjectCell.m in Sources */,
 				F0F0E5EB218D77F800B4ABCE /* NetWorkTool.m in Sources */,
 				F00E07CC218D2A930079D952 /* main.m in Sources */,
 				F0113CC5218EE1BE006521B0 /* BindVC.m in Sources */,
+				F0007EC321995FA400854DA3 /* HomeMasterCell.m in Sources */,
 				F0F0E5E8218D77F800B4ABCE /* ZFCustomView.m in Sources */,
+				F0007ECC2199799600854DA3 /* HomeTopView.m in Sources */,
 				F0FD36422196D4B700F6C93B /* StoreVC.m in Sources */,
 				F0F0E5BF218D77E200B4ABCE /* YTKNetworkConfig.m in Sources */,
 				F0F0E5AB218D77E200B4ABCE /* SYPlaceHolderTextView.m in Sources */,
@@ -1332,10 +1396,12 @@
 				F0F0E5DC218D77E200B4ABCE /* TZImagePickerController.m in Sources */,
 				F0F0E5A1218D77E200B4ABCE /* ZJTitleView.m in Sources */,
 				F0F0E48E218D559E00B4ABCE /* ResigterVC.m in Sources */,
+				F0007EC821995FF600854DA3 /* HomeMainCell.m in Sources */,
 				F0FD361C2196B8B000F6C93B /* RoleSelectVC.m in Sources */,
 				F0F0E4BF218D668300B4ABCE /* UserModel.m in Sources */,
 				F0FD36482196DF5B00F6C93B /* ImageCodeView.m in Sources */,
 				F0F0E5A7218D77E200B4ABCE /* ZJScrollPageView.m in Sources */,
+				F0007EAA21995E0700854DA3 /* HomeAdCell.m in Sources */,
 				F0F0E5AC218D77E200B4ABCE /* UIScrollView+EmptyDataSet.m in Sources */,
 				F0F0E493218D55B000B4ABCE /* ForgetPwdVC.m in Sources */,
 				F0F0E61B218D95C300B4ABCE /* SettingVC.m in Sources */,

@@ -6,6 +6,8 @@
 #import "AgreeProtolVC.h"
 #import "ImageCodeView.h"
 #import "UIButton+countDown.h"
+#import "LoginVC.h"
+#import "AppDelegate.h"
 @interface ResigterVC ()
 @property (weak, nonatomic) IBOutlet UITextField *phoe_tf;
 @property (weak, nonatomic) IBOutlet UITextField *code_tf;
@@ -15,12 +17,14 @@
 @property (weak, nonatomic) IBOutlet ImageCodeView *code_view;
 @property (weak, nonatomic) IBOutlet UITextField *ship_tf;
 @property (weak, nonatomic) IBOutlet UIButton *code_btn;
+@property (nonatomic,copy)  NSString *code_str; // 获取验证码
+@property (nonatomic,assign)BOOL isAgree;       //是否使用协议
 @end
 @implementation ResigterVC
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"注册";
+    self.isAgree = NO;
 }
 /**
  注册的方法
@@ -40,7 +44,6 @@
         [self showHint:@"手机号码有误" yOffset:-200];
         return;
     }
-    /*
     if (ship.length == 0 || [ship isEqualToString:@""]) {
         [self showHint:@"图形文字不能为空" yOffset:-200];
         return;
@@ -49,8 +52,11 @@
         [self showHint:@"图形文字不正确" yOffset:-200];
         return;
     }
-     */
     if ([code isEqualToString:@""] || code.length == 0) {
+        [self showHint:@"验证码不能为空" yOffset:-200];
+        return;
+    }
+    if (![code isEqualToString:self.code_str]) {
         [self showHint:@"验证码有误" yOffset:-200];
         return;
     }
@@ -58,6 +64,11 @@
         [self showHint:@"密码不能为空" yOffset:-200];
         return;
     }
+    if (!self.isAgree) {
+        [self showHint:@"请先同意协议" yOffset:-200];
+        return;
+    }
+    
     //todo执行登录的操作
     [self RegisterWithPhone:phone WithCode:code WithPwd:pwd];
 }
@@ -84,16 +95,26 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if ([res.code isEqualToString:@"1"]) {
-            [ZFCustomView showWithSuccess:res.msg];
+            [ZFCustomView showWithSuccess:@"注册成功"];
+            [self pushLoginMethod];
         }else{
             [ZFCustomView showWithText:res.msg WithDurations:0.5];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        [ZFCustomView showWithText:FailRequestTip WithDurations:0.5];
         return;
     }];
+}
+/**/
+-(void)pushLoginMethod
+{   LoginVC *loginVC = [[LoginVC alloc]init];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginVC];
+    app.window.backgroundColor = [UIColor whiteColor];
+    app.window.rootViewController = nav;
+    [app.window makeKeyAndVisible];
 }
 /**
  获取验证码
@@ -102,6 +123,7 @@
 - (IBAction)actionCodeBtn:(UIButton *)sender
 {
     NSString *phone = self.phoe_tf.text;
+    NSString *ship  = self.ship_tf.text;
     if (phone.length == 0 || [phone isEqualToString:@""]) {
         [self showHint:@"手机号码不能为空" yOffset:-200];
         return;
@@ -110,28 +132,37 @@
         [self showHint:@"手机号码有误" yOffset:-200];
         return;
     }
+    if (ship.length == 0 || [ship isEqualToString:@""]) {
+        [self showHint:@"图形文字不能为空" yOffset:-200];
+        return;
+    }
+    if (![ship isEqualToString:self.code_view.CodeStr]) {
+        [self showHint:@"图形文字不正确" yOffset:-200];
+        return;
+    }
     //获取验证码
+    [SVProgressHUD showWithStatus:@"获取验证"];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"phone"] = phone;
     [[NetWorkTool shareInstacne]postWithURLString:User_Get_Code parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
         NSLog(@"responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if ([res.code isEqualToString:@"1"]) {
-            [sender startWithTime:59 title:@"获取验证码" countDownTitle:@"S" mainColor:MainThemeColor countColor:[UIColor clearColor]];
+            [SVProgressHUD showSuccessWithStatus:@"获取成功"];
+            self.code_str = res.data[@"msg"];
+            [sender startWithTime:59 title:@"获取验证码" countDownTitle:@"秒" mainColor:MainThemeColor countColor:[UIColor clearColor]];
+        }else{
+            [ZFCustomView showWithSuccess:res.data[@"error"]];
+            return;
         }
     } failure:^(NSError * _Nonnull error) {
-        NSLog(@"error:%@",error);
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        return;
     }];
 }
-/**
- 获取验证码
- @param phone 获取验证码
- */
--(void)getCodeWithPhone:(NSString *)phone
-{
-   
-}
-/**
+/*
  眼睛的隐藏
  @param sender 眼睛的隐藏
  */

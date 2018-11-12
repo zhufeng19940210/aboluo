@@ -32,9 +32,11 @@
             rootController = nav;
         }
     }else{
-        LoginVC *loginvc = [[LoginVC alloc]init];
-        MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:loginvc];
-        rootController = nav;
+//        LoginVC *loginvc = [[LoginVC alloc]init];
+//        MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:loginvc];
+//        rootController = nav;
+        TabBarController *tabbarvc = [[TabBarController alloc]init];
+        rootController =  tabbarvc;
     }
     self.window.rootViewController = rootController;
     [self.window makeKeyAndVisible];

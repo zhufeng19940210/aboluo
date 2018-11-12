@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeMainCell">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="110"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_main_right" translatesAutoresizingMaskIntoConstraints="NO" id="S5S-tP-d2P">
+                        <rect key="frame" x="178.5" y="0.0" width="178.5" height="110"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_main_left" translatesAutoresizingMaskIntoConstraints="NO" id="8cl-Eb-jwj">
+                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="110"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="S5S-tP-d2P" firstAttribute="leading" secondItem="8cl-Eb-jwj" secondAttribute="trailing" id="4a9-C4-sBo"/>
+                <constraint firstItem="8cl-Eb-jwj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Cfz-kk-udC"/>
+                <constraint firstItem="S5S-tP-d2P" firstAttribute="height" secondItem="8cl-Eb-jwj" secondAttribute="height" id="KC2-XL-isH"/>
+                <constraint firstItem="S5S-tP-d2P" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Xbf-cQ-Kgq"/>
+                <constraint firstAttribute="bottom" secondItem="8cl-Eb-jwj" secondAttribute="bottom" id="idD-dc-s9G"/>
+                <constraint firstAttribute="bottom" secondItem="S5S-tP-d2P" secondAttribute="bottom" id="n0b-L4-4mm"/>
+                <constraint firstItem="S5S-tP-d2P" firstAttribute="width" secondItem="8cl-Eb-jwj" secondAttribute="width" id="o92-fo-omf"/>
+                <constraint firstItem="8cl-Eb-jwj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qiN-4J-dlg"/>
+                <constraint firstAttribute="trailing" secondItem="S5S-tP-d2P" secondAttribute="trailing" id="ygZ-av-c9m"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="357" height="85"/>
+            <point key="canvasLocation" x="-0.5" y="56"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_main_left" width="183" height="110"/>
+        <image name="home_main_right" width="183" height="110"/>
+    </resources>
+</document>

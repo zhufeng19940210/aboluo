@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeProjectCell">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon" translatesAutoresizingMaskIntoConstraints="NO" id="R1c-3G-mWq">
+                        <rect key="frame" x="18" y="5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="Lsl-iR-a9y"/>
+                            <constraint firstAttribute="height" constant="44" id="kkM-my-Xoa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="木工" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGg-5i-QVw">
+                        <rect key="frame" x="25" y="49" width="31" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="R1c-3G-mWq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="HGr-R8-c60"/>
+                <constraint firstItem="bGg-5i-QVw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="mdD-kl-Uhw"/>
+                <constraint firstItem="R1c-3G-mWq" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ruI-tC-U3B"/>
+                <constraint firstItem="bGg-5i-QVw" firstAttribute="top" secondItem="R1c-3G-mWq" secondAttribute="bottom" id="tY7-Ni-ZO0"/>
+                <constraint firstAttribute="bottom" secondItem="bGg-5i-QVw" secondAttribute="bottom" constant="3" id="xX7-7g-3Nl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_icon" width="44" height="44"/>
+    </resources>
+</document>
