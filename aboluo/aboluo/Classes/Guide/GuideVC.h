@@ -1,11 +1,7 @@
-//
 //  GuideVC.h
-//  aboluo
-//
-//  Created by zhufeng on 2018/11/5.
-//  Copyright © 2018 zhufeng. All rights reserved.
-//
-
+//  YDXZ
+//  Created by bailing on 2018/7/5.
+//  Copyright © 2018年 niecong. All rights reserved.
 #import "BaseVC.h"
 
 @interface GuideVC : BaseVC

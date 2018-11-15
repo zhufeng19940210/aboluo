@@ -32,11 +32,10 @@
             rootController = nav;
         }
     }else{
-//        LoginVC *loginvc = [[LoginVC alloc]init];
-//        MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:loginvc];
-//        rootController = nav;
-        TabBarController *tabbarvc = [[TabBarController alloc]init];
-        rootController =  tabbarvc;
+        //引导页
+        GuideVC *guidevc = [[GuideVC alloc]init];
+        MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:guidevc];
+        rootController = nav;
     }
     self.window.rootViewController = rootController;
     [self.window makeKeyAndVisible];
@@ -52,7 +51,6 @@
         [platformsRegister setupSinaWeiboWithAppkey:MOBSSDKSinaWeiBoAppKey appSecret:MOBSSDKWeChatAppSecret redirectUrl:MOBSSDKSinaWeiBoDirecUrl];
     }];
 }
-
 /**
  判断定位是否可用并且初始化定位信息
  */
