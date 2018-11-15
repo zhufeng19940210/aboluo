@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>method</key>
+	<string>app-store</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.caipu.deardoctor</key>
+		<string>deardoctor_dis2</string>
+	</dict>
+	<key>signingCertificate</key>
+	<string>6F3E8D58778A3338393E69CD40FBD23802E7F7CE</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>L859HGRAHJ</string>
+	<key>uploadSymbols</key>
+	<true/>
+</dict>
+</plist>

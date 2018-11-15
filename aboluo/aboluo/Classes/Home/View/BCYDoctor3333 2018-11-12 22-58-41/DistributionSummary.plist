@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BCYDoctor.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>6F3E8D58778A3338393E69CD40FBD23802E7F7CE</string>
+				<key>dateExpires</key>
+				<string>2019/9/28</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>L859HGRAHJ.com.caipu.deardoctor</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>L859HGRAHJ</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>L859HGRAHJ.com.caipu.deardoctor</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>BCYDoctor.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>87ca6b85-7e2b-4a5d-91fd-4f88db258bc8</string>
+				<key>name</key>
+				<string>deardoctor_dis2</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>L859HGRAHJ</string>
+				<key>name</key>
+				<string>Hunan Herui Technology Co., Ltd.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
