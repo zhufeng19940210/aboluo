@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon" translatesAutoresizingMaskIntoConstraints="NO" id="R1c-3G-mWq">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_shuidian" translatesAutoresizingMaskIntoConstraints="NO" id="R1c-3G-mWq">
                         <rect key="frame" x="18" y="5" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="Lsl-iR-a9y"/>
@@ -42,9 +42,13 @@
                 <constraint firstAttribute="bottom" secondItem="bGg-5i-QVw" secondAttribute="bottom" constant="3" id="xX7-7g-3Nl"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="icon_img" destination="R1c-3G-mWq" id="Zmi-LW-C0G"/>
+                <outlet property="title_lab" destination="bGg-5i-QVw" id="gFn-VE-f0b"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="home_icon" width="44" height="44"/>
+        <image name="home_shuidian" width="44" height="44"/>
     </resources>
 </document>

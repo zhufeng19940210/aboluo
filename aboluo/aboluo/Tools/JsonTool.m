@@ -2,9 +2,7 @@
 //  xiaochacha
 //  Created by apple on 2018/10/31.
 //  Copyright © 2018 HuiC. All rights reserved.
-
 #import "JsonTool.h"
-
 @implementation JsonTool
 #pragma mark - 字典转json
 + (NSString*)dictionaryToJson:(NSDictionary *)dic

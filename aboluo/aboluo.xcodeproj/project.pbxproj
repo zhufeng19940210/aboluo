@@ -117,7 +117,6 @@
 		F0F0E5DC218D77E200B4ABCE /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E588218D77E100B4ABCE /* TZImagePickerController.m */; };
 		F0F0E5DD218D77E200B4ABCE /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E589218D77E100B4ABCE /* TZLocationManager.m */; };
 		F0F0E5DE218D77E200B4ABCE /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E58A218D77E100B4ABCE /* TZGifPhotoPreviewController.m */; };
-		F0F0E5DF218D77E200B4ABCE /* libsms-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F0E590218D77E200B4ABCE /* libsms-lib.a */; };
 		F0F0E5E8218D77F800B4ABCE /* ZFCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E5E1218D77F700B4ABCE /* ZFCustomView.m */; };
 		F0F0E5E9218D77F800B4ABCE /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E5E3218D77F800B4ABCE /* UIViewController+HUD.m */; };
 		F0F0E5EA218D77F800B4ABCE /* JsonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E5E5218D77F800B4ABCE /* JsonTool.m */; };
@@ -127,6 +126,20 @@
 		F0F0E61B218D95C300B4ABCE /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E619218D95C300B4ABCE /* SettingVC.m */; };
 		F0F0E61C218D95C300B4ABCE /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F0E61A218D95C300B4ABCE /* SettingVC.xib */; };
 		F0F0E61F218D964800B4ABCE /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E61E218D964800B4ABCE /* MyNavigationController.m */; };
+		F0F6D4B3219E5E4D0004FCB3 /* HomeRecommendTtileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F6D4B1219E5E4D0004FCB3 /* HomeRecommendTtileCell.m */; };
+		F0F6D4B4219E5E4D0004FCB3 /* HomeRecommendTtileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F6D4B2219E5E4D0004FCB3 /* HomeRecommendTtileCell.xib */; };
+		F0F6D4BC219E99940004FCB3 /* ServerOrdehallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F6D4BA219E99940004FCB3 /* ServerOrdehallVC.m */; };
+		F0F6D4BD219E99940004FCB3 /* ServerOrdehallVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F6D4BB219E99940004FCB3 /* ServerOrdehallVC.xib */; };
+		F0F6D4C1219E99DB0004FCB3 /* ServerBillinghallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F6D4BF219E99DB0004FCB3 /* ServerBillinghallVC.m */; };
+		F0F6D4C2219E99DB0004FCB3 /* ServerBillinghallVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F6D4C0219E99DB0004FCB3 /* ServerBillinghallVC.xib */; };
+		F0F6D4D0219E9C5E0004FCB3 /* ServerBillingruleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F6D4CE219E9C5E0004FCB3 /* ServerBillingruleVC.m */; };
+		F0F6D4D1219E9C5E0004FCB3 /* ServerBillingruleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F6D4CF219E9C5E0004FCB3 /* ServerBillingruleVC.xib */; };
+		F0F6D4D5219E9C910004FCB3 /* ServerOrderruleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F6D4D3219E9C910004FCB3 /* ServerOrderruleVC.m */; };
+		F0F6D4D6219E9C910004FCB3 /* ServerOrderruleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F6D4D4219E9C910004FCB3 /* ServerOrderruleVC.xib */; };
+		F0F6D4DA219EACFA0004FCB3 /* StoreDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F6D4D8219EACFA0004FCB3 /* StoreDetailVC.m */; };
+		F0F6D4DB219EACFA0004FCB3 /* StoreDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F6D4D9219EACFA0004FCB3 /* StoreDetailVC.xib */; };
+		F0F6D4DF219EADD00004FCB3 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F6D4DD219EADD00004FCB3 /* StoreCell.m */; };
+		F0F6D4E0219EADD00004FCB3 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F6D4DE219EADD00004FCB3 /* StoreCell.xib */; };
 		F0FA0B43219D4FA80022B567 /* HomeScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0B41219D4FA80022B567 /* HomeScanVC.m */; };
 		F0FA0B44219D4FA80022B567 /* HomeScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FA0B42219D4FA80022B567 /* HomeScanVC.xib */; };
 		F0FA0B48219D4FD30022B567 /* HomeSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0B46219D4FD30022B567 /* HomeSearchVC.m */; };
@@ -159,8 +172,6 @@
 		F0FA0BD1219D94460022B567 /* HomeSGAdvertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0BCF219D94460022B567 /* HomeSGAdvertCell.m */; };
 		F0FA0BD2219D94460022B567 /* HomeSGAdvertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FA0BD0219D94460022B567 /* HomeSGAdvertCell.xib */; };
 		F0FA0BD6219D97640022B567 /* SGAdvertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0BD4219D97640022B567 /* SGAdvertScrollView.m */; };
-		F0FCB66C219D1B7C0073F062 /* UpdatePwdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCB66A219D1B7C0073F062 /* UpdatePwdVC.m */; };
-		F0FCB66D219D1B7C0073F062 /* UpdatePwdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FCB66B219D1B7C0073F062 /* UpdatePwdVC.xib */; };
 		F0FD361C2196B8B000F6C93B /* RoleSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD361A2196B8B000F6C93B /* RoleSelectVC.m */; };
 		F0FD361D2196B8B000F6C93B /* RoleSelectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FD361B2196B8B000F6C93B /* RoleSelectVC.xib */; };
 		F0FD36212196BF5800F6C93B /* AgreeProtolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD361F2196BF5800F6C93B /* AgreeProtolVC.m */; };
@@ -169,7 +180,6 @@
 		F0FD363D2196D49700F6C93B /* ServerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD363B2196D49700F6C93B /* ServerVC.m */; };
 		F0FD363E2196D49700F6C93B /* ServerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FD363C2196D49700F6C93B /* ServerVC.xib */; };
 		F0FD36422196D4B700F6C93B /* StoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD36402196D4B700F6C93B /* StoreVC.m */; };
-		F0FD36432196D4B700F6C93B /* StoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FD36412196D4B700F6C93B /* StoreVC.xib */; };
 		F0FD36452196DBA400F6C93B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FD36442196DBA400F6C93B /* CoreLocation.framework */; };
 		F0FD36482196DF5B00F6C93B /* ImageCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD36472196DF5B00F6C93B /* ImageCodeView.m */; };
 /* End PBXBuildFile section */
@@ -367,9 +377,6 @@
 		F0F0E589218D77E100B4ABCE /* TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZLocationManager.m; sourceTree = "<group>"; };
 		F0F0E58A218D77E100B4ABCE /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
 		F0F0E58B218D77E100B4ABCE /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
-		F0F0E58E218D77E200B4ABCE /* JSMSSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMSSDK.h; sourceTree = "<group>"; };
-		F0F0E58F218D77E200B4ABCE /* JSMSConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMSConstant.h; sourceTree = "<group>"; };
-		F0F0E590218D77E200B4ABCE /* libsms-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libsms-lib.a"; sourceTree = "<group>"; };
 		F0F0E5E0218D77F700B4ABCE /* JsonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTool.h; sourceTree = "<group>"; };
 		F0F0E5E1218D77F700B4ABCE /* ZFCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCustomView.m; sourceTree = "<group>"; };
 		F0F0E5E2218D77F700B4ABCE /* NetWorkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTool.h; sourceTree = "<group>"; };
@@ -386,6 +393,27 @@
 		F0F0E61A218D95C300B4ABCE /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		F0F0E61D218D964800B4ABCE /* MyNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
 		F0F0E61E218D964800B4ABCE /* MyNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
+		F0F6D4B0219E5E4D0004FCB3 /* HomeRecommendTtileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeRecommendTtileCell.h; sourceTree = "<group>"; };
+		F0F6D4B1219E5E4D0004FCB3 /* HomeRecommendTtileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeRecommendTtileCell.m; sourceTree = "<group>"; };
+		F0F6D4B2219E5E4D0004FCB3 /* HomeRecommendTtileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommendTtileCell.xib; sourceTree = "<group>"; };
+		F0F6D4B9219E99940004FCB3 /* ServerOrdehallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerOrdehallVC.h; sourceTree = "<group>"; };
+		F0F6D4BA219E99940004FCB3 /* ServerOrdehallVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerOrdehallVC.m; sourceTree = "<group>"; };
+		F0F6D4BB219E99940004FCB3 /* ServerOrdehallVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerOrdehallVC.xib; sourceTree = "<group>"; };
+		F0F6D4BE219E99DB0004FCB3 /* ServerBillinghallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerBillinghallVC.h; sourceTree = "<group>"; };
+		F0F6D4BF219E99DB0004FCB3 /* ServerBillinghallVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerBillinghallVC.m; sourceTree = "<group>"; };
+		F0F6D4C0219E99DB0004FCB3 /* ServerBillinghallVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerBillinghallVC.xib; sourceTree = "<group>"; };
+		F0F6D4CD219E9C5E0004FCB3 /* ServerBillingruleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerBillingruleVC.h; sourceTree = "<group>"; };
+		F0F6D4CE219E9C5E0004FCB3 /* ServerBillingruleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerBillingruleVC.m; sourceTree = "<group>"; };
+		F0F6D4CF219E9C5E0004FCB3 /* ServerBillingruleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerBillingruleVC.xib; sourceTree = "<group>"; };
+		F0F6D4D2219E9C910004FCB3 /* ServerOrderruleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerOrderruleVC.h; sourceTree = "<group>"; };
+		F0F6D4D3219E9C910004FCB3 /* ServerOrderruleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerOrderruleVC.m; sourceTree = "<group>"; };
+		F0F6D4D4219E9C910004FCB3 /* ServerOrderruleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerOrderruleVC.xib; sourceTree = "<group>"; };
+		F0F6D4D7219EACFA0004FCB3 /* StoreDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreDetailVC.h; sourceTree = "<group>"; };
+		F0F6D4D8219EACFA0004FCB3 /* StoreDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreDetailVC.m; sourceTree = "<group>"; };
+		F0F6D4D9219EACFA0004FCB3 /* StoreDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreDetailVC.xib; sourceTree = "<group>"; };
+		F0F6D4DC219EADD00004FCB3 /* StoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreCell.h; sourceTree = "<group>"; };
+		F0F6D4DD219EADD00004FCB3 /* StoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
+		F0F6D4DE219EADD00004FCB3 /* StoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
 		F0FA0B40219D4FA80022B567 /* HomeScanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScanVC.h; sourceTree = "<group>"; };
 		F0FA0B41219D4FA80022B567 /* HomeScanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScanVC.m; sourceTree = "<group>"; };
 		F0FA0B42219D4FA80022B567 /* HomeScanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScanVC.xib; sourceTree = "<group>"; };
@@ -437,9 +465,6 @@
 		F0FA0BD0219D94460022B567 /* HomeSGAdvertCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSGAdvertCell.xib; sourceTree = "<group>"; };
 		F0FA0BD4219D97640022B567 /* SGAdvertScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAdvertScrollView.m; sourceTree = "<group>"; };
 		F0FA0BD5219D97640022B567 /* SGAdvertScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAdvertScrollView.h; sourceTree = "<group>"; };
-		F0FCB669219D1B7C0073F062 /* UpdatePwdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdatePwdVC.h; sourceTree = "<group>"; };
-		F0FCB66A219D1B7C0073F062 /* UpdatePwdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdatePwdVC.m; sourceTree = "<group>"; };
-		F0FCB66B219D1B7C0073F062 /* UpdatePwdVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatePwdVC.xib; sourceTree = "<group>"; };
 		F0FD36192196B8B000F6C93B /* RoleSelectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleSelectVC.h; sourceTree = "<group>"; };
 		F0FD361A2196B8B000F6C93B /* RoleSelectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoleSelectVC.m; sourceTree = "<group>"; };
 		F0FD361B2196B8B000F6C93B /* RoleSelectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoleSelectVC.xib; sourceTree = "<group>"; };
@@ -452,7 +477,6 @@
 		F0FD363C2196D49700F6C93B /* ServerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerVC.xib; sourceTree = "<group>"; };
 		F0FD363F2196D4B700F6C93B /* StoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreVC.h; sourceTree = "<group>"; };
 		F0FD36402196D4B700F6C93B /* StoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreVC.m; sourceTree = "<group>"; };
-		F0FD36412196D4B700F6C93B /* StoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreVC.xib; sourceTree = "<group>"; };
 		F0FD36442196DBA400F6C93B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F0FD36462196DF5B00F6C93B /* ImageCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCodeView.h; sourceTree = "<group>"; };
 		F0FD36472196DF5B00F6C93B /* ImageCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCodeView.m; sourceTree = "<group>"; };
@@ -480,7 +504,6 @@
 				F0B50AA6218FF0F70027BB61 /* ShareSDKConfigFile.framework in Frameworks */,
 				F0B50A9F218FF0F70027BB61 /* libWeiboSDK.a in Frameworks */,
 				F0B50AAF218FF0F80027BB61 /* MOBFoundation.framework in Frameworks */,
-				F0F0E5DF218D77E200B4ABCE /* libsms-lib.a in Frameworks */,
 				F0B50AAD218FF0F80027BB61 /* SinaWeiboConnector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +690,8 @@
 		F0F0E453218D51F300B4ABCE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F0F6D4C4219E99EE0004FCB3 /* 发单 */,
+				F0F6D4C3219E99E40004FCB3 /* 接单 */,
 				F0FD36262196D46800F6C93B /* Server */,
 				F0FD362E2196D46800F6C93B /* Store */,
 				F0F0E485218D557900B4ABCE /* Guide */,
@@ -743,6 +768,9 @@
 				F0FA0BCE219D94460022B567 /* HomeSGAdvertCell.h */,
 				F0FA0BCF219D94460022B567 /* HomeSGAdvertCell.m */,
 				F0FA0BD0219D94460022B567 /* HomeSGAdvertCell.xib */,
+				F0F6D4B0219E5E4D0004FCB3 /* HomeRecommendTtileCell.h */,
+				F0F6D4B1219E5E4D0004FCB3 /* HomeRecommendTtileCell.m */,
+				F0F6D4B2219E5E4D0004FCB3 /* HomeRecommendTtileCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -843,7 +871,6 @@
 				F0F0E51F218D77DA00B4ABCE /* Common */,
 				F0F0E52B218D77DB00B4ABCE /* DZNEmptyDataSet */,
 				F0F0E4E8218D77DA00B4ABCE /* IQKeyboardManager */,
-				F0F0E58C218D77E200B4ABCE /* JsmsSDK */,
 				F0F0E528218D77DB00B4ABCE /* PlaceHolderTextView */,
 				F0F0E56E218D77E100B4ABCE /* TZImagePickerController */,
 				F0F0E550218D77E000B4ABCE /* YTKNetwork */,
@@ -903,9 +930,6 @@
 				F0FD361E2196BF5800F6C93B /* AgreeProtolVC.h */,
 				F0FD361F2196BF5800F6C93B /* AgreeProtolVC.m */,
 				F0FD36202196BF5800F6C93B /* AgreeProtolVC.xib */,
-				F0FCB669219D1B7C0073F062 /* UpdatePwdVC.h */,
-				F0FCB66A219D1B7C0073F062 /* UpdatePwdVC.m */,
-				F0FCB66B219D1B7C0073F062 /* UpdatePwdVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1164,22 +1188,94 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
-		F0F0E58C218D77E200B4ABCE /* JsmsSDK */ = {
+		F0F6D4C3219E99E40004FCB3 /* 接单 */ = {
 			isa = PBXGroup;
 			children = (
-				F0F0E58D218D77E200B4ABCE /* include */,
-				F0F0E590218D77E200B4ABCE /* libsms-lib.a */,
+				F0F6D4CC219E9A3C0004FCB3 /* Other */,
+				F0F6D4CB219E9A380004FCB3 /* Model */,
+				F0F6D4CA219E9A330004FCB3 /* View */,
+				F0F6D4C9219E9A2C0004FCB3 /* Controller */,
 			);
-			path = JsmsSDK;
+			path = "接单";
 			sourceTree = "<group>";
 		};
-		F0F0E58D218D77E200B4ABCE /* include */ = {
+		F0F6D4C4219E99EE0004FCB3 /* 发单 */ = {
 			isa = PBXGroup;
 			children = (
-				F0F0E58E218D77E200B4ABCE /* JSMSSDK.h */,
-				F0F0E58F218D77E200B4ABCE /* JSMSConstant.h */,
+				F0F6D4C8219E9A200004FCB3 /* Other */,
+				F0F6D4C7219E9A160004FCB3 /* View */,
+				F0F6D4C6219E9A0E0004FCB3 /* Model */,
+				F0F6D4C5219E9A060004FCB3 /* Controller */,
 			);
-			path = include;
+			path = "发单";
+			sourceTree = "<group>";
+		};
+		F0F6D4C5219E9A060004FCB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0F6D4BE219E99DB0004FCB3 /* ServerBillinghallVC.h */,
+				F0F6D4BF219E99DB0004FCB3 /* ServerBillinghallVC.m */,
+				F0F6D4C0219E99DB0004FCB3 /* ServerBillinghallVC.xib */,
+				F0F6D4CD219E9C5E0004FCB3 /* ServerBillingruleVC.h */,
+				F0F6D4CE219E9C5E0004FCB3 /* ServerBillingruleVC.m */,
+				F0F6D4CF219E9C5E0004FCB3 /* ServerBillingruleVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0F6D4C6219E9A0E0004FCB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0F6D4C7219E9A160004FCB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0F6D4C8219E9A200004FCB3 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F0F6D4C9219E9A2C0004FCB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0F6D4B9219E99940004FCB3 /* ServerOrdehallVC.h */,
+				F0F6D4BA219E99940004FCB3 /* ServerOrdehallVC.m */,
+				F0F6D4BB219E99940004FCB3 /* ServerOrdehallVC.xib */,
+				F0F6D4D2219E9C910004FCB3 /* ServerOrderruleVC.h */,
+				F0F6D4D3219E9C910004FCB3 /* ServerOrderruleVC.m */,
+				F0F6D4D4219E9C910004FCB3 /* ServerOrderruleVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0F6D4CA219E9A330004FCB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0F6D4CB219E9A380004FCB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0F6D4CC219E9A3C0004FCB3 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		F0FA0B24219D4D6F0022B567 /* Main */ = {
@@ -1668,7 +1764,9 @@
 			children = (
 				F0FD363F2196D4B700F6C93B /* StoreVC.h */,
 				F0FD36402196D4B700F6C93B /* StoreVC.m */,
-				F0FD36412196D4B700F6C93B /* StoreVC.xib */,
+				F0F6D4D7219EACFA0004FCB3 /* StoreDetailVC.h */,
+				F0F6D4D8219EACFA0004FCB3 /* StoreDetailVC.m */,
+				F0F6D4D9219EACFA0004FCB3 /* StoreDetailVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1683,6 +1781,9 @@
 		F0FD36352196D46800F6C93B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0F6D4DC219EADD00004FCB3 /* StoreCell.h */,
+				F0F6D4DD219EADD00004FCB3 /* StoreCell.m */,
+				F0F6D4DE219EADD00004FCB3 /* StoreCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1755,12 +1856,17 @@
 				F0B50AA5218FF0F70027BB61 /* ShareSDKUI.bundle in Resources */,
 				F0F0E5C8218D77E200B4ABCE /* car4@2x.png in Resources */,
 				F0007EB521995E6100854DA3 /* HomeRecommandCell.xib in Resources */,
+				F0F6D4DB219EACFA0004FCB3 /* StoreDetailVC.xib in Resources */,
 				F0FA0B7F219D51F10022B567 /* HomeReceiptVC.xib in Resources */,
+				F0F6D4D6219E9C910004FCB3 /* ServerOrderruleVC.xib in Resources */,
+				F0F6D4BD219E99940004FCB3 /* ServerOrdehallVC.xib in Resources */,
 				F0B50AA4218FF0F70027BB61 /* ShareSDK.bundle in Resources */,
+				F0F6D4C2219E99DB0004FCB3 /* ServerBillinghallVC.xib in Resources */,
 				F0FD361D2196B8B000F6C93B /* RoleSelectVC.xib in Resources */,
 				F0F0E494218D55B000B4ABCE /* ForgetPwdVC.xib in Resources */,
 				F00E07C9218D2A930079D952 /* LaunchScreen.storyboard in Resources */,
 				F0FA0B7A219D51C70022B567 /* HomeExchangeVC.xib in Resources */,
+				F0F6D4E0219EADD00004FCB3 /* StoreCell.xib in Resources */,
 				F0FA0B6B219D51130022B567 /* HomeMasterVC.xib in Resources */,
 				F0FD363E2196D49700F6C93B /* ServerVC.xib in Resources */,
 				F0007EBA21995F5700854DA3 /* HomeProjectCell.xib in Resources */,
@@ -1771,8 +1877,8 @@
 				F0B50A9E218FF0F70027BB61 /* WeiboSDK.bundle in Resources */,
 				F0007EAB21995E0700854DA3 /* HomeAdCell.xib in Resources */,
 				F0F0E597218D77E200B4ABCE /* IQKeyboardManager.bundle in Resources */,
+				F0F6D4B4219E5E4D0004FCB3 /* HomeRecommendTtileCell.xib in Resources */,
 				F0F0E48A218D558D00B4ABCE /* LoginVC.xib in Resources */,
-				F0FCB66D219D1B7C0073F062 /* UpdatePwdVC.xib in Resources */,
 				F0007EC921995FF600854DA3 /* HomeMainCell.xib in Resources */,
 				F0F0E5C9218D77E200B4ABCE /* car2@2x.png in Resources */,
 				F0F0E5CE218D77E200B4ABCE /* 失败图片@2x.png in Resources */,
@@ -1785,10 +1891,10 @@
 				F0FA0B49219D4FD30022B567 /* HomeSearchVC.xib in Resources */,
 				F0007EB021995E3200854DA3 /* HomeTitleCell.xib in Resources */,
 				F0F0E612218D959600B4ABCE /* HomeVC.xib in Resources */,
+				F0F6D4D1219E9C5E0004FCB3 /* ServerBillingruleVC.xib in Resources */,
 				F0B50AA9218FF0F80027BB61 /* ShareSDKConfigFile.bundle in Resources */,
 				F0FD36242196C0B600F6C93B /* 协议.html in Resources */,
 				F0FA0B75219D51910022B567 /* HomeProjectVC.xib in Resources */,
-				F0FD36432196D4B700F6C93B /* StoreVC.xib in Resources */,
 				F0F0E5D7218D77E200B4ABCE /* TZImagePickerController.bundle in Resources */,
 				F0FA0B8E219D590A0022B567 /* RecommadnCell.xib in Resources */,
 				F0B50AA1218FF0F70027BB61 /* README.txt in Resources */,
@@ -1857,16 +1963,19 @@
 				F0F0E59C218D77E200B4ABCE /* IQUIScrollView+Additions.m in Sources */,
 				F0FA0B79219D51C70022B567 /* HomeExchangeVC.m in Sources */,
 				F0FA0B6F219D51450022B567 /* HomeRecommendVC.m in Sources */,
+				F0F6D4C1219E99DB0004FCB3 /* ServerBillinghallVC.m in Sources */,
+				F0F6D4DF219EADD00004FCB3 /* StoreCell.m in Sources */,
 				F0F0E59E218D77E200B4ABCE /* IQUIViewController+Additions.m in Sources */,
 				F0F0E4B9218D661800B4ABCE /* TabBarController.m in Sources */,
 				F0F0E5A2218D77E200B4ABCE /* UIViewController+ZJScrollPageController.m in Sources */,
 				F0F0E5CC218D77E200B4ABCE /* ZJCustomHud.m in Sources */,
 				F0FA0BC6219D834D0022B567 /* MLMenuView.m in Sources */,
+				F0F6D4B3219E5E4D0004FCB3 /* HomeRecommendTtileCell.m in Sources */,
+				F0F6D4D0219E9C5E0004FCB3 /* ServerBillingruleVC.m in Sources */,
 				F0FA0B97219D5AE40022B567 /* ProjectCell.m in Sources */,
 				F0F0E5C0218D77E200B4ABCE /* YTKChainRequest.m in Sources */,
 				F0F0E5C4218D77E200B4ABCE /* YTKNetworkAgent.m in Sources */,
 				F0F0E593218D77E200B4ABCE /* IQTitleBarButtonItem.m in Sources */,
-				F0FCB66C219D1B7C0073F062 /* UpdatePwdVC.m in Sources */,
 				F0F0E59F218D77E200B4ABCE /* IQKeyboardReturnKeyHandler.m in Sources */,
 				F0F0E5D8218D77E200B4ABCE /* TZProgressView.m in Sources */,
 				F0FD36212196BF5800F6C93B /* AgreeProtolVC.m in Sources */,
@@ -1879,9 +1988,12 @@
 				F0FA0B48219D4FD30022B567 /* HomeSearchVC.m in Sources */,
 				F0F0E5E8218D77F800B4ABCE /* ZFCustomView.m in Sources */,
 				F0007ECC2199799600854DA3 /* HomeTopView.m in Sources */,
+				F0F6D4DA219EACFA0004FCB3 /* StoreDetailVC.m in Sources */,
 				F0FD36422196D4B700F6C93B /* StoreVC.m in Sources */,
 				F0F0E5BF218D77E200B4ABCE /* YTKNetworkConfig.m in Sources */,
+				F0F6D4BC219E99940004FCB3 /* ServerOrdehallVC.m in Sources */,
 				F0F0E5AB218D77E200B4ABCE /* SYPlaceHolderTextView.m in Sources */,
+				F0F6D4D5219E9C910004FCB3 /* ServerOrderruleVC.m in Sources */,
 				F0F0E5C3218D77E200B4ABCE /* YTKBatchRequest.m in Sources */,
 				F0F0E5A4218D77E200B4ABCE /* ZJCollectionView.m in Sources */,
 				F0F0E5A6218D77E200B4ABCE /* ZJScrollSegmentView.m in Sources */,

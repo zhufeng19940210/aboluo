@@ -23,7 +23,7 @@ CGFloat const DCMargin = 10;
 -(NSMutableArray *)titleArray
 {
     if (!_titleArray) {
-        _titleArray = [NSMutableArray arrayWithObjects:@"hom_sao",@"home_fu",@"home_shou",@"home_dui", nil];
+        _titleArray = [NSMutableArray arrayWithObjects:@"home_scan",@"home_pay",@"home_reexceipt",@"home_exchange", nil];
     }
     return _titleArray;
 }
@@ -86,7 +86,7 @@ CGFloat const DCMargin = 10;
     CGFloat btnW = btnH;
     CGFloat marign = 10;
     for(int i = 0 ; i<4; i++){
-        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(10+(marign*i)+btnW*i, Height_NavBar+10,btnW , btnH)];
+        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(10+(marign*i)+btnW*i, Height_NavBar,btnW , btnH)];
         [button setImage:[UIImage imageNamed:self.titleArray[i]] forState:UIControlStateNormal];
         [button setTitle:self.imageArray[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

@@ -1,11 +1,7 @@
-//
 //  SGAdvertScrollView.m
 //  SGAdvertScrollViewExample
-//
 //  Created by kingsic on 17/3/8.
 //  Copyright © 2017年 kingsic. All rights reserved.
-//
-
 #import "SGAdvertScrollView.h"
 #import "UIImageView+WebCache.h"
 
@@ -29,9 +25,7 @@ static NSInteger const advertScrollViewTitleFont = 13;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
     CGFloat spacing = 5;
-    
     CGFloat signImageViewW = self.signImageView.image.size.width;
     CGFloat signImageViewH = self.signImageView.image.size.height;
     CGFloat signImageViewX = 0;

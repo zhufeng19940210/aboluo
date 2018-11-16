@@ -38,9 +38,9 @@
     UIImageView *imageView2 = [[UIImageView alloc] init];
     UIImageView *imageView3 = [[UIImageView alloc]init];
     if (IS_IPHONE_X || IS_IPHONE_Xs) {
-        imageView1.image = [UIImage imageNamed:@"Guide1_x"];
-        imageView2.image = [UIImage imageNamed:@"Guide2_x"];
-        imageView3.image = [UIImage imageNamed:@"Guide3_x"];
+        imageView1.image = [UIImage imageNamed:@"Guide1"];
+        imageView2.image = [UIImage imageNamed:@"Guide2"];
+        imageView3.image = [UIImage imageNamed:@"Guide3"];
     }else if(IS_IPHONE_Xs_Max){
         imageView1.image = [UIImage imageNamed:@"Guide1_xr"];
         imageView2.image = [UIImage imageNamed:@"Guide2_xr"];
@@ -76,7 +76,7 @@
     button.layer.borderWidth = 1.0f;
     button.center = CGPointMake(imageView2.frame.size.width * 0.5, imageView2.frame.size.height * 0.8);
     [button addTarget:self action:@selector(enterBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [imageView2 addSubview:button];
+    [imageView3 addSubview:button];
 }
 - (void)setupWelceomPageView {
     self.pagecontrol.numberOfPages = 3;

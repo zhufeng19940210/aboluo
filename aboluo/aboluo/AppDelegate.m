@@ -19,7 +19,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor  = [UIColor whiteColor];
     UIViewController *rootController = nil;
-    BOOL isFirst = [[NSUserDefaults standardUserDefaults]boolForKey:@"isFirst"];
+    BOOL isFirst = [[NSUserDefaults standardUserDefaults]boolForKey:ISFirst];
     if (isFirst) {
         if ([UserModel isOnline]) {
             //登录成功
@@ -44,6 +44,19 @@
 -(void)seutpThirdInitlation
 {
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    //这里设置下样式
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
+    //设置背景颜色
+    [SVProgressHUD setBackgroundColor:[UIColor blackColor]];
+    //设置前景色
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    //遮罩的颜色
+    //[SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeCustom];
+    //设置遮罩的颜色
+    //[SVProgressHUD setBackgroundLayerColor:[UIColor yellowColor]];
+    //动画的样式(菊花)|默认是圆圈
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+    [SVProgressHUD setMinimumDismissTimeInterval:1.0];//显示的时间
     ///三方登录的东西
     [ShareSDK registPlatforms:^(SSDKRegister *platformsRegister) {
         [platformsRegister setupQQWithAppId:MOBSSDKQQAppID appkey:MOBSSDKQQAppKey];

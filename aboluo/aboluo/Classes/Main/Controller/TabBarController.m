@@ -29,6 +29,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//去掉tabBar顶部黑色线条
+//    CGRect rect = CGRectMake(0, 0, IPHONE_WIDTH, IPHONE_HEIGHT);
+//
+//    UIGraphicsBeginImageContext(rect.size);
+//
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//
+//    CGContextSetFillColorWithColor(context, [[UIColor clearColor] CGColor]);
+//
+//    CGContextFillRect(context, rect);
+//
+//    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+//
+//    UIGraphicsEndImageContext();
+//
+//    [self.tabBar setBackgroundImage:img];
+//
+//    [self.tabBar setShadowImage:img];
     // 初始化子控制器
     [self setupAllControllers];
 }

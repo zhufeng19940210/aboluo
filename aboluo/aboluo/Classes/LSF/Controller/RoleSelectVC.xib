@@ -84,12 +84,20 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp4-fQ-ADF">
                     <rect key="frame" x="16" y="397" width="343" height="50"/>
+                    <color key="backgroundColor" red="0.87058823529999996" green="0.70980392160000005" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Yz8-ar-AJ4"/>
                     </constraints>
-                    <state key="normal" title="下一步" backgroundImage="bg">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="下一步">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="actionNextBtn:" destination="-1" eventType="touchUpInside" id="scZ-Ga-gD7"/>
                     </connections>
@@ -146,7 +154,6 @@
     </objects>
     <resources>
         <image name="agree_sel" width="25" height="25"/>
-        <image name="bg" width="343" height="63"/>
         <image name="geren_nor" width="88" height="88"/>
         <image name="qiye_nor" width="88" height="88"/>
     </resources>

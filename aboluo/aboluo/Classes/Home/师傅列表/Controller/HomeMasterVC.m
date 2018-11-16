@@ -19,7 +19,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"师傅列表";
+    self.navigationItem.title = @"找师傅";
 }
 /**
  请求数据

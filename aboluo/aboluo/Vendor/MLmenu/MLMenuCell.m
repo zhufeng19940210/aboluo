@@ -32,7 +32,7 @@
     [super layoutSubviews];
   
     
-    CGSize imageSize = self.imageViewAccessory.hidden ? CGSizeZero:CGSizeMake(20, 20);
+    CGSize imageSize = self.imageViewAccessory.hidden ? CGSizeZero:CGSizeMake(30, 30);
      self.imageViewAccessory.center = CGPointMake(10 + imageSize.width * 0.5, self.frame.size.height * 0.5);
      self.imageViewAccessory.bounds = CGRectMake(0, 0, imageSize.width, imageSize.height);
     

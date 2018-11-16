@@ -58,4 +58,6 @@
 +(NSString *)getTimeStr;
 //判断网络请求
 +(BOOL)isVaildNetWorkStatus;
+
++(NSString *)convertHexStrToString:(NSString *)str;
 @end

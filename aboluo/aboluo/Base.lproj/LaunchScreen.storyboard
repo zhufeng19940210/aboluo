@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="TRa-nn-3fq">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TRa-nn-3fq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HEJ-NC-JUR"/>
-                            <constraint firstItem="TRa-nn-3fq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KS8-k5-5ws"/>
-                            <constraint firstItem="TRa-nn-3fq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pZk-hs-k6o"/>
-                            <constraint firstItem="TRa-nn-3fq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w8T-rN-Tiz"/>
+                            <constraint firstItem="TRa-nn-3fq" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Blz-cK-fUP"/>
+                            <constraint firstItem="TRa-nn-3fq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D5X-Wh-FM1"/>
+                            <constraint firstItem="TRa-nn-3fq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HN9-uI-qNz"/>
+                            <constraint firstItem="TRa-nn-3fq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YEp-Vh-yaB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

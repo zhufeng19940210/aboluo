@@ -185,8 +185,10 @@
     sender.selected = !sender.selected;
     if (sender.selected) {
         [self.agree_btn setImage:[UIImage imageNamed:@"agree_sel"] forState:UIControlStateNormal];
+        self.isAgree = YES;
     }else{
         [self.agree_btn setImage:[UIImage imageNamed:@"agree_nor"] forState:UIControlStateNormal];
+        self.isAgree = NO;
     }
 }
 /**
