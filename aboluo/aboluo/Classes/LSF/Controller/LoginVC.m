@@ -73,7 +73,7 @@
         NSLog(@"resoponseObject:%@",responseObject);
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
-        if ([res.code isEqualToString:@"1"]) {
+        if (res.code ==1) {
             [ZFCustomView showWithSuccess:@"登录成功"];
             //请求成功
             [[NSUserDefaults standardUserDefaults]setValue:res.data[@"token"] forKey:Token];

@@ -44,7 +44,7 @@
         [SVProgressHUD dismiss];
         NSLog(@"responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
-        if ([res.code isEqualToString:@"1"]) {
+        if (res.code == 1) {
             [SVProgressHUD showSuccessWithStatus:@"获取成功"];
             self.code_str = res.data[@"msg"];
             [sender startWithTime:59 title:@"获取验证码" countDownTitle:@"秒" mainColor:MainThemeColor countColor:[UIColor clearColor]];
@@ -108,7 +108,7 @@
     [[NetWorkTool shareInstacne]postWithURLString:User_Pwd_Forget parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
-        if ([res.code isEqualToString:@"1"]) {
+        if (res.code == 1) {
             [ZFCustomView showWithText:@"修改成功" WithDurations:0.5];
             [self.navigationController popViewControllerAnimated:YES];
         }else{

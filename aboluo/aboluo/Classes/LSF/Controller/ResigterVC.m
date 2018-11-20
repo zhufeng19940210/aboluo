@@ -85,8 +85,7 @@
     NSString *latitude = [[NSUserDefaults standardUserDefaults]valueForKey:ZF_Latitude];
     param[@"phone"]    = phone;
     param[@"password"] = pwd;
-    param[@"role"]     = self.selectRoleType;
-    param[@"recommendId"] = @1;
+    param[@"roleId"]     = self.selectRoleType;
     param[@"longitude"]   = longitude;
     param[@"latitude"]   = latitude;
     [SVProgressHUD showWithStatus:@"正在注册"];
@@ -94,7 +93,7 @@
         [SVProgressHUD dismiss];
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
-        if ([res.code isEqualToString:@"1"]) {
+        if (res.code == 1) {
             [ZFCustomView showWithSuccess:@"注册成功"];
             [self pushLoginMethod];
         }else{
@@ -148,7 +147,7 @@
         [SVProgressHUD dismiss];
         NSLog(@"responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
-        if ([res.code isEqualToString:@"1"]) {
+        if (res.code == 1) {
             [SVProgressHUD showSuccessWithStatus:@"获取成功"];
             self.code_str = res.data[@"msg"];
             [sender startWithTime:59 title:@"获取验证码" countDownTitle:@"秒" mainColor:MainThemeColor countColor:[UIColor clearColor]];

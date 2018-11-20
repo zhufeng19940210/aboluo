@@ -17,5 +17,5 @@
 #define User_Pwd_Forget [BaseUrl stringByAppendingString:@"/updatePwd"]
 ///首页接口
 #define Home_Index [BaseUrl stringByAppendingString:@"/index"]
-
+///考试
 #endif /* URLStr_h */
