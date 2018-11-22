@@ -4,11 +4,12 @@
 //  Copyright © 2018 zhufeng. All rights reserved.
 #import "HomeMasterVC.h"
 #import "MasterCell.h"
+#import "HomeMasterModel.h"
 @interface HomeMasterVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *masterArray;
+@property (nonatomic,assign)int page;
 @end
-
 @implementation HomeMasterVC
 -(NSMutableArray *)masterArray
 {
@@ -20,14 +21,81 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"找师傅";
+    self.page = 1;
+    [self setupTableView];
+    [self setupRefresh];
+}
+-(void)setupRefresh
+{
+    [self setViewRefreshTableView:self.tableview
+                 withHeaderAction:@selector(acitonMasterNewData) andFooterAction:@selector(acitonMaterMoreData)
+                           target:self];
 }
 /**
- 请求数据
+ 请求最新数据
  */
--(void)setupData
+-(void)acitonMasterNewData
 {
-    
+    [SVProgressHUD showWithStatus:ShowTitleTip];
+    self.page = 1;
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"page"] = [NSString stringWithFormat:@"%d",self.page];
+    param[@"cid"]  = self.typemodel.wid;
+    WEAKSELF
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Project_List parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
+        NSLog(@"responseObject:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code == 1) {
+            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
+            [weakSelf.masterArray removeAllObjects];
+            weakSelf.masterArray = [HomeMasterModel mj_objectArrayWithKeyValuesArray:res.data[@""]];
+            [weakSelf.tableview reloadData];
+            [weakSelf.tableview.mj_header endRefreshing];
+        }else{
+            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
+            return ;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        [weakSelf.tableview.mj_header endRefreshing];
+        return;
+    }];
 }
+/**
+ 请求更多数据
+ */
+-(void)acitonMaterMoreData
+{
+    self.page++;
+    [SVProgressHUD showWithStatus:ShowTitleTip];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"page"] =[NSString stringWithFormat:@"%d",self.page];
+    WEAKSELF
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Project_List parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
+        NSLog(@"responseObject:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code == 1) {
+            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
+            NSMutableArray *array = [NSMutableArray array];
+            array = [HomeMasterModel mj_objectArrayWithKeyValuesArray:res.data[@""]];
+            [weakSelf.masterArray addObjectsFromArray:array];
+            [weakSelf.tableview reloadData];
+            [weakSelf.tableview.mj_header endRefreshing];
+        }else{
+            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
+            return ;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        [weakSelf.tableview.mj_header endRefreshing];
+        return;
+    }];
+}
+
 -(void)setupTableView
 {
     self.tableview.delegate = self;
@@ -41,7 +109,8 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.masterArray.count;
+    return 10;
+    //return self.masterArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -51,6 +120,8 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MasterCell *cell  = [MasterCell masterCellWithTableView:tableView];
+    //HomeMasterModel *mastermodel = self.masterArray[indexPath.row];
+    //cell.mastermodel = mastermodel;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

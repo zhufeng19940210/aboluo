@@ -62,7 +62,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="sSJ-mY-23Z">
-                    <rect key="frame" x="147.5" y="50" width="80" height="80"/>
+                    <rect key="frame" x="147.5" y="60" width="80" height="80"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="Lte-Xw-86O"/>
@@ -132,8 +132,11 @@
                         <constraint firstAttribute="height" constant="47" id="JU8-7L-g1M"/>
                     </constraints>
                     <state key="normal" image="wechat"/>
+                    <connections>
+                        <action selector="actionThirdLoginBtn:" destination="-1" eventType="touchUpInside" id="AjW-xx-po8"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-ya-fJa">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-ya-fJa">
                     <rect key="frame" x="220.5" y="594" width="47" height="47"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="47" id="Hyv-2i-7SY"/>
@@ -197,7 +200,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="hSK-ya-fJa" secondAttribute="bottom" constant="26" id="Zbw-qd-JK4"/>
                 <constraint firstItem="82n-OS-jaG" firstAttribute="leading" secondItem="jVl-VL-I9h" secondAttribute="trailing" constant="8" id="bfB-xA-6CG"/>
                 <constraint firstItem="Fpa-aw-sX6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="bwm-dG-TEt"/>
-                <constraint firstItem="sSJ-mY-23Z" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="c3o-fh-qqI"/>
+                <constraint firstItem="sSJ-mY-23Z" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="c3o-fh-qqI"/>
                 <constraint firstAttribute="trailing" secondItem="Fpa-aw-sX6" secondAttribute="trailing" constant="20" id="cFJ-hO-q6C"/>
                 <constraint firstItem="hSK-ya-fJa" firstAttribute="leading" secondItem="82n-OS-jaG" secondAttribute="leading" id="cRe-AF-6Mm"/>
                 <constraint firstItem="AdX-yj-PWC" firstAttribute="leading" secondItem="Dje-E9-hbD" secondAttribute="trailing" id="coZ-Se-LOu"/>
@@ -222,7 +225,7 @@
     </objects>
     <resources>
         <image name="eye_nor" width="25" height="25"/>
-        <image name="logo" width="71" height="73"/>
+        <image name="logo" width="90" height="90"/>
         <image name="qq" width="47" height="47"/>
         <image name="wechat" width="47" height="47"/>
     </resources>

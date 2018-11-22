@@ -38,9 +38,9 @@
     UIImageView *imageView2 = [[UIImageView alloc] init];
     UIImageView *imageView3 = [[UIImageView alloc]init];
     if (IS_IPHONE_X || IS_IPHONE_Xs) {
-        imageView1.image = [UIImage imageNamed:@"Guide1"];
-        imageView2.image = [UIImage imageNamed:@"Guide2"];
-        imageView3.image = [UIImage imageNamed:@"Guide3"];
+        imageView1.image = [UIImage imageNamed:@"Guide1_x"];
+        imageView2.image = [UIImage imageNamed:@"Guide2_x"];
+        imageView3.image = [UIImage imageNamed:@"Guide3_x"];
     }else if(IS_IPHONE_Xs_Max){
         imageView1.image = [UIImage imageNamed:@"Guide1_xr"];
         imageView2.image = [UIImage imageNamed:@"Guide2_xr"];
@@ -99,10 +99,5 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     long int page = lroundf(scrollView.contentOffset.x / scrollView.frame.size.width);
     self.pagecontrol.currentPage = page;
-    if (page == 2) {
-        self.pagecontrol.hidden = YES;
-    }else{
-        self.pagecontrol.hidden = NO;
-    }
 }
 @end

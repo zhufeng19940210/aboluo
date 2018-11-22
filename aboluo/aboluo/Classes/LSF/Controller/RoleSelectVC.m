@@ -4,6 +4,7 @@
 //  Copyright © 2018 zhufeng. All rights reserved.
 #import "RoleSelectVC.h"
 #import "ResigterVC.h"
+#import "BindVC.h"
 @interface RoleSelectVC ()
 @property (weak, nonatomic) IBOutlet UIImageView *geren_img;
 @property (weak, nonatomic) IBOutlet UIImageView *qiye_img;
@@ -60,8 +61,16 @@
         [self showHint:@"请先选择角色" yOffset:-200];
         return;
     }
-    ResigterVC *resigtervc = [[ResigterVC alloc]init];
-    resigtervc.selectRoleType = self.selectRoleStr;
-    [self.navigationController pushViewController:resigtervc animated:YES];
+    if (self.isThird == YES) {
+        ///是第三过来的东西
+        BindVC *bindvc = [[BindVC alloc]init];
+        bindvc.selectRole = self.selectRoleStr;
+        [self.navigationController pushViewController:bindvc animated:YES];
+    }else{
+        ///不是三方过来的东西
+        ResigterVC *resigtervc = [[ResigterVC alloc]init];
+        resigtervc.selectRoleType = self.selectRoleStr;
+        [self.navigationController pushViewController:resigtervc animated:YES];
+    }
 }
 @end

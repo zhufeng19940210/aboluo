@@ -47,7 +47,7 @@
     //这里设置下样式
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
     //设置背景颜色
-    [SVProgressHUD setBackgroundColor:[UIColor blackColor]];
+    [SVProgressHUD setBackgroundColor:MainThemeColor];
     //设置前景色
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
     //遮罩的颜色

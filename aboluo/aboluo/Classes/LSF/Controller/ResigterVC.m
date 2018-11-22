@@ -8,6 +8,7 @@
 #import "UIButton+countDown.h"
 #import "LoginVC.h"
 #import "AppDelegate.h"
+#import "TabBarController.h"
 @interface ResigterVC ()
 @property (weak, nonatomic) IBOutlet UITextField *phoe_tf;
 @property (weak, nonatomic) IBOutlet UITextField *code_tf;
@@ -89,31 +90,60 @@
     param[@"longitude"]   = longitude;
     param[@"latitude"]   = latitude;
     [SVProgressHUD showWithStatus:@"正在注册"];
+    WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:User_Register_URL parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [ZFCustomView showWithSuccess:@"注册成功"];
-            [self pushLoginMethod];
+            //这里去做一个登录操作
+            [weakSelf pushToTabbarMethodWithUserPhone:phone WithUserPwd:pwd];
         }else{
-            [ZFCustomView showWithText:res.msg WithDurations:0.5];
+            [SVProgressHUD showWithStatus:res.msg];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [ZFCustomView showWithText:FailRequestTip WithDurations:0.5];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }
-/**/
--(void)pushLoginMethod
-{   LoginVC *loginVC = [[LoginVC alloc]init];
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginVC];
-    app.window.backgroundColor = [UIColor whiteColor];
-    app.window.rootViewController = nav;
-    [app.window makeKeyAndVisible];
+
+-(void)pushToTabbarMethodWithUserPhone:(NSString *)phone WithUserPwd:(NSString *)pwd
+{
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"phone"] = phone;
+    param[@"password"] = pwd;
+    [SVProgressHUD showWithStatus:@"正在登录"];
+    WEAKSELF
+    [[NetWorkTool shareInstacne]postWithURLString:User_Login_URL parameters:param success:^(id  _Nonnull responseObject) {
+        NSLog(@"resoponseObject:%@",responseObject);
+        [SVProgressHUD dismiss];
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code ==1) {
+            [SVProgressHUD showInfoWithStatus:@"登录成功"];
+            //请求成功
+            [[NSUserDefaults standardUserDefaults]setValue:res.data[@"token"] forKey:ZF_Token];
+            [[NSUserDefaults standardUserDefaults]synchronize];
+            UserModel *user = [UserModel mj_objectWithKeyValues:res.data[@"user"]];
+            [UserModel save:user];
+            //跳转到首页
+            AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+            app.window.backgroundColor = [UIColor whiteColor];
+            TabBarController *tabbar = [[TabBarController alloc]init];
+            app.window.backgroundColor = [UIColor whiteColor];
+            app.window.rootViewController = tabbar;
+            [app.window makeKeyAndVisible];
+        }else{
+            //请求失败
+            [SVProgressHUD showErrorWithStatus:res.data[@"msg"]];
+            return;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        return;
+    }];
 }
 /**
  获取验证码
@@ -140,19 +170,20 @@
         return;
     }
     //获取验证码
-    [SVProgressHUD showWithStatus:@"获取验证"];
+    [SVProgressHUD showWithStatus:@"获取验证中"];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"phone"] = phone;
+    WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:User_Get_Code parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         NSLog(@"responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
             [SVProgressHUD showSuccessWithStatus:@"获取成功"];
-            self.code_str = res.data[@"msg"];
+            weakSelf.code_str = res.data[@"msg"];
             [sender startWithTime:59 title:@"获取验证码" countDownTitle:@"秒" mainColor:MainThemeColor countColor:[UIColor clearColor]];
         }else{
-            [ZFCustomView showWithSuccess:res.data[@"error"]];
+            [SVProgressHUD showErrorWithStatus:res.data[@"error"]];
             return;
         }
     } failure:^(NSError * _Nonnull error) {

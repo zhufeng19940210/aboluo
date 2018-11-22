@@ -74,9 +74,9 @@
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code ==1) {
-            [ZFCustomView showWithSuccess:@"登录成功"];
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
             //请求成功
-            [[NSUserDefaults standardUserDefaults]setValue:res.data[@"token"] forKey:Token];
+            [[NSUserDefaults standardUserDefaults]setValue:res.data[@"token"] forKey:ZF_Token];
             [[NSUserDefaults standardUserDefaults]synchronize];
             UserModel *user = [UserModel mj_objectWithKeyValues:res.data[@"user"]];
             [UserModel save:user];
@@ -89,12 +89,12 @@
             [app.window makeKeyAndVisible];
         }else{
             //请求失败
-            [ZFCustomView showWithText:res.msg WithDurations:0.5];
+            [SVProgressHUD showErrorWithStatus:res.data[@"msg"]];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [ZFCustomView showWithText:FailRequestTip WithDurations:0.5];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }
@@ -121,5 +121,61 @@
         self.pwd_tf.secureTextEntry = YES;
         [self.eye_btn setImage:[UIImage imageNamed:@"eye_nor"] forState:UIControlStateNormal];
     }
+}
+/**
+ 三方登录
+ @param sender 三方登录
+ */
+- (IBAction)actionThirdLoginBtn:(UIButton *)sender
+{
+    int tag = (int)sender.tag;
+    int platform;
+    NSString *platformType = nil;
+    if (tag == 0) {
+        //微信登录
+        platform = SSDKPlatformTypeWechat;
+        platformType = @"wx";
+    }else{
+        //qq登录
+        platform = SSDKPlatformTypeQQ;
+        platformType = @"qq";
+    }
+    [self ThirdAuthorMethodWithPlatform:platform WithType:platformType];
+}
+/**
+ 三方登录的方法
+ */
+-(void)ThirdAuthorMethodWithPlatform:(int)platform WithType:(NSString *)platformType
+{
+    [SVProgressHUD showWithStatus:@"正在授权"];
+    [ShareSDK authorize:platform settings:nil onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
+        [SVProgressHUD dismiss];
+        switch (state) {
+            case SSDKResponseStateSuccess:
+            {
+                NSLog(@"授权成功");
+                NSLog(@"userid:%@",user.uid);
+                NSLog(@"usericon:%@",user.icon);
+                NSLog(@"username:%@",user.nickname);
+                //这里有一个接口是否有绑定过数据,这里需要自己去判断下
+                RoleSelectVC *selectRoloevc = [[RoleSelectVC alloc]init];
+                
+                [self.navigationController pushViewController:selectRoloevc animated:YES];
+            }
+                break;
+            case SSDKResponseStateFail:
+            {
+                NSLog(@"授权失败");
+            }
+                break;
+            case SSDKResponseStateCancel:
+            {
+                NSLog(@"授权取消了");
+            }
+                break;
+            default:
+                break;
+        }
+    }];
 }
 @end

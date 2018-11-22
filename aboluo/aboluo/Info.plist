@@ -90,6 +90,10 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>您的位置将用来获取你所在地的附近的信息</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App需要您的同意,才能访问相册</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App需要您的同意,才能访问相机</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -10,4 +10,15 @@
     [super viewDidLoad];
 
 }
+
+/**
+  测试数据了
+ @param sender 测试数据
+ */
+- (IBAction)actionSelectBtn:(id)sender
+{
+    NSString *selecstr = @"龙华新区";
+    self.addreessblock(selecstr);
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 @end

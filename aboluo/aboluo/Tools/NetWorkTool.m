@@ -39,15 +39,23 @@ AFHTTPSessionManager *session = nil;
                  success:(void (^)(id responseObject))success
                  failure:(void (^)(NSError *error))failure
 {
-    [session GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (error) {
-            failure(error);
-        }
-    }];
+    BOOL isNetStatus = [LCUtil isVaildNetWorkStatus];
+    if (isNetStatus == YES) {
+        //有网络的情况
+        [session GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (error) {
+                failure(error);
+            }
+        }];
+    }else{
+       //没有网络的情况
+        [SVProgressHUD showErrorWithStatus:@"网络未连接,检查网络设置"];
+        return;
+    }
 }
 /**
  *  发送post请求
@@ -62,15 +70,23 @@ AFHTTPSessionManager *session = nil;
                   success:(void (^)(id responseObject))success
                   failure:(void (^)(NSError *error))failure
 {
-    [session POST:url parameters:soapStr progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (error) {
-            failure(error);
-        }
-    }];
+    BOOL netStatus =  [LCUtil isVaildNetWorkStatus];
+    if (netStatus == YES) {
+        ///有网络的请求
+        [session POST:url parameters:soapStr progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (error) {
+                failure(error);
+            }
+        }];
+    }else{
+        //没网络的情况
+        [SVProgressHUD showErrorWithStatus:@"网络未连接,检查网络设置"];
+        return;
+    }
 }
 /**
  *  发送网络请求

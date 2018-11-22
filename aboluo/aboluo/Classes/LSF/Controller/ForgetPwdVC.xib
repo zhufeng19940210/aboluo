@@ -116,7 +116,7 @@
                         <constraint firstAttribute="height" constant="50" id="sIY-3v-irb"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="完成" backgroundImage="bg">
+                    <state key="normal" title="完成">
                         <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -209,7 +209,6 @@
         </view>
     </objects>
     <resources>
-        <image name="bg" width="345" height="65"/>
         <image name="eye_nor" width="25" height="25"/>
     </resources>
 </document>

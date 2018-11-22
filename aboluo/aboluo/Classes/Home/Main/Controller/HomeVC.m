@@ -12,8 +12,6 @@
 #import "HomeSGAdvertCell.h"            ///轮播
 #import "HomeRecommendTtileCell.h"      ///为你推荐
 #import "HomeRecommendVC.h"             ///推荐列表
-#import "HomeMasterVC.h"                ///师傅列表
-#import "HomeProjectVC.h"               ///项目列表
 #import "HomeExchangeVC.h"              ///兑换
 #import "HomeReceiptVC.h"               ///收款
 #import "HomeRayVC.h"                   ///付款
@@ -22,6 +20,8 @@
 #import "HomeAddressVC.h"               ///定位
 #import "ServerOrdehallVC.h"            ///接单
 #import "ServerBillinghallVC.h"         ///发单
+#import "HomeProjectTypeVC.h"           ///项目列表
+#import "HomeMasterModel.h"
 @interface HomeVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *top_layout;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionview;
@@ -72,12 +72,52 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-   [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+    [self actionHomeNewData];
     [self setupHome];
     [self setupCollectionView];
+    [self setupRefresh];
 }
+/**
+ 集成刷新功能
+ */
+-(void)setupRefresh
+{
+    [self setViewRefreshColletionView:self.collectionview
+                     withHeaderAction:@selector(actionHomeNewData)
+                      andFooterAction:nil
+                               target:self];
+}
+/**
+ 加载最新的数据
+ */
+-(void)actionHomeNewData
+{
+    [SVProgressHUD showWithStatus:ShowTitleTip];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    WEAKSELF
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Index parameters:param success:^(id  _Nonnull responseObject) {
+        NSLog(@"responseObject:%@",responseObject);
+        [SVProgressHUD dismiss];
+        ResponeModel *res =  [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code == 1) {
+            [weakSelf.collectionview reloadData];
+            [weakSelf.collectionview.mj_header endRefreshing];
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        //[SVProgressHUD showErrorWithStatus:FailRequestTip];
+        [weakSelf.collectionview.mj_header endRefreshing];
+        return;
+    }];
+}
+/**
+ 加载更多的数据
+ */
+-(void)actionHomeMoreData
+{
+    
+}
+
 -(void)setupHome
 {
    self.topview = [[HomeTopView alloc]initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, 80+Height_NavBar)];
@@ -88,6 +128,10 @@
     //leftblock
     self.topview.leftblock = ^(UIButton *btn) {
         HomeAddressVC *addressvc = [[HomeAddressVC alloc]init];
+        addressvc.addreessblock = ^(NSString *selectStr) {
+            NSLog(@"selectStr:%@",selectStr);
+            [weakSelf.topview.leftBarItem setTitle:selectStr forState:UIControlStateNormal];
+        };
         [weakSelf.navigationController pushViewController:addressvc animated:YES];
     };
     //searcblock
@@ -139,9 +183,17 @@
     if (section == 0 || section == 1 || section == 2 ||section == 4 || section == 6 || section == 7) {
         return 1;
     }if (section == 3) {
-        return self.projectArray.count;
+        if (self.projectArray.count > 3) {
+            return 4;
+        }else{
+            return self.projectArray.count;
+        }
     }if (section == 5) {
-        return self.masterArray.count;
+        if (self.masterArray.count > 3) {
+            return 4;
+        }else{
+            return self.masterArray.count;
+        }
     }if (section == 8) {
         return 6;
     }else{
@@ -165,27 +217,31 @@
     }if (indexPath.section == 2) {
         HomeTitleCell *titleCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeTitleCell" forIndexPath:indexPath];
         titleCell.title_lab.text = @"找项目";
+        ///TODO这里是找项目更多的数据了
         titleCell.pushblock = ^(UIButton *btn) {
-            HomeProjectVC *projectvc = [[HomeProjectVC alloc]init];
-            [self.navigationController pushViewController:projectvc animated:YES];
+            HomeProjectTypeVC *projecttpyevc = [[HomeProjectTypeVC alloc]init];
+            projecttpyevc.projectArray = self.projectArray;
+            projecttpyevc.type = @"1";
+            [self.navigationController pushViewController:projecttpyevc animated:YES];
         };
         homeCell = titleCell;
     }
     if (indexPath.section == 3) {
         HomeProjectCell *projectCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeProjectCell" forIndexPath:indexPath];
-        projectCell.icon_img.image = [UIImage imageNamed:self.projectArray[indexPath.row]];
         homeCell = projectCell;
     }if (indexPath.section == 4) {
         HomeTitleCell *titleCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeTitleCell" forIndexPath:indexPath];
         titleCell.title_lab.text = @"找师傅";
+        ///TODO找师傅更多数据
         titleCell.pushblock = ^(UIButton *btn) {
-            HomeMasterVC *mastervc = [[HomeMasterVC alloc]init];
-            [self.navigationController pushViewController:mastervc animated:YES];
+            HomeProjectTypeVC *projecttpyevc = [[HomeProjectTypeVC alloc]init];
+            projecttpyevc.projectArray = self.masterArray;
+            projecttpyevc.type = @"2";
+            [self.navigationController pushViewController:projecttpyevc animated:YES];
         };
         homeCell = titleCell;
     }if (indexPath.section == 5) {
         HomeProjectCell *projectCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeProjectCell" forIndexPath:indexPath];
-        projectCell.icon_img.image = [UIImage imageNamed:self.masterArray[indexPath.row]];
         homeCell = projectCell;
     }if (indexPath.section == 6) {
         HomeMainCell *mainCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeMainCell" forIndexPath:indexPath];

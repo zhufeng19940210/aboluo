@@ -51,6 +51,25 @@
 		F0B50AB1218FF10A0027BB61 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B50AB0218FF10A0027BB61 /* libsqlite3.0.tbd */; };
 		F0B50AB3218FF1190027BB61 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B50AB2218FF1190027BB61 /* libz.tbd */; };
 		F0B50AB5218FF12A0027BB61 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B50AB4218FF12A0027BB61 /* libc++.tbd */; };
+		F0D073A121A645BF006BC623 /* HomeProjectDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073A021A645BF006BC623 /* HomeProjectDetailModel.m */; };
+		F0D073A421A65D7F006BC623 /* HomeMasterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073A321A65D7F006BC623 /* HomeMasterModel.m */; };
+		F0D073AD21A67333006BC623 /* HomeProjectTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073AB21A67333006BC623 /* HomeProjectTypeVC.m */; };
+		F0D073AE21A67333006BC623 /* HomeProjectTypeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D073AC21A67333006BC623 /* HomeProjectTypeVC.xib */; };
+		F0D073B621A67B89006BC623 /* HomeWorkTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073B521A67B89006BC623 /* HomeWorkTypeModel.m */; };
+		F0D073C721A68B69006BC623 /* SGQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F0D073B921A68B69006BC623 /* SGQRCode.bundle */; };
+		F0D073C821A68B69006BC623 /* UIImage+ImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073BC21A68B69006BC623 /* UIImage+ImageSize.m */; };
+		F0D073C921A68B69006BC623 /* SGQRCodeHelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073BD21A68B69006BC623 /* SGQRCodeHelperTool.m */; };
+		F0D073CA21A68B69006BC623 /* SGQRCodeScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073BE21A68B69006BC623 /* SGQRCodeScanningView.m */; };
+		F0D073CB21A68B69006BC623 /* SGQRCodeScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073BF21A68B69006BC623 /* SGQRCodeScanManager.m */; };
+		F0D073CC21A68B69006BC623 /* SGQRCodeGenerateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073C021A68B69006BC623 /* SGQRCodeGenerateManager.m */; };
+		F0D073CD21A68B69006BC623 /* SGQRCodeAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073C521A68B69006BC623 /* SGQRCodeAlbumManager.m */; };
+		F0D073D321A68CF9006BC623 /* HomeScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073D221A68CF9006BC623 /* HomeScanVC.m */; };
+		F0D073D621A6A194006BC623 /* AddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073D521A6A194006BC623 /* AddressModel.m */; };
+		F0D073DF21A6B3FA006BC623 /* HomeExamVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073DD21A6B3FA006BC623 /* HomeExamVC.m */; };
+		F0D073E021A6B3FA006BC623 /* HomeExamVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D073DE21A6B3FA006BC623 /* HomeExamVC.xib */; };
+		F0D073E421A6BA1C006BC623 /* HomeExamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073E221A6BA1C006BC623 /* HomeExamCell.m */; };
+		F0D073E521A6BA1C006BC623 /* HomeExamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D073E321A6BA1C006BC623 /* HomeExamCell.xib */; };
+		F0D073E821A6BABC006BC623 /* ExamModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073E721A6BABC006BC623 /* ExamModel.m */; };
 		F0F0E484218D557100B4ABCE /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E483218D557100B4ABCE /* BaseVC.m */; };
 		F0F0E489218D558D00B4ABCE /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E487218D558D00B4ABCE /* LoginVC.m */; };
 		F0F0E48A218D558D00B4ABCE /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F0E488218D558D00B4ABCE /* LoginVC.xib */; };
@@ -146,8 +165,6 @@
 		F0F6D4E0219EADD00004FCB3 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F6D4DE219EADD00004FCB3 /* StoreCell.xib */; };
 		F0F8E31221A2538C00DA2B35 /* AddOrEditAddreddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E31021A2538C00DA2B35 /* AddOrEditAddreddVC.m */; };
 		F0F8E31321A2538C00DA2B35 /* AddOrEditAddreddVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F8E31121A2538C00DA2B35 /* AddOrEditAddreddVC.xib */; };
-		F0FA0B43219D4FA80022B567 /* HomeScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0B41219D4FA80022B567 /* HomeScanVC.m */; };
-		F0FA0B44219D4FA80022B567 /* HomeScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FA0B42219D4FA80022B567 /* HomeScanVC.xib */; };
 		F0FA0B48219D4FD30022B567 /* HomeSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0B46219D4FD30022B567 /* HomeSearchVC.m */; };
 		F0FA0B49219D4FD30022B567 /* HomeSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FA0B47219D4FD30022B567 /* HomeSearchVC.xib */; };
 		F0FA0B4D219D4FED0022B567 /* HomeAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0B4B219D4FED0022B567 /* HomeAddressVC.m */; };
@@ -178,6 +195,9 @@
 		F0FA0BD1219D94460022B567 /* HomeSGAdvertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0BCF219D94460022B567 /* HomeSGAdvertCell.m */; };
 		F0FA0BD2219D94460022B567 /* HomeSGAdvertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FA0BD0219D94460022B567 /* HomeSGAdvertCell.xib */; };
 		F0FA0BD6219D97640022B567 /* SGAdvertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0BD4219D97640022B567 /* SGAdvertScrollView.m */; };
+		F0FBC88F21A5626100B8ADE9 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FBC88E21A5626100B8ADE9 /* BaseModel.m */; };
+		F0FBC89221A562A900B8ADE9 /* HomeBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FBC89121A562A900B8ADE9 /* HomeBanner.m */; };
+		F0FBC89B21A5643A00B8ADE9 /* HomeNoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FBC89A21A5643A00B8ADE9 /* HomeNoticeModel.m */; };
 		F0FD361C2196B8B000F6C93B /* RoleSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD361A2196B8B000F6C93B /* RoleSelectVC.m */; };
 		F0FD361D2196B8B000F6C93B /* RoleSelectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FD361B2196B8B000F6C93B /* RoleSelectVC.xib */; };
 		F0FD36212196BF5800F6C93B /* AgreeProtolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FD361F2196BF5800F6C93B /* AgreeProtolVC.m */; };
@@ -254,6 +274,41 @@
 		F0B50AB0218FF10A0027BB61 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		F0B50AB2218FF1190027BB61 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F0B50AB4218FF12A0027BB61 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		F0D0739F21A645BF006BC623 /* HomeProjectDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeProjectDetailModel.h; sourceTree = "<group>"; };
+		F0D073A021A645BF006BC623 /* HomeProjectDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeProjectDetailModel.m; sourceTree = "<group>"; };
+		F0D073A221A65D7F006BC623 /* HomeMasterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMasterModel.h; sourceTree = "<group>"; };
+		F0D073A321A65D7F006BC623 /* HomeMasterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMasterModel.m; sourceTree = "<group>"; };
+		F0D073AA21A67333006BC623 /* HomeProjectTypeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeProjectTypeVC.h; sourceTree = "<group>"; };
+		F0D073AB21A67333006BC623 /* HomeProjectTypeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeProjectTypeVC.m; sourceTree = "<group>"; };
+		F0D073AC21A67333006BC623 /* HomeProjectTypeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProjectTypeVC.xib; sourceTree = "<group>"; };
+		F0D073B421A67B89006BC623 /* HomeWorkTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeWorkTypeModel.h; sourceTree = "<group>"; };
+		F0D073B521A67B89006BC623 /* HomeWorkTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeWorkTypeModel.m; sourceTree = "<group>"; };
+		F0D073B821A68B69006BC623 /* SGQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCode.h; sourceTree = "<group>"; };
+		F0D073B921A68B69006BC623 /* SGQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SGQRCode.bundle; sourceTree = "<group>"; };
+		F0D073BB21A68B69006BC623 /* UIImage+ImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageSize.h"; sourceTree = "<group>"; };
+		F0D073BC21A68B69006BC623 /* UIImage+ImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageSize.m"; sourceTree = "<group>"; };
+		F0D073BD21A68B69006BC623 /* SGQRCodeHelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeHelperTool.m; sourceTree = "<group>"; };
+		F0D073BE21A68B69006BC623 /* SGQRCodeScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeScanningView.m; sourceTree = "<group>"; };
+		F0D073BF21A68B69006BC623 /* SGQRCodeScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeScanManager.m; sourceTree = "<group>"; };
+		F0D073C021A68B69006BC623 /* SGQRCodeGenerateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeGenerateManager.m; sourceTree = "<group>"; };
+		F0D073C121A68B69006BC623 /* SGQRCodeAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeAlbumManager.h; sourceTree = "<group>"; };
+		F0D073C221A68B69006BC623 /* SGQRCodeHelperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeHelperTool.h; sourceTree = "<group>"; };
+		F0D073C321A68B69006BC623 /* SGQRCodeScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeScanningView.h; sourceTree = "<group>"; };
+		F0D073C421A68B69006BC623 /* SGQRCodeScanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeScanManager.h; sourceTree = "<group>"; };
+		F0D073C521A68B69006BC623 /* SGQRCodeAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeAlbumManager.m; sourceTree = "<group>"; };
+		F0D073C621A68B69006BC623 /* SGQRCodeGenerateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeGenerateManager.h; sourceTree = "<group>"; };
+		F0D073D121A68CF9006BC623 /* HomeScanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScanVC.h; sourceTree = "<group>"; };
+		F0D073D221A68CF9006BC623 /* HomeScanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScanVC.m; sourceTree = "<group>"; };
+		F0D073D421A6A194006BC623 /* AddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressModel.h; sourceTree = "<group>"; };
+		F0D073D521A6A194006BC623 /* AddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressModel.m; sourceTree = "<group>"; };
+		F0D073DC21A6B3FA006BC623 /* HomeExamVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeExamVC.h; sourceTree = "<group>"; };
+		F0D073DD21A6B3FA006BC623 /* HomeExamVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeExamVC.m; sourceTree = "<group>"; };
+		F0D073DE21A6B3FA006BC623 /* HomeExamVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeExamVC.xib; sourceTree = "<group>"; };
+		F0D073E121A6BA1C006BC623 /* HomeExamCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeExamCell.h; sourceTree = "<group>"; };
+		F0D073E221A6BA1C006BC623 /* HomeExamCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeExamCell.m; sourceTree = "<group>"; };
+		F0D073E321A6BA1C006BC623 /* HomeExamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeExamCell.xib; sourceTree = "<group>"; };
+		F0D073E621A6BABC006BC623 /* ExamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamModel.h; sourceTree = "<group>"; };
+		F0D073E721A6BABC006BC623 /* ExamModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamModel.m; sourceTree = "<group>"; };
 		F0F0E482218D557100B4ABCE /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		F0F0E483218D557100B4ABCE /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		F0F0E486218D558D00B4ABCE /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
@@ -429,9 +484,6 @@
 		F0F8E30F21A2538C00DA2B35 /* AddOrEditAddreddVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddOrEditAddreddVC.h; sourceTree = "<group>"; };
 		F0F8E31021A2538C00DA2B35 /* AddOrEditAddreddVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddOrEditAddreddVC.m; sourceTree = "<group>"; };
 		F0F8E31121A2538C00DA2B35 /* AddOrEditAddreddVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOrEditAddreddVC.xib; sourceTree = "<group>"; };
-		F0FA0B40219D4FA80022B567 /* HomeScanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScanVC.h; sourceTree = "<group>"; };
-		F0FA0B41219D4FA80022B567 /* HomeScanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScanVC.m; sourceTree = "<group>"; };
-		F0FA0B42219D4FA80022B567 /* HomeScanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScanVC.xib; sourceTree = "<group>"; };
 		F0FA0B45219D4FD30022B567 /* HomeSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSearchVC.h; sourceTree = "<group>"; };
 		F0FA0B46219D4FD30022B567 /* HomeSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeSearchVC.m; sourceTree = "<group>"; };
 		F0FA0B47219D4FD30022B567 /* HomeSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSearchVC.xib; sourceTree = "<group>"; };
@@ -480,6 +532,12 @@
 		F0FA0BD0219D94460022B567 /* HomeSGAdvertCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSGAdvertCell.xib; sourceTree = "<group>"; };
 		F0FA0BD4219D97640022B567 /* SGAdvertScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAdvertScrollView.m; sourceTree = "<group>"; };
 		F0FA0BD5219D97640022B567 /* SGAdvertScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAdvertScrollView.h; sourceTree = "<group>"; };
+		F0FBC88D21A5626000B8ADE9 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		F0FBC88E21A5626100B8ADE9 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		F0FBC89021A562A900B8ADE9 /* HomeBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBanner.h; sourceTree = "<group>"; };
+		F0FBC89121A562A900B8ADE9 /* HomeBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBanner.m; sourceTree = "<group>"; };
+		F0FBC89921A5643A00B8ADE9 /* HomeNoticeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNoticeModel.h; sourceTree = "<group>"; };
+		F0FBC89A21A5643A00B8ADE9 /* HomeNoticeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNoticeModel.m; sourceTree = "<group>"; };
 		F0FD36192196B8B000F6C93B /* RoleSelectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleSelectVC.h; sourceTree = "<group>"; };
 		F0FD361A2196B8B000F6C93B /* RoleSelectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoleSelectVC.m; sourceTree = "<group>"; };
 		F0FD361B2196B8B000F6C93B /* RoleSelectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoleSelectVC.xib; sourceTree = "<group>"; };
@@ -584,6 +642,8 @@
 		F00D3400219FAF2200DB33A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0D073D421A6A194006BC623 /* AddressModel.h */,
+				F0D073D521A6A194006BC623 /* AddressModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -743,6 +803,82 @@
 			path = Required;
 			sourceTree = "<group>";
 		};
+		F0D073B721A68B69006BC623 /* SGQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				F0D073B821A68B69006BC623 /* SGQRCode.h */,
+				F0D073B921A68B69006BC623 /* SGQRCode.bundle */,
+				F0D073BA21A68B69006BC623 /* Category */,
+				F0D073BD21A68B69006BC623 /* SGQRCodeHelperTool.m */,
+				F0D073BE21A68B69006BC623 /* SGQRCodeScanningView.m */,
+				F0D073BF21A68B69006BC623 /* SGQRCodeScanManager.m */,
+				F0D073C021A68B69006BC623 /* SGQRCodeGenerateManager.m */,
+				F0D073C121A68B69006BC623 /* SGQRCodeAlbumManager.h */,
+				F0D073C221A68B69006BC623 /* SGQRCodeHelperTool.h */,
+				F0D073C321A68B69006BC623 /* SGQRCodeScanningView.h */,
+				F0D073C421A68B69006BC623 /* SGQRCodeScanManager.h */,
+				F0D073C521A68B69006BC623 /* SGQRCodeAlbumManager.m */,
+				F0D073C621A68B69006BC623 /* SGQRCodeGenerateManager.h */,
+			);
+			path = SGQRCode;
+			sourceTree = "<group>";
+		};
+		F0D073BA21A68B69006BC623 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F0D073BB21A68B69006BC623 /* UIImage+ImageSize.h */,
+				F0D073BC21A68B69006BC623 /* UIImage+ImageSize.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F0D073D721A6B239006BC623 /* 考试 */ = {
+			isa = PBXGroup;
+			children = (
+				F0D073DB21A6B259006BC623 /* Model */,
+				F0D073DA21A6B252006BC623 /* View */,
+				F0D073D921A6B24B006BC623 /* Controller */,
+				F0D073D821A6B242006BC623 /* Other */,
+			);
+			path = "考试";
+			sourceTree = "<group>";
+		};
+		F0D073D821A6B242006BC623 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F0D073D921A6B24B006BC623 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0D073DC21A6B3FA006BC623 /* HomeExamVC.h */,
+				F0D073DD21A6B3FA006BC623 /* HomeExamVC.m */,
+				F0D073DE21A6B3FA006BC623 /* HomeExamVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0D073DA21A6B252006BC623 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0D073E121A6BA1C006BC623 /* HomeExamCell.h */,
+				F0D073E221A6BA1C006BC623 /* HomeExamCell.m */,
+				F0D073E321A6BA1C006BC623 /* HomeExamCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0D073DB21A6B259006BC623 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0D073E621A6BABC006BC623 /* ExamModel.h */,
+				F0D073E721A6BABC006BC623 /* ExamModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F0F0E452218D51F300B4ABCE /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,6 +907,7 @@
 		F0F0E459218D51F300B4ABCE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F0D073D721A6B239006BC623 /* 考试 */,
 				F0FA0B2E219D4E2B0022B567 /* 推荐列表 */,
 				F0FA0B2C219D4E180022B567 /* 师傅列表 */,
 				F0FA0B2B219D4E0E0022B567 /* 项目列表 */,
@@ -805,6 +942,12 @@
 		F0F0E45C218D51F300B4ABCE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0FBC89021A562A900B8ADE9 /* HomeBanner.h */,
+				F0FBC89121A562A900B8ADE9 /* HomeBanner.m */,
+				F0FBC89921A5643A00B8ADE9 /* HomeNoticeModel.h */,
+				F0FBC89A21A5643A00B8ADE9 /* HomeNoticeModel.m */,
+				F0D073B421A67B89006BC623 /* HomeWorkTypeModel.h */,
+				F0D073B521A67B89006BC623 /* HomeWorkTypeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -928,6 +1071,7 @@
 		F0F0E468218D51F300B4ABCE /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F0D073B721A68B69006BC623 /* SGQRCode */,
 				F0FA0BD3219D97640022B567 /* SGAdvertScrollView */,
 				F0FA0BBE219D83380022B567 /* MLmenu */,
 				F0B50A7C218FF0F70027BB61 /* SDK */,
@@ -959,6 +1103,8 @@
 			children = (
 				F0F0E482218D557100B4ABCE /* BaseVC.h */,
 				F0F0E483218D557100B4ABCE /* BaseVC.m */,
+				F0FBC88D21A5626000B8ADE9 /* BaseModel.h */,
+				F0FBC88E21A5626100B8ADE9 /* BaseModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1517,9 +1663,8 @@
 		F0FA0B3C219D4F770022B567 /* Contoroller */ = {
 			isa = PBXGroup;
 			children = (
-				F0FA0B40219D4FA80022B567 /* HomeScanVC.h */,
-				F0FA0B41219D4FA80022B567 /* HomeScanVC.m */,
-				F0FA0B42219D4FA80022B567 /* HomeScanVC.xib */,
+				F0D073D121A68CF9006BC623 /* HomeScanVC.h */,
+				F0D073D221A68CF9006BC623 /* HomeScanVC.m */,
 			);
 			path = Contoroller;
 			sourceTree = "<group>";
@@ -1644,6 +1789,9 @@
 				F0FA0B71219D51910022B567 /* HomeProjectVC.h */,
 				F0FA0B72219D51910022B567 /* HomeProjectVC.m */,
 				F0FA0B73219D51910022B567 /* HomeProjectVC.xib */,
+				F0D073AA21A67333006BC623 /* HomeProjectTypeVC.h */,
+				F0D073AB21A67333006BC623 /* HomeProjectTypeVC.m */,
+				F0D073AC21A67333006BC623 /* HomeProjectTypeVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1651,6 +1799,8 @@
 		F0FA0B5C219D50700022B567 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0D0739F21A645BF006BC623 /* HomeProjectDetailModel.h */,
+				F0D073A021A645BF006BC623 /* HomeProjectDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1695,6 +1845,8 @@
 		F0FA0B61219D50B60022B567 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0D073A221A65D7F006BC623 /* HomeMasterModel.h */,
+				F0D073A321A65D7F006BC623 /* HomeMasterModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1923,7 +2075,9 @@
 				F0007EB521995E6100854DA3 /* HomeRecommandCell.xib in Resources */,
 				F0F6D4DB219EACFA0004FCB3 /* StoreDetailVC.xib in Resources */,
 				F0FA0B7F219D51F10022B567 /* HomeReceiptVC.xib in Resources */,
+				F0D073E521A6BA1C006BC623 /* HomeExamCell.xib in Resources */,
 				F0F6D4D6219E9C910004FCB3 /* ServerOrderruleVC.xib in Resources */,
+				F0D073AE21A67333006BC623 /* HomeProjectTypeVC.xib in Resources */,
 				F0F6D4BD219E99940004FCB3 /* ServerOrdehallVC.xib in Resources */,
 				F0B50AA4218FF0F70027BB61 /* ShareSDK.bundle in Resources */,
 				F0F6D4C2219E99DB0004FCB3 /* ServerBillinghallVC.xib in Resources */,
@@ -1937,9 +2091,10 @@
 				F0007EBA21995F5700854DA3 /* HomeProjectCell.xib in Resources */,
 				F0FA0BCD219D8C080022B567 /* GuideVC.xib in Resources */,
 				F00E07C6218D2A930079D952 /* Assets.xcassets in Resources */,
-				F0FA0B44219D4FA80022B567 /* HomeScanVC.xib in Resources */,
 				F0FD36222196BF5800F6C93B /* AgreeProtolVC.xib in Resources */,
+				F0D073C721A68B69006BC623 /* SGQRCode.bundle in Resources */,
 				F0F8E31321A2538C00DA2B35 /* AddOrEditAddreddVC.xib in Resources */,
+				F0D073E021A6B3FA006BC623 /* HomeExamVC.xib in Resources */,
 				F0B50A9E218FF0F70027BB61 /* WeiboSDK.bundle in Resources */,
 				F0007EAB21995E0700854DA3 /* HomeAdCell.xib in Resources */,
 				F0F0E597218D77E200B4ABCE /* IQKeyboardManager.bundle in Resources */,
@@ -2024,14 +2179,19 @@
 				F0F0E5DB218D77E200B4ABCE /* TZPhotoPreviewCell.m in Sources */,
 				F0F0E59B218D77E200B4ABCE /* IQUITextFieldView+Additions.m in Sources */,
 				F0FA0BC7219D834D0022B567 /* MLMenuItem.m in Sources */,
+				F0D073CA21A68B69006BC623 /* SGQRCodeScanningView.m in Sources */,
 				F0F0E5AA218D77E200B4ABCE /* UIButton+POImagePosition.m in Sources */,
+				F0D073DF21A6B3FA006BC623 /* HomeExamVC.m in Sources */,
+				F0D073D621A6A194006BC623 /* AddressModel.m in Sources */,
 				F0007EB421995E6100854DA3 /* HomeRecommandCell.m in Sources */,
 				F0007EAF21995E3200854DA3 /* HomeTitleCell.m in Sources */,
+				F0D073B621A67B89006BC623 /* HomeWorkTypeModel.m in Sources */,
 				F0F0E59C218D77E200B4ABCE /* IQUIScrollView+Additions.m in Sources */,
 				F0FA0B79219D51C70022B567 /* HomeExchangeVC.m in Sources */,
 				F0FA0B6F219D51450022B567 /* HomeRecommendVC.m in Sources */,
 				F0F6D4C1219E99DB0004FCB3 /* ServerBillinghallVC.m in Sources */,
 				F0F6D4DF219EADD00004FCB3 /* StoreCell.m in Sources */,
+				F0D073A121A645BF006BC623 /* HomeProjectDetailModel.m in Sources */,
 				F0F0E59E218D77E200B4ABCE /* IQUIViewController+Additions.m in Sources */,
 				F0F0E4B9218D661800B4ABCE /* TabBarController.m in Sources */,
 				F0F0E5A2218D77E200B4ABCE /* UIViewController+ZJScrollPageController.m in Sources */,
@@ -2042,6 +2202,7 @@
 				F0F6D4D0219E9C5E0004FCB3 /* ServerBillingruleVC.m in Sources */,
 				F0FA0B97219D5AE40022B567 /* ProjectCell.m in Sources */,
 				F0F0E5C0218D77E200B4ABCE /* YTKChainRequest.m in Sources */,
+				F0FBC89B21A5643A00B8ADE9 /* HomeNoticeModel.m in Sources */,
 				F0F0E5C4218D77E200B4ABCE /* YTKNetworkAgent.m in Sources */,
 				F0F0E593218D77E200B4ABCE /* IQTitleBarButtonItem.m in Sources */,
 				F0F0E59F218D77E200B4ABCE /* IQKeyboardReturnKeyHandler.m in Sources */,
@@ -2049,6 +2210,7 @@
 				F0FD36212196BF5800F6C93B /* AgreeProtolVC.m in Sources */,
 				F0F0E5C7218D77E200B4ABCE /* YTKRequest.m in Sources */,
 				F0F0E5D3218D77E200B4ABCE /* TZAssetModel.m in Sources */,
+				F0D073CC21A68B69006BC623 /* SGQRCodeGenerateManager.m in Sources */,
 				F0007EB921995F5700854DA3 /* HomeProjectCell.m in Sources */,
 				F0F0E5EB218D77F800B4ABCE /* NetWorkTool.m in Sources */,
 				F00E07CC218D2A930079D952 /* main.m in Sources */,
@@ -2066,6 +2228,7 @@
 				F0F0E5C3218D77E200B4ABCE /* YTKBatchRequest.m in Sources */,
 				F0F0E5A4218D77E200B4ABCE /* ZJCollectionView.m in Sources */,
 				F0F0E5A6218D77E200B4ABCE /* ZJScrollSegmentView.m in Sources */,
+				F0D073A421A65D7F006BC623 /* HomeMasterModel.m in Sources */,
 				F0F0E59A218D77E200B4ABCE /* IQUIWindow+Hierarchy.m in Sources */,
 				F0F0E595218D77E200B4ABCE /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				F0F0E5C1218D77E200B4ABCE /* YTKNetworkPrivate.m in Sources */,
@@ -2074,33 +2237,41 @@
 				F0FA0BD6219D97640022B567 /* SGAdvertScrollView.m in Sources */,
 				F0FA0BCC219D8C080022B567 /* GuideVC.m in Sources */,
 				F0F0E5C5218D77E200B4ABCE /* YTKChainRequestAgent.m in Sources */,
+				F0FBC88F21A5626100B8ADE9 /* BaseModel.m in Sources */,
 				F0F0E5D4218D77E200B4ABCE /* NSBundle+TZImagePicker.m in Sources */,
+				F0D073D321A68CF9006BC623 /* HomeScanVC.m in Sources */,
 				F0FA0B74219D51910022B567 /* HomeProjectVC.m in Sources */,
 				F0F0E598218D77E200B4ABCE /* IQKeyboardManager.m in Sources */,
 				F0F0E489218D558D00B4ABCE /* LoginVC.m in Sources */,
-				F0FA0B43219D4FA80022B567 /* HomeScanVC.m in Sources */,
 				F0F0E61F218D964800B4ABCE /* MyNavigationController.m in Sources */,
 				F0F0E5D9218D77E200B4ABCE /* TZImageManager.m in Sources */,
 				F0F0E592218D77E200B4ABCE /* IQToolbar.m in Sources */,
 				F0F0E5E9218D77F800B4ABCE /* UIViewController+HUD.m in Sources */,
 				F0F0E5A8218D77E200B4ABCE /* LCUtil.m in Sources */,
 				F0F0E5DE218D77E200B4ABCE /* TZGifPhotoPreviewController.m in Sources */,
+				F0D073E821A6BABC006BC623 /* ExamModel.m in Sources */,
 				F0F0E591218D77E200B4ABCE /* IQTextView.m in Sources */,
 				F0FA0B7E219D51F10022B567 /* HomeReceiptVC.m in Sources */,
 				F0FA0B92219D596E0022B567 /* MasterCell.m in Sources */,
+				F0D073CB21A68B69006BC623 /* SGQRCodeScanManager.m in Sources */,
+				F0FBC89221A562A900B8ADE9 /* HomeBanner.m in Sources */,
 				F0F0E5C2218D77E200B4ABCE /* YTKBaseRequest.m in Sources */,
 				F0F0E5D2218D77E200B4ABCE /* TZVideoPlayerController.m in Sources */,
 				F0F0E5A3218D77E200B4ABCE /* ZJContentView.m in Sources */,
 				F0F0E5A0218D77E200B4ABCE /* UIView+ZJFrame.m in Sources */,
+				F0D073C821A68B69006BC623 /* UIImage+ImageSize.m in Sources */,
 				F0F0E5DD218D77E200B4ABCE /* TZLocationManager.m in Sources */,
 				F0F0E611218D959600B4ABCE /* HomeVC.m in Sources */,
+				F0D073AD21A67333006BC623 /* HomeProjectTypeVC.m in Sources */,
 				F00E07BE218D2A920079D952 /* AppDelegate.m in Sources */,
 				F0F0E59D218D77E200B4ABCE /* IQUIView+Hierarchy.m in Sources */,
 				F0F0E5C6218D77E200B4ABCE /* YTKBatchRequestAgent.m in Sources */,
+				F0D073C921A68B69006BC623 /* SGQRCodeHelperTool.m in Sources */,
 				F0F0E5A5218D77E200B4ABCE /* ZJSegmentStyle.m in Sources */,
 				F0F0E596218D77E200B4ABCE /* IQPreviousNextView.m in Sources */,
 				F0F0E5D0218D77E200B4ABCE /* TZImageCropManager.m in Sources */,
 				F0F0E5A9218D77E200B4ABCE /* UIButton+countDown.m in Sources */,
+				F0D073CD21A68B69006BC623 /* SGQRCodeAlbumManager.m in Sources */,
 				F0F0E5D1218D77E200B4ABCE /* TZAssetCell.m in Sources */,
 				F0F0E5D6218D77E200B4ABCE /* TZPhotoPreviewController.m in Sources */,
 				F0F0E594218D77E200B4ABCE /* IQBarButtonItem.m in Sources */,
@@ -2119,6 +2290,7 @@
 				F0F0E4BF218D668300B4ABCE /* UserModel.m in Sources */,
 				F0FD36482196DF5B00F6C93B /* ImageCodeView.m in Sources */,
 				F0F0E5A7218D77E200B4ABCE /* ZJScrollPageView.m in Sources */,
+				F0D073E421A6BA1C006BC623 /* HomeExamCell.m in Sources */,
 				F0FA0B8D219D590A0022B567 /* RecommadnCell.m in Sources */,
 				F009C1D221A2E9CA00EE828E /* AddressListCell.m in Sources */,
 				F0007EAA21995E0700854DA3 /* HomeAdCell.m in Sources */,

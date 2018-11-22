@@ -101,15 +101,16 @@
 #define Height_NavBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 88.0 : 64.0)
 #define Height_TabBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 83.0 : 49.0)
 //通用的协议
-#define FailRequestTip @"服务器繁忙"
+#define FailRequestTip      @"服务器繁忙"
+#define ShowTitleTip        @"正在请求"
+#define ShowSuccessTip      @"请求成功"
+#define ShowErrorTip        @"请求失败"
 //经纬度
 #define ZF_Latitude    @"lattiude"
 #define ZF_Longitude   @"longitude"
+#define ZF_Token       @"token"
 //地址
 #define ZF_Location_Add  @"location_addr"
-
 //通知类型的key   === ZF 7月5日
 #define ISFirst       @"isFirstRun"
-//token
-#define  Token    @"user_token"
 #endif /* BMacro_h */

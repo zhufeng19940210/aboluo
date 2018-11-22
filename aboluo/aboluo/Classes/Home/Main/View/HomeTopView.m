@@ -9,8 +9,7 @@ CGFloat const DCMargin = 10;
 @interface HomeTopView()
 @property (nonatomic,strong)NSMutableArray *titleArray;
 @property (nonatomic,strong)NSMutableArray *imageArray;
-/* 左边的按钮 */
-@property(nonatomic,strong)UIButton *leftBarItem;
+
 /* 右边按钮 */
 @property(nonatomic,strong)UIButton *rightBarItem;
 /* 搜索 */
@@ -50,9 +49,9 @@ CGFloat const DCMargin = 10;
         [button setImage:[UIImage imageNamed:@"home_location"] forState:UIControlStateNormal];
         [button setTitle:@"南昌市" forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        button.titleLabel.font = [UIFont systemFontOfSize:15];
+        button.titleLabel.font = [UIFont systemFontOfSize:17];
         [button addTarget:self action:@selector(actionLeftBtn:) forControlEvents:UIControlEventTouchUpInside];
-        [button setImagePosition:0 withInset:2];
+        [button setImagePosition:0 withInset:-5];
         [button sizeToFit];
         button;
     });

@@ -13,6 +13,9 @@ typedef NS_ENUM(NSInteger,HomeTopType) {
 typedef void(^LeftBtnBlock)(UIButton *btn);
 typedef void(^SearchBtnBlock)(UIButton *btn);
 @interface HomeTopView : UIView
+/* 左边的按钮 */
+@property(nonatomic,strong)UIButton *leftBarItem;
+
 @property (nonatomic,copy) void(^topactionCallback)(HomeTopType type);
 @property (nonatomic,copy) LeftBtnBlock   leftblock;
 @property (nonatomic,copy) SearchBtnBlock searchblock;
