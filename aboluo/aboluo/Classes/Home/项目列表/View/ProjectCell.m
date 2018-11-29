@@ -16,6 +16,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
+
 + (instancetype)projectcellWithTableView:(UITableView *)tableView{
     ProjectCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     if (cell == nil) {
@@ -30,8 +31,10 @@
 - (IBAction)actionGraborderBtn:(UIButton *)sender
 {
     NSLog(@"抢单");
+    if (self.projectblock) {
+        self.projectblock((int)sender.tag);
+    }
 }
-
 -(void)setDetailModel:(HomeProjectDetailModel *)detailModel
 {
     _detailModel = detailModel;

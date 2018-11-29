@@ -5,6 +5,7 @@
 #import "HomeMasterVC.h"
 #import "MasterCell.h"
 #import "HomeMasterModel.h"
+#import "HomeMasterDetailVC.h"
 @interface HomeMasterVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *masterArray;
@@ -20,7 +21,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"找师傅";
+    self.navigationItem.title =[NSString stringWithFormat:@"%@",self.typemodel.name];
     self.page = 1;
     [self setupTableView];
     [self setupRefresh];
@@ -39,8 +40,9 @@
     [SVProgressHUD showWithStatus:ShowTitleTip];
     self.page = 1;
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"page"] = [NSString stringWithFormat:@"%d",self.page];
-    param[@"cid"]  = self.typemodel.wid;
+    param[@"productId"] = @"";
+    param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
+    param[@"pageSize"] = @10;
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:Home_Project_List parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
@@ -71,7 +73,9 @@
     self.page++;
     [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"page"] =[NSString stringWithFormat:@"%d",self.page];
+    param[@"productId"] = @"";
+    param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
+    param[@"pageSize"] = @10;
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:Home_Project_List parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
@@ -109,8 +113,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
-    //return self.masterArray.count;
+    return self.masterArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -120,13 +123,17 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MasterCell *cell  = [MasterCell masterCellWithTableView:tableView];
-    //HomeMasterModel *mastermodel = self.masterArray[indexPath.row];
-    //cell.mastermodel = mastermodel;
+    HomeMasterModel *mastermodel = self.masterArray[indexPath.row];
+    cell.mastermodel = mastermodel;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HomeMasterModel *mastermodel = self.masterArray[indexPath.row];
+    HomeMasterDetailVC *detailvc = [[HomeMasterDetailVC alloc]init];
+    detailvc.masterModel = mastermodel;
+    [self.navigationController pushViewController:detailvc animated:YES];
 }
 @end

@@ -6,4 +6,5 @@
 #import "ExamModel.h"
 @interface HomeExamCell : UITableViewCell
 @property (nonatomic,strong)ExamModel *exammodel;
++ (instancetype)HomecellWithTableView:(UITableView *)tableView;
 @end

@@ -5,6 +5,7 @@
 #import "HomeProjectVC.h"
 #import "ProjectCell.h"
 #import "HomeProjectDetailModel.h"
+#import "HomeProjectDetailVC.h"
 @interface HomeProjectVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *projectArray;
@@ -40,7 +41,9 @@
     [SVProgressHUD showWithStatus:ShowTitleTip];
     self.page = 1;
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"page"] = [NSString stringWithFormat:@"%d",self.page];
+    param[@"productId"] = @"";
+    param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
+    param[@"pageSize"] = @10;
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:Home_Project_List parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
@@ -71,7 +74,9 @@
     self.page++;
     [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"page"] =[NSString stringWithFormat:@"%d",self.page];
+    param[@"productId"] = @"";
+    param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
+    param[@"pageSize"] = @10;
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:Home_Project_List parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
@@ -120,11 +125,47 @@
     ProjectCell *cell  = [ProjectCell projectcellWithTableView:tableView];
     HomeProjectDetailModel *productmodel = self.projectArray [indexPath.row];
     cell.detailModel = productmodel;
+    cell.projectblock = ^(int tag) {
+        NSLog(@"detailModel.name:%@",productmodel);
+        [self recviceWithModel:productmodel];
+    };
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+     HomeProjectDetailModel *productmodel = self.projectArray [indexPath.row];
+    HomeProjectDetailVC *detailvc = [[HomeProjectDetailVC alloc]init];
+    detailvc.detailModel = productmodel;
+    [self.navigationController pushViewController:detailvc animated:YES];
+}
+
+/**
+ 抢单
+ @param model 抢单的东西
+ */
+-(void)recviceWithModel:(HomeProjectDetailModel *)model
+{
+    [SVProgressHUD showWithStatus:ShowTitleTip];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"projectId"] = @"";
+    param[@"userId"]    = @"";
+    WEAKSELF
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Project_Receive parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
+        NSLog(@"抢单:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code == 1) {
+            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
+        }else{
+            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
+            return;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        return;
+    }];
 }
 @end

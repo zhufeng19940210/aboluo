@@ -40,7 +40,7 @@
     [SVProgressHUD showWithStatus:@"获取验证"];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"phone"] = phone;
-    [[NetWorkTool shareInstacne]postWithURLString:User_Get_Code parameters:param success:^(id  _Nonnull responseObject) {
+    [[NetWorkTool shareInstacne]postWithURLString:User_Update_Code parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         NSLog(@"responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];

@@ -27,7 +27,22 @@
  */
 -(void)setupData
 {
-    
+    [SVProgressHUD showWithStatus:ShowTitleTip];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@""] = @"";
+    WEAKSELF
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Store_Home parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
+        NSLog(@"responseObject:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code == 1) {
+            
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        return;
+    }];
 }
 /**
   设置tableview

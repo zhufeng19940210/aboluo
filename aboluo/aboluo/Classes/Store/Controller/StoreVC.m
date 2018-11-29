@@ -50,6 +50,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"商城中心";
     [self setRightButton:[UIImage imageNamed:@"search2"]];
+    [self setupData];
     self.titles = @[@"新闻头条",
                     @"国际要闻",
                     @"体育",
@@ -73,6 +74,30 @@
     //这个一定要的东西了呀哈哈
     self.scrollPageView.backgroundColor = RGB(240, 240, 240);
 }
+
+/**
+ 请求数据
+ */
+-(void)setupData
+{
+    [SVProgressHUD show];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"categoryId"] = @"1";
+    WEAKSELF
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Store_Sort parameters:param success:^(id  _Nonnull responseObject) {
+        [SVProgressHUD dismiss];
+        NSLog(@"responseobject:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code == 1) {
+            
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        return ;
+    }];
+}
+
 - (void)onRightBtnAction:(UIButton *)button
 {
     HomeSearchVC *searchvc = [[HomeSearchVC alloc]init];

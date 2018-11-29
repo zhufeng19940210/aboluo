@@ -19,6 +19,15 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
+
++ (instancetype)HomecellWithTableView:(UITableView *)tableView{
+    HomeExamCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+    if (cell == nil) {
+        cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+    }
+    return cell;
+}
+
 /**
  选择选项的功能设置
  @param sender 选择功能的选项
@@ -31,7 +40,5 @@
 -(void)setExammodel:(ExamModel *)exammodel
 {
     _exammodel = exammodel;
-    
 }
-
 @end

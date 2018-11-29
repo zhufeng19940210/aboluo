@@ -50,6 +50,7 @@ CGFloat const DCMargin = 10;
         [button setTitle:@"南昌市" forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:17];
+        button.titleLabel.textAlignment = NSTextAlignmentLeft;
         [button addTarget:self action:@selector(actionLeftBtn:) forControlEvents:UIControlEventTouchUpInside];
         [button setImagePosition:0 withInset:-5];
         [button sizeToFit];
