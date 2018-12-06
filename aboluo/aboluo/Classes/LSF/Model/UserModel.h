@@ -4,12 +4,18 @@
 //  Copyright © 2018年 zhufeng. All rights reserved.
 #import <Foundation/Foundation.h>
 @interface UserModel : NSObject
-//存放用户的字段
-@property (nonatomic,copy)NSString *F_CreatorTime;
-@property (nonatomic,copy)NSString *F_Id;
-@property (nonatomic,copy)NSString *mobile;
-@property (nonatomic,assign)NSInteger score;
-@property (nonatomic,assign)NSInteger status;
+@property (nonatomic,copy)NSString  *commerceId;
+@property (nonatomic,copy)NSString  *createTime;
+@property (nonatomic,copy)NSString  *head;
+@property (nonatomic,copy)NSString  *aid;
+@property (nonatomic,copy)NSString  *identify;
+@property (nonatomic,copy)NSString  *latitude;
+@property (nonatomic,copy)NSString  *levelId;
+@property (nonatomic,copy)NSString  *longitude;
+@property (nonatomic,copy)NSString  *password;
+@property (nonatomic,copy)NSString  *phone;
+@property (nonatomic,copy)NSString  *recommendId;
+@property (nonatomic,copy)NSString  *roleId;
 + (void)save:(UserModel *)model;
 + (UserModel *)getInfo;
 + (BOOL)isOnline;

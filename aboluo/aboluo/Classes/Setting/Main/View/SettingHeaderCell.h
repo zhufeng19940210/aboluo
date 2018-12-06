@@ -12,6 +12,7 @@ typedef NS_ENUM(NSInteger,SettingHeaderType) {
 @interface SettingHeaderCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *name_lab;
 @property (weak, nonatomic) IBOutlet UILabel *level_lab;
-@property (weak, nonatomic) IBOutlet UIButton *icon_btn;
+@property (weak, nonatomic) IBOutlet UIImageView *icon_img;
+@property (weak, nonatomic) IBOutlet UIImageView *setting_bg;
 @property (nonatomic,copy)void(^actionBlock)(SettingHeaderType type);
 @end

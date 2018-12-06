@@ -9,7 +9,7 @@
 +(NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{
-             @"hid": @"id"
+             @"bid": @"id"
 
              };
 }

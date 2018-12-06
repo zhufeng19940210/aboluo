@@ -9,32 +9,55 @@
 #import "UserInfoCenterVC.h"
 #import "UserLevelVC.h"
 #import "UserAmountVC.h"
+#import "SettingLogoutCell.h"
+#import "SettingPersonAuthonVC.h"
+#import "SettingCompanyAuthonVC.h"
+#import "LoginVC.h"
+#import "AppDelegate.h"
+#import "OpenshopVC.h"
 @interface SettingVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
-@property (nonatomic,strong)NSMutableArray *imagArray;
-@property (nonatomic,strong)NSMutableArray *titleArray;
+@property (nonatomic,strong)NSMutableArray *personimagArray;
+@property (nonatomic,strong)NSMutableArray *persontitleArray;
+@property (nonatomic,strong)NSMutableArray *companyimagArray;
+@property (nonatomic,strong)NSMutableArray *companytitleArray;
+@property (nonatomic,strong)UserModel *usermodel;
 @end
 @implementation SettingVC
--(NSMutableArray *)imagArray
+-(NSMutableArray *)personimagArray
 {
-    if (!_imagArray) {
-        _imagArray = [NSMutableArray arrayWithObjects:@"setting_yue",@"setting_dengji",@"setting_zhengsu",@"setting_user", nil];
-    }
-    return _imagArray;
+    if (!_personimagArray) {
+        _personimagArray = [NSMutableArray arrayWithObjects:@"setting_yue",@"setting_dengji",@"setting_zhengsu",@"setting_user",@"setting_authon", nil];
+    }return _personimagArray;
 }
--(NSMutableArray *)titleArray
+
+-(NSMutableArray *)persontitleArray
 {
-    if (!_titleArray) {
-        _titleArray = [NSMutableArray arrayWithObjects:@"余额",@"等级",@"证书",@"个人中心", nil];
+    if (!_persontitleArray) {
+        _persontitleArray = [NSMutableArray arrayWithObjects:@"余额",@"等级",@"证书",@"个人中心",@"去认证", nil];
     }
-    return _titleArray;
+    return _persontitleArray;
+}
+-(NSMutableArray *)companyimagArray
+{
+    if (!_companyimagArray ) {
+        _companyimagArray = [NSMutableArray arrayWithObjects:@"setting_yue",@"setting_dengji",@"setting_qiye",@"seting_kaidian",@"setting_authon", nil];
+    }
+    return _companyimagArray;
+}
+-(NSMutableArray *)companytitleArray
+{
+    if (!_companytitleArray) {
+        _companytitleArray = [NSMutableArray arrayWithObjects:@"余额",@"等级",@"企业中心",@"申请开店",@"去认证", nil];
+    }
+    return _companytitleArray;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-    ///请求数据
-    //[self setupData];
+    self.usermodel = [UserModel getInfo];
+    [self setupData];
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -81,69 +104,168 @@
     self.tableview.backgroundColor = [UIColor clearColor];
     [self.tableview registerNib:[UINib nibWithNibName:@"SettingHeaderCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"SettingHeaderCell"];
     [self.tableview registerNib:[UINib nibWithNibName:@"SettingNormalCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"SettingNormalCell"];
+    [self.tableview registerNib:[UINib nibWithNibName:@"SettingLogoutCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"SettingLogoutCell"];
 }
-
 #pragma mark --uitableviewdelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section == 0) {
+        return self.persontitleArray.count+1;
+    }else{
+        return 1;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return 220;
-    }else {
+        if (indexPath.row == 0) {
+            return 220;
+        }else{
+            return 60;
+        }
+    }else{
         return 50;
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        SettingHeaderCell *headercell = [tableView dequeueReusableCellWithIdentifier:@"SettingHeaderCell"];
-        headercell.actionBlock = ^(SettingHeaderType type) {
-            if (type == SettingHeaderTypeIcon) {
-                //头像
-                NSLog(@"头像");
-            }else if(type == SettingHeaderTypeCode){
-                //二维码
-                NSLog(@"二维码");
-            }else if (type == SettingHeaderTypeMine){
-                //个人中心
-                NSLog(@"个人中心");
+        if (indexPath.row == 0) {
+            SettingHeaderCell *headercell = [tableView dequeueReusableCellWithIdentifier:@"SettingHeaderCell"];
+            if ([self.usermodel.roleId isEqualToString:@"0"]) {
+                //个人
+                headercell.setting_bg.image = [UIImage imageNamed:@"setting_bg.png"];
+                headercell.actionBlock = ^(SettingHeaderType type) {
+                    if (type == SettingHeaderTypeIcon) {
+                        //头像
+                        NSLog(@"头像");
+                    }else if(type == SettingHeaderTypeCode){
+                        //二维码
+                        NSLog(@"二维码");
+                    }else if (type == SettingHeaderTypeMine){
+                        //个人中心
+                        NSLog(@"个人中心");
+                    }
+                };
+            }else{
+                //企业
+                headercell.setting_bg.image = [UIImage imageNamed:@"setting_bg_company.png"];
+                headercell.actionBlock = ^(SettingHeaderType type) {
+                    if (type == SettingHeaderTypeIcon) {
+                        //头像
+                        NSLog(@"头像");
+                    }else if(type == SettingHeaderTypeCode){
+                        //二维码
+                        NSLog(@"二维码");
+                    }else if (type == SettingHeaderTypeMine){
+                        //个人中心
+                        NSLog(@"个人中心");
+                    }
+                };
             }
-        };
-        headercell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return headercell;
+            headercell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return headercell;
+            
+        }else{
+            SettingNormalCell *normalcell = [tableView dequeueReusableCellWithIdentifier:@"SettingNormalCell"];
+            if ([self.usermodel.roleId isEqualToString:@"0"]) {
+                //个人
+                normalcell.img_icon.image =[UIImage imageNamed:self.personimagArray[indexPath.row-1]];
+                normalcell.title_lab.text = self.persontitleArray[indexPath.row-1];
+            }else{
+                //企业
+                normalcell.img_icon.image =[UIImage imageNamed:self.companyimagArray[indexPath.row-1]] ;
+                normalcell.title_lab.text = self.companytitleArray[indexPath.row-1];
+            }
+            normalcell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return normalcell;
+        }
     }else{
-        SettingNormalCell *normalcell = [tableView dequeueReusableCellWithIdentifier:@"SettingNormalCell"];
-        normalcell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return normalcell;
+        SettingLogoutCell *logoutcell = [tableView dequeueReusableCellWithIdentifier:@"SettingLogoutCell"];
+        logoutcell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return logoutcell;
     }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.section == 1) {
-        //余额
-        UserAmountVC *amountvc = [[UserAmountVC alloc]init];
-        [self.navigationController pushViewController:amountvc animated:YES];
-    }else if(indexPath.section == 2){
-        //等级
-        UserLevelVC *levelvc = [[UserLevelVC alloc]init];
-        [self.navigationController pushViewController:levelvc animated:YES];
-    }else if (indexPath.section == 3){
-        //证书
-        UserCertificateVC *certificatevc = [[UserCertificateVC alloc]init];
-        [self.navigationController pushViewController:certificatevc animated:YES];
-    }else if (indexPath.section == 4){
-        //个人中心
-        UserInfoCenterVC *centervc = [[UserInfoCenterVC alloc]init];
-        [self.navigationController pushViewController:centervc animated:YES];
+    if (indexPath.section == 0) {
+        if ([self.usermodel.roleId isEqualToString:@"0"]) {
+            //个人
+            if (indexPath.row == 1) {
+                //余额
+                UserAmountVC *amountvc = [[UserAmountVC alloc]init];
+                [self.navigationController pushViewController:amountvc animated:YES];
+            }else if(indexPath.row == 2){
+                //等级
+                UserLevelVC *levelvc = [[UserLevelVC alloc]init];
+                [self.navigationController pushViewController:levelvc animated:YES];
+            }else if (indexPath.row == 3){
+                //证书
+                UserCertificateVC *certificatevc = [[UserCertificateVC alloc]init];
+                [self.navigationController pushViewController:certificatevc animated:YES];
+            }else if (indexPath.row == 4){
+                //个人中心
+                UserInfoCenterVC *centervc = [[UserInfoCenterVC alloc]init];
+                [self.navigationController pushViewController:centervc animated:YES];
+            }else if(indexPath.row == 5){
+                //去认证
+                SettingPersonAuthonVC *personauthonvc = [[SettingPersonAuthonVC alloc]init];
+                [self.navigationController pushViewController:personauthonvc animated:YES];
+            }
+        }else{
+            //企业
+            if (indexPath.row == 1) {
+                //余额
+                UserAmountVC *amountvc = [[UserAmountVC alloc]init];
+                [self.navigationController pushViewController:amountvc animated:YES];
+            }else if(indexPath.row == 2){
+                //等级
+                UserLevelVC *levelvc = [[UserLevelVC alloc]init];
+                [self.navigationController pushViewController:levelvc animated:YES];
+            }else if (indexPath.row == 3){
+                //企业中心
+                UserCertificateVC *certificatevc = [[UserCertificateVC alloc]init];
+                [self.navigationController pushViewController:certificatevc animated:YES];
+            }else if (indexPath.row == 4){
+                //申请开店
+                OpenshopVC *openshopvc = [[OpenshopVC alloc]init];
+                [self.navigationController pushViewController:openshopvc animated:YES];
+            }else if(indexPath.row == 5){
+                //去认证
+                SettingCompanyAuthonVC *companyvc =[[SettingCompanyAuthonVC alloc]init];
+                [self.navigationController pushViewController:companyvc animated:YES];
+            }
+        }
+    }else{
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您确定退出登录吗?" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [self logoutMethod];
+        }];
+        [alertController addAction:cancelAction];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
+}
+/**
+ 退出登录
+ */
+-(void)logoutMethod
+{
+    //情况数据
+    [UserModel logout];
+    LoginVC *loginVC = [[LoginVC alloc]init];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginVC];
+    app.window.backgroundColor = [UIColor whiteColor];
+    app.window.rootViewController = nav;
+    [app.window makeKeyAndVisible];
+    [SVProgressHUD showSuccessWithStatus:@"退出成功"];
 }
 @end

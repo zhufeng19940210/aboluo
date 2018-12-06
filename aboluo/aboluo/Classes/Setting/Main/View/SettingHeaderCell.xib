@@ -34,17 +34,6 @@
                             <action selector="actionHeaderBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KEu-rW-D2i"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJX-mD-enD">
-                        <rect key="frame" x="10" y="78" width="90" height="90"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="90" id="6gU-6C-R6d"/>
-                            <constraint firstAttribute="width" constant="90" id="jUK-E0-Y5H"/>
-                        </constraints>
-                        <state key="normal" backgroundImage="setting_icon"/>
-                        <connections>
-                            <action selector="actionHeaderBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aGN-KD-Fe1"/>
-                        </connections>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张灵玉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxY-Bj-FO5">
                         <rect key="frame" x="114" y="92" width="52" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -73,29 +62,37 @@
                             <action selector="actionHeaderBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EJM-Oo-ahL"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_icon" translatesAutoresizingMaskIntoConstraints="NO" id="3qg-0A-afI">
+                        <rect key="frame" x="11" y="77" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="CRQ-yE-bPs"/>
+                            <constraint firstAttribute="width" constant="90" id="dcl-hD-5iZ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="mxY-Bj-FO5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="81" id="7JN-MN-C3n"/>
                     <constraint firstItem="jPB-R2-AYt" firstAttribute="centerY" secondItem="TZc-bO-jhH" secondAttribute="centerY" id="CVq-mJ-Vgc"/>
-                    <constraint firstItem="gJX-mD-enD" firstAttribute="top" secondItem="TZc-bO-jhH" secondAttribute="bottom" constant="11" id="DXn-io-7UB"/>
-                    <constraint firstItem="gJX-mD-enD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ERj-0o-NHu"/>
+                    <constraint firstItem="mxY-Bj-FO5" firstAttribute="leading" secondItem="3qg-0A-afI" secondAttribute="trailing" constant="13" id="Emw-cj-hFr"/>
                     <constraint firstAttribute="bottom" secondItem="TxJ-IQ-jOb" secondAttribute="bottom" constant="-0.5" id="GaC-sa-1y9"/>
+                    <constraint firstItem="3qg-0A-afI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="InE-TC-Ptx"/>
                     <constraint firstItem="TZc-bO-jhH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="J9e-oa-FDV"/>
                     <constraint firstItem="HJa-6p-bhH" firstAttribute="top" secondItem="mxY-Bj-FO5" secondAttribute="bottom" constant="12" id="Jhu-h3-QCt"/>
                     <constraint firstItem="TxJ-IQ-jOb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KmJ-Tz-eo2"/>
                     <constraint firstAttribute="trailing" secondItem="TxJ-IQ-jOb" secondAttribute="trailing" id="O54-Jt-Wee"/>
-                    <constraint firstItem="HJa-6p-bhH" firstAttribute="leading" secondItem="gJX-mD-enD" secondAttribute="trailing" constant="14" id="XTp-Gd-iXe"/>
+                    <constraint firstItem="3qg-0A-afI" firstAttribute="top" secondItem="TZc-bO-jhH" secondAttribute="bottom" constant="10" id="XWX-Yt-jeB"/>
                     <constraint firstItem="TZc-bO-jhH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aPB-ko-aGj"/>
                     <constraint firstAttribute="trailing" secondItem="jPB-R2-AYt" secondAttribute="trailing" constant="10" id="bgc-3q-IfK"/>
+                    <constraint firstItem="HJa-6p-bhH" firstAttribute="leading" secondItem="3qg-0A-afI" secondAttribute="trailing" constant="13" id="dkV-tc-AWv"/>
                     <constraint firstItem="TxJ-IQ-jOb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jn9-oh-fXg"/>
-                    <constraint firstItem="mxY-Bj-FO5" firstAttribute="leading" secondItem="gJX-mD-enD" secondAttribute="trailing" constant="14" id="pYn-T2-Ye9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="icon_btn" destination="gJX-mD-enD" id="yoW-Ny-ECv"/>
+                <outlet property="icon_img" destination="3qg-0A-afI" id="rtK-82-rqa"/>
                 <outlet property="level_lab" destination="HJa-6p-bhH" id="kHs-fL-zea"/>
                 <outlet property="name_lab" destination="mxY-Bj-FO5" id="XT5-J3-tZw"/>
+                <outlet property="setting_bg" destination="TxJ-IQ-jOb" id="2u3-Yt-lCA"/>
             </connections>
             <point key="canvasLocation" x="63.5" y="54"/>
         </tableViewCell>

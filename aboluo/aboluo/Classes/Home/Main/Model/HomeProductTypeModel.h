@@ -5,6 +5,7 @@
 #import "BaseModel.h"
 @interface HomeProductTypeModel : BaseModel
 @property (nonatomic,copy)NSString *pid;
-@property (nonatomic,copy)NSString *picurl;
-@property (nonatomic,copy)NSString *title;
+@property (nonatomic,copy)NSString *img;
+@property (nonatomic,copy)NSString *name;
+@property (nonatomic,copy)NSString *parentId;
 @end

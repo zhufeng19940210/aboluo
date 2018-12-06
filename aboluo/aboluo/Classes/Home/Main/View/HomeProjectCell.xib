@@ -26,9 +26,9 @@
                             <constraint firstAttribute="height" constant="44" id="kkM-my-Xoa"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="木工" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGg-5i-QVw">
-                        <rect key="frame" x="25" y="49" width="31" height="28"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="土木建筑工程师一i一快快快" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGg-5i-QVw">
+                        <rect key="frame" x="0.0" y="49" width="80" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -36,8 +36,10 @@
             </view>
             <constraints>
                 <constraint firstItem="R1c-3G-mWq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="HGr-R8-c60"/>
+                <constraint firstAttribute="trailing" secondItem="bGg-5i-QVw" secondAttribute="trailing" id="Kfk-ky-Yz9"/>
                 <constraint firstItem="bGg-5i-QVw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="mdD-kl-Uhw"/>
                 <constraint firstItem="R1c-3G-mWq" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ruI-tC-U3B"/>
+                <constraint firstItem="bGg-5i-QVw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="skW-cw-gzv"/>
                 <constraint firstItem="bGg-5i-QVw" firstAttribute="top" secondItem="R1c-3G-mWq" secondAttribute="bottom" id="tY7-Ni-ZO0"/>
                 <constraint firstAttribute="bottom" secondItem="bGg-5i-QVw" secondAttribute="bottom" constant="3" id="xX7-7g-3Nl"/>
             </constraints>

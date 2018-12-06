@@ -15,5 +15,7 @@
 -(void)setTypemodel:(HomeWorkTypeModel *)typemodel
 {
     _typemodel = typemodel;
+    [_icon_img sd_setImageWithURL:[NSURL URLWithString:typemodel.img] placeholderImage:[UIImage imageNamed:Default_Img]];
+    _title_lab.text = [NSString stringWithFormat:@"%@",typemodel.name];
 }
 @end

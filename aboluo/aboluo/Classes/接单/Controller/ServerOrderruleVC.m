@@ -10,5 +10,4 @@
     [super viewDidLoad];
     self.navigationItem.title = @"接单规范";
 }
-
 @end

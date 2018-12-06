@@ -48,5 +48,11 @@
 ///查看商品
 #define Home_Store_Detail [BaseUrl stringByAppendingString:@"/shop/goods"]
 /*====================商品接口 End==================*/
+/*====================认证 End==================*/
+///个人认证
+#define Person_Authon [BaseUrl stringByAppendingString:@"/person/identify"]
+///公司认证
+#define Company_Authon [BaseUrl stringByAppendingString:@"/company/identif"]
+
 
 #endif /* URLStr_h */

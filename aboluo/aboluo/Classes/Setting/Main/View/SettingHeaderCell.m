@@ -11,10 +11,7 @@
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
-
 /**
  button的点击事件
  @param sender button的点击事件

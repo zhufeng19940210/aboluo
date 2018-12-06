@@ -4,10 +4,9 @@
 //  Copyright © 2018 zhufeng. All rights reserved.
 #import "BaseModel.h"
 @interface HomeBanner : BaseModel
-@property (nonatomic,copy)NSString *createTime;
-@property (nonatomic,copy)NSString *hid;
-@property (nonatomic,copy)NSString *name;
-@property (nonatomic,assign)int turn;
-@property (nonatomic,assign)int type;
-@property (nonatomic,copy)NSString *url;
+@property (nonatomic,copy) NSString *contents;
+@property (nonatomic,copy) NSString *bid;
+@property (nonatomic,copy) NSString *img;
+@property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *style;
 @end

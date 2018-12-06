@@ -105,12 +105,15 @@
 #define ShowTitleTip        @"正在请求"
 #define ShowSuccessTip      @"请求成功"
 #define ShowErrorTip        @"请求失败"
+#define Default_Img         @"app_placher"
 //经纬度
 #define ZF_Latitude    @"lattiude"
 #define ZF_Longitude   @"longitude"
 #define ZF_Token       @"token"
 //地址
 #define ZF_Location_Add  @"location_addr"
+
+
 //通知类型的key   === ZF 7月5日
 #define ISFirst       @"isFirstRun"
 #endif /* BMacro_h */

@@ -5,6 +5,12 @@
 #import "UserModel.h"
 static NSString *UserModelKey = @"UserModelKey";
 @implementation UserModel
++(NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"aid": @"id"
+             };
+}
 + (void)save:(UserModel *)model
 {
     NSDictionary *user = model.mj_keyValues;
@@ -22,7 +28,7 @@ static NSString *UserModelKey = @"UserModelKey";
 {
     NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:UserModelKey];
     UserModel *user =[UserModel mj_objectWithKeyValues:dict];
-    if (user.F_Id.length>0)
+    if (user.aid.length>0)
         return YES;
     return NO;
 }
@@ -30,7 +36,7 @@ static NSString *UserModelKey = @"UserModelKey";
 {
     NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:UserModelKey];
     UserModel *user =[UserModel mj_objectWithKeyValues:dict];
-    user.F_Id = nil;
+    user.aid = nil;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:user.mj_keyValues forKey:UserModelKey];
     [defaults synchronize];

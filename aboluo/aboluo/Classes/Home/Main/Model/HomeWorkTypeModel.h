@@ -5,7 +5,8 @@
 #import "BaseModel.h"
 @interface HomeWorkTypeModel : BaseModel
 @property (nonatomic,copy)NSString *wid;
+@property (nonatomic,copy)NSString *img;
 @property (nonatomic,copy)NSString *name;
-@property (nonatomic,assign)int turn;
-@property (nonatomic,copy)NSString *url;
+@property (nonatomic,copy)NSString *parentId;
+
 @end

@@ -26,4 +26,6 @@
 #import "ResponeModel.h"
 #import "IQKeyboardManager.h"
 #import <ShareSDK/ShareSDK.h>
+#import "TZImagePickerController.h"
+#import "UserModel.h"
 #endif /* PrefixHeader_pch */

@@ -19,13 +19,11 @@
     }
     return self;
 }
-
 -(void)setProductTypeArray:(NSMutableArray *)productTypeArray
 {
     _productTypeArray = productTypeArray;
     [self.myCollectionView reloadData];
 }
-
 -(void)setupCollectView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout  alloc]init];
@@ -66,12 +64,10 @@
     
     HomeProductTypeDetailCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeProductTypeDetailCell" forIndexPath:indexPath];
     HomeProductTypeModel *model = self.productTypeArray[indexPath.row];
-    cell.icon_img.image = [UIImage imageNamed:model.picurl];
-    //[cell.icon_img sd_setImageWithURL:[NSURL URLWithString:model.picurl] placeholderImage:[UIImage imageNamed:@""]];
-    cell.title_lab.text = [NSString stringWithFormat:@"%@",model.title];
+    [cell.icon_img sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:[UIImage imageNamed:Default_Img]];
+    cell.title_lab.text = [NSString stringWithFormat:@"%@",model.name];
     return cell;
 }
-
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeProductTypeModel *model = self.productTypeArray[indexPath.row];

@@ -82,20 +82,20 @@ CGFloat const DCMargin = 10;
     [_searchButton addTarget:self action:@selector(searchButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [_topSearchView addSubview:_searchButton];
     //然后是哪个支付宝的东西
-    CGFloat btnH = 80;
-    CGFloat btnW = btnH;
-    CGFloat marign = 10;
-    for(int i = 0 ; i<4; i++){
-        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(10+(marign*i)+btnW*i, Height_NavBar,btnW , btnH)];
-        [button setImage:[UIImage imageNamed:self.titleArray[i]] forState:UIControlStateNormal];
-        [button setTitle:self.imageArray[i] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [button setImagePosition:POImagePositionTop withInset:1];
-        button.titleLabel.font = [UIFont systemFontOfSize:15];
-        button.tag = 1000+i;
-        [button addTarget:self action:@selector(myButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:button];
-    }
+//    CGFloat btnH = 80;
+//    CGFloat btnW = btnH;
+//    CGFloat marign = 10;
+//    for(int i = 0 ; i<4; i++){
+//        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(10+(marign*i)+btnW*i, Height_NavBar,btnW , btnH)];
+//        [button setImage:[UIImage imageNamed:self.titleArray[i]] forState:UIControlStateNormal];
+//        [button setTitle:self.imageArray[i] forState:UIControlStateNormal];
+//        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [button setImagePosition:POImagePositionTop withInset:1];
+//        button.titleLabel.font = [UIFont systemFontOfSize:15];
+//        button.tag = 1000+i;
+//        [button addTarget:self action:@selector(myButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+//        [self addSubview:button];
+//    }
 }
 -(void)layoutSubviews
 {
