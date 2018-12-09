@@ -21,8 +21,10 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title =[NSString stringWithFormat:@"%@",self.typemodel.name];
+    self.navigationItem.title =[NSString stringWithFormat:@"%@师傅 ",self.typemodel.name];
+    NSLog(@"wid:%@",self.typemodel.wid);
     self.page = 1;
+    [self acitonMasterNewData];
     [self setupTableView];
     [self setupRefresh];
 }
@@ -40,11 +42,11 @@
     [SVProgressHUD showWithStatus:ShowTitleTip];
     self.page = 1;
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"productId"] = @"";
+    param[@"productId"] = self.typemodel.wid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
     param[@"pageSize"] = @10;
     WEAKSELF
-    [[NetWorkTool shareInstacne]postWithURLString:Home_Project_List parameters:param success:^(id  _Nonnull responseObject) {
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Master_List parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
@@ -73,11 +75,11 @@
     self.page++;
     [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"productId"] = @"";
+    param[@"productId"] = self.typemodel.wid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
     param[@"pageSize"] = @10;
     WEAKSELF
-    [[NetWorkTool shareInstacne]postWithURLString:Home_Project_List parameters:param success:^(id  _Nonnull responseObject) {
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Master_List parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];

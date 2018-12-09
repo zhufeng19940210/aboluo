@@ -84,7 +84,7 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"categoryId"] = @"1";
     WEAKSELF
-    [[NetWorkTool shareInstacne]postWithURLString:Home_Store_Sort parameters:param success:^(id  _Nonnull responseObject) {
+    [[NetWorkTool shareInstacne]postWithURLString:@"" parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         NSLog(@"responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];

@@ -9,7 +9,10 @@ typedef NS_ENUM(NSInteger,SettingHeaderType) {
     SettingHeaderTypeMine     = 3000,//个人中心Btn
     SettingHeaderTypeHuan     = 4000,//其他Btn
 };
-@interface SettingHeaderCell : UITableViewCell
+@interface SettingHeaderCell :
+UITableViewCell
+@property (weak, nonatomic) IBOutlet UIButton *right_btn;
+@property (weak, nonatomic) IBOutlet UIButton *left_btn;
 @property (weak, nonatomic) IBOutlet UILabel *name_lab;
 @property (weak, nonatomic) IBOutlet UILabel *level_lab;
 @property (weak, nonatomic) IBOutlet UIImageView *icon_img;

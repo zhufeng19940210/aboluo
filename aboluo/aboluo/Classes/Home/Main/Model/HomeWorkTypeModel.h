@@ -8,5 +8,4 @@
 @property (nonatomic,copy)NSString *img;
 @property (nonatomic,copy)NSString *name;
 @property (nonatomic,copy)NSString *parentId;
-
 @end

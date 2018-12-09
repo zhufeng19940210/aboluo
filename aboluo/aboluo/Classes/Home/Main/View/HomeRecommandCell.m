@@ -30,5 +30,8 @@
  */
 - (IBAction)actionGraborderBtn:(UIButton *)sender
 {
+    if (self.projcectblock) {
+        self.projcectblock(self.productModel);
+    }
 }
 @end

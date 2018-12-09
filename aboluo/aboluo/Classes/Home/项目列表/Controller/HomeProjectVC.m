@@ -21,7 +21,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@",self.typemodel.name];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@",self.xiangmumodel.name];
+    NSLog(@"xiangmuid:%@",self.xiangmumodel.wid);
     self.page = 1;
     [self acitonProjectNewData];
     [self setupTableView];
@@ -41,7 +42,7 @@
     [SVProgressHUD showWithStatus:ShowTitleTip];
     self.page = 1;
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"productId"] = @"";
+    param[@"productId"] = self.xiangmumodel.wid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
     param[@"pageSize"] = @10;
     WEAKSELF
@@ -52,7 +53,7 @@
         if (res.code == 1) {
             [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.projectArray removeAllObjects];
-            weakSelf.projectArray = [HomeProjectDetailModel mj_objectArrayWithKeyValuesArray:res.data[@""]];
+            weakSelf.projectArray = [HomeProjectDetailModel mj_objectArrayWithKeyValuesArray:res.data[@"projects"]];
             [weakSelf.tableview reloadData];
             [weakSelf.tableview.mj_header endRefreshing];
         }else{
@@ -74,7 +75,7 @@
     self.page++;
     [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"productId"] = @"";
+    param[@"productId"] = self.xiangmumodel.wid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
     param[@"pageSize"] = @10;
     WEAKSELF
@@ -85,7 +86,7 @@
         if (res.code == 1) {
             [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             NSMutableArray *array = [NSMutableArray array];
-            array = [HomeProjectDetailModel mj_objectArrayWithKeyValuesArray:res.data[@""]];
+            array = [HomeProjectDetailModel mj_objectArrayWithKeyValuesArray:res.data[@"projects"]];
             [weakSelf.projectArray addObjectsFromArray:array];
             [weakSelf.tableview reloadData];
             [weakSelf.tableview.mj_header endRefreshing];
@@ -125,9 +126,8 @@
     ProjectCell *cell  = [ProjectCell projectcellWithTableView:tableView];
     HomeProjectDetailModel *productmodel = self.projectArray [indexPath.row];
     cell.detailModel = productmodel;
-    cell.projectblock = ^(int tag) {
-        NSLog(@"detailModel.name:%@",productmodel);
-        [self recviceWithModel:productmodel];
+    cell.projectblock = ^(HomeProjectDetailModel *detailmodel) {
+        
     };
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -147,19 +147,20 @@
  */
 -(void)recviceWithModel:(HomeProjectDetailModel *)model
 {
+    UserModel *usermodel = [UserModel getInfo];
     [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"projectId"] = @"";
-    param[@"userId"]    = @"";
+    param[@"projectId"] = model.productId;
+    param[@"userId"]    = usermodel.aid;
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:Home_Project_Receive parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
-        NSLog(@"抢单:%@",responseObject);
+        NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
+            [SVProgressHUD showSuccessWithStatus:@"抢单成功👍"];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
+            [SVProgressHUD showErrorWithStatus:res.msg];
             return;
         }
     } failure:^(NSError * _Nonnull error) {

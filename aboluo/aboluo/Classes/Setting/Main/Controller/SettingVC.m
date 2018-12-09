@@ -15,7 +15,8 @@
 #import "LoginVC.h"
 #import "AppDelegate.h"
 #import "OpenshopVC.h"
-@interface SettingVC ()<UITableViewDelegate,UITableViewDataSource>
+#import "PersonalinformationPage.h"
+@interface SettingVC ()<UITableViewDelegate,UITableViewDataSource,TZImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *personimagArray;
 @property (nonatomic,strong)NSMutableArray *persontitleArray;
@@ -77,7 +78,6 @@
 {
     [SVProgressHUD show];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:@"" parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         NSLog(@"responobject:%@",responseObject);
@@ -165,6 +165,7 @@
                     }else if (type == SettingHeaderTypeMine){
                         //个人中心
                         NSLog(@"个人中心");
+            
                     }
                 };
             }
@@ -268,4 +269,60 @@
     [app.window makeKeyAndVisible];
     [SVProgressHUD showSuccessWithStatus:@"退出成功"];
 }
+/**
+ 修改头像
+ */
+-(void)changeIconMethod
+{
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 columnNumber:4 delegate:self pushPhotoPickerVc:YES];
+    [imagePickerVc setAllowPreview:NO];
+    [imagePickerVc setAllowPickingVideo:NO];
+    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
+        //上传单张图片的东西
+        [self uploadpath:photos[0]];
+    }];
+    [self presentViewController:imagePickerVc animated:YES completion:nil];
+}
+/**
+ 上传单张图片
+ @param selectImage 上传单张图片
+ */
+-(void)uploadpath:(UIImage *)selectImage{
+    [SVProgressHUD show];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"userId"] = self.usermodel.aid;
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html",nil];
+    [manager POST:User_Update_Head parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+        formatter.dateFormat=@"yyyyMMddHHmmss";
+        NSString *str=[formatter stringFromDate:[NSDate date]];
+        NSString *fileName=[NSString stringWithFormat:@"%@.jpg",str];
+        NSLog(@"selectimageurl:%@",fileName);
+        NSData *imageData = UIImageJPEGRepresentation(selectImage, 0.5);
+        NSLog(@"iMAGEdata:%@",imageData);
+        [formData appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/jpg"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [SVProgressHUD dismiss];
+        NSLog(@"success:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code == 1) {
+            NSString *avtorpath = res.data[@"photo"];
+            [SVProgressHUD showSuccessWithStatus:@"上传成功"];
+            UserModel *model = [UserModel getInfo];
+            model.head = avtorpath;
+            [UserModel save:model];
+        }else{
+            [SVProgressHUD showErrorWithStatus:@"上传失败"];
+            return;
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showInfoWithStatus:@"服务器失败"];
+        return;
+    }];
+}
+
 @end

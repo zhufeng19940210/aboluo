@@ -28,6 +28,11 @@
 #import "HomeNoticeModel.h"
 #import "HomeProjectDetailModel.h"
 #import "HomeWorkTypeModel.h"
+#import "HomeXiangmuModel.h"
+#import "StorePruductListVC.h"
+#import "HomeProjectDetailVC.h"
+#import "HomeMasterVC.h"
+#import "HomeProjectVC.h"
 @interface HomeVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *top_layout;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionview;
@@ -138,7 +143,7 @@
             ///2.广播
             weakSelf.noticArray = [HomeNoticeModel mj_objectArrayWithKeyValuesArray:res.data[@"notices"]];
             ///3.项目
-            weakSelf.projectArray = [HomeWorkTypeModel mj_objectArrayWithKeyValuesArray:res.data[@"xiangmu"]];
+            weakSelf.projectArray = [HomeXiangmuModel mj_objectArrayWithKeyValuesArray:res.data[@"xiangmu"]];
             ///4.师傅
             weakSelf.masterArray = [HomeWorkTypeModel mj_objectArrayWithKeyValuesArray:res.data[@"shifu"]];
             ///6.商品列表
@@ -158,13 +163,7 @@
         return;
     }];
 }
-/**
- 加载更多的数据
- */
--(void)actionHomeMoreData
-{
-    
-}
+
 -(void)setupHome
 {
    self.topview = [[HomeTopView alloc]initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, Height_NavBar)];
@@ -298,8 +297,8 @@
     if (indexPath.section == 3) {
         ///3.项目列表
         HomeProjectCell *projectCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeProjectCell" forIndexPath:indexPath];
-        HomeWorkTypeModel *model = self.projectArray[indexPath.row];
-        projectCell.typemodel = model;
+        HomeXiangmuModel *model = self.projectArray[indexPath.row];
+        projectCell.xiangmumodel = model;
         homeCell = projectCell;
     }if (indexPath.section == 4) {
         //4.个人找师傅标题
@@ -324,23 +323,38 @@
         HomeTitleCell *titleCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeTitleCell" forIndexPath:indexPath];
         titleCell.title_lab.text = @"商品列表";
         ///TODO找师傅更多数据
+        WEAKSELF
         titleCell.pushblock = ^(UIButton *btn) {
+            ///调整
+            weakSelf.tabBarController.selectedIndex = 2;
         };
         homeCell = titleCell;
     }if (indexPath.section == 7) {
         ///7.商城列表
         HomeProductTypeCell *productTypecell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeProductTypeCell" forIndexPath:indexPath];
+        WEAKSELF
+        productTypecell.producttypeblock = ^(HomeProductTypeModel *typeModel) {
+            NSLog(@"typeModel.id:%@",typeModel.parentId);
+            StorePruductListVC *productlistvc = [[StorePruductListVC alloc]init];
+            productlistvc.typeModel = typeModel;
+            [weakSelf.navigationController pushViewController:productlistvc animated:YES];
+        };
         productTypecell.productTypeArray = self.productTypeArray;
         homeCell = productTypecell;
     }if (indexPath.section == 8) {
-        ///11.为你推荐的东西
+        ///8.为你推荐的东西
         HomeRecommendTtileCell *recommendCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeRecommendTtileCell" forIndexPath:indexPath];
         homeCell = recommendCell;
     }if (indexPath.section == 9) {
-        ///12.推荐的商品的列表
+        ///9.推荐的商品的列表
         HomeRecommandCell *recommandCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeRecommandCell" forIndexPath:indexPath];
         HomeProjectDetailModel *detailModel = self.remmendProjectArray[indexPath.row];
         recommandCell.productModel = detailModel;
+        WEAKSELF
+        recommandCell.projcectblock = ^(HomeProjectDetailModel *productModel) {
+            //抢单
+            [weakSelf qingdanWithModel:productModel];
+        };
         homeCell = recommandCell;
     }
     return homeCell;
@@ -348,6 +362,25 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 3) {
+        //找项目列表
+        HomeXiangmuModel *xiangmumodel = self.projectArray[indexPath.row];
+        HomeProjectVC *projectvc = [[HomeProjectVC alloc]init];
+        projectvc.xiangmumodel = xiangmumodel;
+        [self.navigationController pushViewController:projectvc animated:YES];
+    }
+    if (indexPath.section == 5) {
+        //找师傅列表
+        HomeWorkTypeModel *typemodel = self.masterArray[indexPath.row];
+        HomeMasterVC *masterlistvc = [[HomeMasterVC alloc]init];
+        masterlistvc.typemodel = typemodel;
+        [self.navigationController pushViewController:masterlistvc animated:YES];
+    }
+    if (indexPath.section == 9) {
+        //项目详情
+        HomeProjectDetailVC *projectdetailvc = [[HomeProjectDetailVC alloc]init];
+        [self.navigationController pushViewController:projectdetailvc animated:YES];
+    }
 }
 #pragma mark -item宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -367,6 +400,29 @@
     }else{
         return CGSizeZero;
     }
+}
+#pragma mark --抢单Btn
+-(void)qingdanWithModel:(HomeProjectDetailModel *)detailmodel
+{
+    UserModel *usermodel = [UserModel getInfo];
+    [SVProgressHUD showWithStatus:ShowTitleTip];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"projectId"] = detailmodel.productId;
+    param[@"userId"]    = usermodel.aid;
+    [[NetWorkTool shareInstacne]postWithURLString:Home_Project_Receive parameters:param success:^(id  _Nonnull responseObject) {
+        NSLog(@"responseObject:%@",responseObject);
+        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
+        if (res.code == 1) {
+            [SVProgressHUD showErrorWithStatus:@"抢单成功"];
+        }else{
+            [SVProgressHUD showErrorWithStatus:res.msg];
+            return;
+        }
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        return;
+    }];
 }
 @end
 

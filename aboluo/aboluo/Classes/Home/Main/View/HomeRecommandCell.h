@@ -5,6 +5,8 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeProjectDetailModel.h"
+typedef void (^ProjectBlock)(HomeProjectDetailModel *productModel);
 @interface HomeRecommandCell : UICollectionViewCell
 @property (nonatomic,strong)HomeProjectDetailModel *productModel;
+@property (nonatomic,copy)ProjectBlock projcectblock;
 @end

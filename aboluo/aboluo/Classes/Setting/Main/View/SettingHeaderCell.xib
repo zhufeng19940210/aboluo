@@ -90,8 +90,10 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="icon_img" destination="3qg-0A-afI" id="rtK-82-rqa"/>
+                <outlet property="left_btn" destination="TZc-bO-jhH" id="L20-qI-Opt"/>
                 <outlet property="level_lab" destination="HJa-6p-bhH" id="kHs-fL-zea"/>
                 <outlet property="name_lab" destination="mxY-Bj-FO5" id="XT5-J3-tZw"/>
+                <outlet property="right_btn" destination="jPB-R2-AYt" id="0Ry-2R-Qqd"/>
                 <outlet property="setting_bg" destination="TxJ-IQ-jOb" id="2u3-Yt-lCA"/>
             </connections>
             <point key="canvasLocation" x="63.5" y="54"/>

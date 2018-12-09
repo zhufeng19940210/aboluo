@@ -4,7 +4,7 @@
 //  Copyright © 2018 zhufeng. All rights reserved.
 #import <UIKit/UIKit.h>
 #import "HomeProjectDetailModel.h"
-typedef void(^ProjectBlock) (int tag);
+typedef void(^ProjectBlock) (HomeProjectDetailModel *detailmodel);
 @interface ProjectCell : UITableViewCell
 @property (nonatomic,strong)HomeProjectDetailModel *detailModel;
 + (instancetype)projectcellWithTableView:(UITableView *)tableView;

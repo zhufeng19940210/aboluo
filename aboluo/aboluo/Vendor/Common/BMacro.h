@@ -106,6 +106,7 @@
 #define ShowSuccessTip      @"请求成功"
 #define ShowErrorTip        @"请求失败"
 #define Default_Img         @"app_placher"
+#define Default_Img2        @"app_placher2"
 //经纬度
 #define ZF_Latitude    @"lattiude"
 #define ZF_Longitude   @"longitude"
