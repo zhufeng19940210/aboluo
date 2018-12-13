@@ -6,6 +6,7 @@
 #import "MasterCell.h"
 #import "HomeMasterModel.h"
 #import "HomeMasterDetailVC.h"
+#import "HomeMasterModel.h"
 @interface HomeMasterVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *masterArray;
@@ -53,7 +54,7 @@
         if (res.code == 1) {
             [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.masterArray removeAllObjects];
-            weakSelf.masterArray = [HomeMasterModel mj_objectArrayWithKeyValuesArray:res.data[@""]];
+            weakSelf.masterArray = [HomeMasterModel mj_objectArrayWithKeyValuesArray:res.data[@"list"]];
             [weakSelf.tableview reloadData];
             [weakSelf.tableview.mj_header endRefreshing];
         }else{
@@ -86,7 +87,7 @@
         if (res.code == 1) {
             [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             NSMutableArray *array = [NSMutableArray array];
-            array = [HomeMasterModel mj_objectArrayWithKeyValuesArray:res.data[@""]];
+            array = [HomeMasterModel mj_objectArrayWithKeyValuesArray:res.data[@"list"]];
             [weakSelf.masterArray addObjectsFromArray:array];
             [weakSelf.tableview reloadData];
             [weakSelf.tableview.mj_header endRefreshing];

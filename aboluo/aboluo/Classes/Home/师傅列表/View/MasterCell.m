@@ -26,7 +26,10 @@
 -(void)setMastermodel:(HomeMasterModel *)mastermodel
 {
     _mastermodel = mastermodel;
-    
+    [_icon_img sd_setImageWithURL:[NSURL URLWithString:mastermodel.head] placeholderImage:[UIImage imageNamed:Default_Img]];
+    _name_lab.text = [NSString stringWithFormat:@"姓名:%@",mastermodel.name];
+    _level_lab.text = [NSString stringWithFormat:@"会员等级:%@",mastermodel.memberRank];
+    _time_lab.text  = [NSString stringWithFormat:@"会员时间:%@",mastermodel.create_time];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

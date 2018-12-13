@@ -8,13 +8,20 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
-
+/**
+ 选择保险类型
+ @param sender 选择保险类型
+ */
+- (IBAction)actionSelectInsuranceBtn:(UIButton *)sender
+{
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(pushToInsuranceMethod)]) {
+            [self.delegate pushToInsuranceMethod];
+        }
+    }
+}
 @end

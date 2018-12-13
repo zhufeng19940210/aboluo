@@ -4,9 +4,9 @@
 //  Copyright © 2018 zhufeng. All rights reserved.
 
 #import "BaseVC.h"
-#import "AddressModel.h"
+#import "AddressModel2.h"
 @interface AddOrEditAddreddVC : BaseVC
 ///isAdd 是否编辑 isEdit
 @property (nonatomic,assign)BOOL isAdd;
-@property (nonatomic,strong)AddressModel *addressmodel;
+@property (nonatomic,strong)AddressModel2 *addressmodel;
 @end

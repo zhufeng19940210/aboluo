@@ -19,8 +19,6 @@
 		F0007EC821995FF600854DA3 /* HomeMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007EC621995FF600854DA3 /* HomeMainCell.m */; };
 		F0007EC921995FF600854DA3 /* HomeMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0007EC721995FF600854DA3 /* HomeMainCell.xib */; };
 		F0007ECC2199799600854DA3 /* HomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0007ECB2199799600854DA3 /* HomeTopView.m */; };
-		F009C1D221A2E9CA00EE828E /* AddressListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F009C1D021A2E9CA00EE828E /* AddressListCell.m */; };
-		F009C1D321A2E9CA00EE828E /* AddressListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F009C1D121A2E9CA00EE828E /* AddressListCell.xib */; };
 		F00CF85821B7CC8200121892 /* ServerBillinghallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F00CF85621B7CC8200121892 /* ServerBillinghallVC.m */; };
 		F00CF85921B7CC8200121892 /* ServerBillinghallVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00CF85721B7CC8200121892 /* ServerBillinghallVC.xib */; };
 		F00CF85D21B7D46300121892 /* ZFSquareAddCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F00CF85B21B7D46300121892 /* ZFSquareAddCollectionCell.m */; };
@@ -40,6 +38,18 @@
 		F02FF20F21B8F4680051F3C0 /* SettingLogoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02FF20D21B8F4680051F3C0 /* SettingLogoutCell.xib */; };
 		F02FF21821B8F7430051F3C0 /* OpenshopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F02FF21621B8F7430051F3C0 /* OpenshopVC.m */; };
 		F02FF21921B8F7430051F3C0 /* OpenshopVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02FF21721B8F7430051F3C0 /* OpenshopVC.xib */; };
+		F05E30DE21C2689F00FEEA81 /* CommitOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E30DC21C2689F00FEEA81 /* CommitOrder.m */; };
+		F05E30DF21C2689F00FEEA81 /* CommitOrder.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E30DD21C2689F00FEEA81 /* CommitOrder.xib */; };
+		F05E30E721C277F400FEEA81 /* ProjectDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E30E621C277F400FEEA81 /* ProjectDetailModel.m */; };
+		F05E30F421C2931F00FEEA81 /* MySendOrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E30F321C2931F00FEEA81 /* MySendOrderListVC.m */; };
+		F05E30F821C2933B00FEEA81 /* MySendOrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E30F621C2933B00FEEA81 /* MySendOrderDetailVC.m */; };
+		F05E30F921C2933B00FEEA81 /* MySendOrderDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E30F721C2933B00FEEA81 /* MySendOrderDetailVC.xib */; };
+		F05E30FC21C293BA00FEEA81 /* MyReceiveOrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E30FB21C293BA00FEEA81 /* MyReceiveOrderListVC.m */; };
+		F05E310021C2941100FEEA81 /* MyReceiveOrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E30FE21C2941100FEEA81 /* MyReceiveOrderDetailVC.m */; };
+		F05E310121C2941100FEEA81 /* MyReceiveOrderDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E30FF21C2941100FEEA81 /* MyReceiveOrderDetailVC.xib */; };
+		F05E310521C296AB00FEEA81 /* MyOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E310321C296AB00FEEA81 /* MyOrderCell.m */; };
+		F05E310621C296AB00FEEA81 /* MyOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E310421C296AB00FEEA81 /* MyOrderCell.xib */; };
+		F05E310921C297B600FEEA81 /* MyOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F05E310821C297B600FEEA81 /* MyOrderModel.m */; };
 		F0B50A9E218FF0F70027BB61 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F0B50A81218FF0F70027BB61 /* WeiboSDK.bundle */; };
 		F0B50A9F218FF0F70027BB61 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B50A82218FF0F70027BB61 /* libWeiboSDK.a */; };
 		F0B50AA0218FF0F70027BB61 /* libWeChatSDKFull.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B50A87218FF0F70027BB61 /* libWeChatSDKFull.a */; };
@@ -96,7 +106,7 @@
 		F0D073CC21A68B69006BC623 /* SGQRCodeGenerateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073C021A68B69006BC623 /* SGQRCodeGenerateManager.m */; };
 		F0D073CD21A68B69006BC623 /* SGQRCodeAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073C521A68B69006BC623 /* SGQRCodeAlbumManager.m */; };
 		F0D073D321A68CF9006BC623 /* HomeScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073D221A68CF9006BC623 /* HomeScanVC.m */; };
-		F0D073D621A6A194006BC623 /* AddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073D521A6A194006BC623 /* AddressModel.m */; };
+		F0D073D621A6A194006BC623 /* AddressModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073D521A6A194006BC623 /* AddressModel2.m */; };
 		F0D073DF21A6B3FA006BC623 /* HomeExamVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073DD21A6B3FA006BC623 /* HomeExamVC.m */; };
 		F0D073E021A6B3FA006BC623 /* HomeExamVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D073DE21A6B3FA006BC623 /* HomeExamVC.xib */; };
 		F0D073E421A6BA1C006BC623 /* HomeExamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D073E221A6BA1C006BC623 /* HomeExamCell.m */; };
@@ -221,6 +231,35 @@
 		F0F7855721AF8E1800F0251F /* HomeProductTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7855621AF8E1800F0251F /* HomeProductTypeCell.m */; };
 		F0F7855B21AF915300F0251F /* HomeProductTypeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7855921AF915300F0251F /* HomeProductTypeDetailCell.m */; };
 		F0F7855C21AF915300F0251F /* HomeProductTypeDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7855A21AF915300F0251F /* HomeProductTypeDetailCell.xib */; };
+		F0F7E1CC21BF4B6700DAF0D6 /* StoreProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1CB21BF4B6700DAF0D6 /* StoreProductModel.m */; };
+		F0F7E1D021BF5F3B00DAF0D6 /* EngineerLevelPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1CE21BF5F3B00DAF0D6 /* EngineerLevelPage.m */; };
+		F0F7E1D121BF5F3B00DAF0D6 /* EngineerLevelPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E1CF21BF5F3B00DAF0D6 /* EngineerLevelPage.xib */; };
+		F0F7E1D521BF5F5300DAF0D6 /* CompanyLevelPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1D321BF5F5300DAF0D6 /* CompanyLevelPage.m */; };
+		F0F7E1D621BF5F5300DAF0D6 /* CompanyLevelPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E1D421BF5F5300DAF0D6 /* CompanyLevelPage.xib */; };
+		F0F7E1DA21BF5F7100DAF0D6 /* InsurancePage.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1D821BF5F7100DAF0D6 /* InsurancePage.m */; };
+		F0F7E1DB21BF5F7100DAF0D6 /* InsurancePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E1D921BF5F7100DAF0D6 /* InsurancePage.xib */; };
+		F0F7E1DE21BF600400DAF0D6 /* InsurancesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1DD21BF600400DAF0D6 /* InsurancesModel.m */; };
+		F0F7E1E121BF602900DAF0D6 /* GongZhongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1E021BF602900DAF0D6 /* GongZhongModel.m */; };
+		F0F7E1E421BF604000DAF0D6 /* EngineerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1E321BF604000DAF0D6 /* EngineerModel.m */; };
+		F0F7E1E721BF605D00DAF0D6 /* CompanyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1E621BF605D00DAF0D6 /* CompanyModel.m */; };
+		F0F7E1EB21BF623500DAF0D6 /* ConditionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1E921BF623500DAF0D6 /* ConditionCell.m */; };
+		F0F7E1EC21BF623500DAF0D6 /* ConditionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E1EA21BF623500DAF0D6 /* ConditionCell.xib */; };
+		F0F7E1F021BF9C8000DAF0D6 /* ServerBillingTotalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1EE21BF9C8000DAF0D6 /* ServerBillingTotalCell.m */; };
+		F0F7E1F121BF9C8000DAF0D6 /* ServerBillingTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E1EF21BF9C8000DAF0D6 /* ServerBillingTotalCell.xib */; };
+		F0F7E1FB21BFCA8E00DAF0D6 /* SeverAcceptanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E1F921BFCA8E00DAF0D6 /* SeverAcceptanceVC.m */; };
+		F0F7E1FC21BFCA8E00DAF0D6 /* SeverAcceptanceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E1FA21BFCA8E00DAF0D6 /* SeverAcceptanceVC.xib */; };
+		F0F7E20421BFCACF00DAF0D6 /* SeverJoinplatformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E20221BFCACF00DAF0D6 /* SeverJoinplatformVC.m */; };
+		F0F7E20521BFCACF00DAF0D6 /* SeverJoinplatformVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E20321BFCACF00DAF0D6 /* SeverJoinplatformVC.xib */; };
+		F0F7E20C21BFD7EB00DAF0D6 /* AddreeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E20621BFD7EA00DAF0D6 /* AddreeListCell.xib */; };
+		F0F7E20D21BFD7EB00DAF0D6 /* AddreeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E20921BFD7EB00DAF0D6 /* AddreeListCell.m */; };
+		F0F7E20E21BFD7EB00DAF0D6 /* AddSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E20A21BFD7EB00DAF0D6 /* AddSelectCell.m */; };
+		F0F7E20F21BFD7EB00DAF0D6 /* AddSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7E20B21BFD7EB00DAF0D6 /* AddSelectCell.xib */; };
+		F0F7E21221BFF11800DAF0D6 /* SeverBillingRuleListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E21121BFF11800DAF0D6 /* SeverBillingRuleListVC.m */; };
+		F0F7E21521BFF1D000DAF0D6 /* BillingRuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E21421BFF1D000DAF0D6 /* BillingRuleModel.m */; };
+		F0F7E21821BFF5CB00DAF0D6 /* ServerOrderruleListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E21721BFF5CB00DAF0D6 /* ServerOrderruleListVC.m */; };
+		F0F7E21B21BFF5F400DAF0D6 /* SeverAcceptanceListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7E21A21BFF5F400DAF0D6 /* SeverAcceptanceListVC.m */; };
+		F0F8708A21BE076300B535BA /* ServerConditionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F8708821BE076300B535BA /* ServerConditionVC.m */; };
+		F0F8708B21BE076300B535BA /* ServerConditionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F8708921BE076300B535BA /* ServerConditionVC.xib */; };
 		F0F8E31221A2538C00DA2B35 /* AddOrEditAddreddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F8E31021A2538C00DA2B35 /* AddOrEditAddreddVC.m */; };
 		F0F8E31321A2538C00DA2B35 /* AddOrEditAddreddVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F8E31121A2538C00DA2B35 /* AddOrEditAddreddVC.xib */; };
 		F0F9C0C421B66DDB00DEDBC3 /* ServerBillingHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F9C0C221B66DDB00DEDBC3 /* ServerBillingHeaderCell.m */; };
@@ -307,9 +346,6 @@
 		F0007EC721995FF600854DA3 /* HomeMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMainCell.xib; sourceTree = "<group>"; };
 		F0007ECA2199799600854DA3 /* HomeTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTopView.h; sourceTree = "<group>"; };
 		F0007ECB2199799600854DA3 /* HomeTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTopView.m; sourceTree = "<group>"; };
-		F009C1CF21A2E9CA00EE828E /* AddressListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressListCell.h; sourceTree = "<group>"; };
-		F009C1D021A2E9CA00EE828E /* AddressListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressListCell.m; sourceTree = "<group>"; };
-		F009C1D121A2E9CA00EE828E /* AddressListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressListCell.xib; sourceTree = "<group>"; };
 		F00CF85521B7CC8200121892 /* ServerBillinghallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerBillinghallVC.h; sourceTree = "<group>"; };
 		F00CF85621B7CC8200121892 /* ServerBillinghallVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerBillinghallVC.m; sourceTree = "<group>"; };
 		F00CF85721B7CC8200121892 /* ServerBillinghallVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerBillinghallVC.xib; sourceTree = "<group>"; };
@@ -339,6 +375,26 @@
 		F02FF21521B8F7430051F3C0 /* OpenshopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenshopVC.h; sourceTree = "<group>"; };
 		F02FF21621B8F7430051F3C0 /* OpenshopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenshopVC.m; sourceTree = "<group>"; };
 		F02FF21721B8F7430051F3C0 /* OpenshopVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenshopVC.xib; sourceTree = "<group>"; };
+		F05E30DB21C2689F00FEEA81 /* CommitOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitOrder.h; sourceTree = "<group>"; };
+		F05E30DC21C2689F00FEEA81 /* CommitOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitOrder.m; sourceTree = "<group>"; };
+		F05E30DD21C2689F00FEEA81 /* CommitOrder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitOrder.xib; sourceTree = "<group>"; };
+		F05E30E521C277F400FEEA81 /* ProjectDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectDetailModel.h; sourceTree = "<group>"; };
+		F05E30E621C277F400FEEA81 /* ProjectDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailModel.m; sourceTree = "<group>"; };
+		F05E30F221C2931F00FEEA81 /* MySendOrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySendOrderListVC.h; sourceTree = "<group>"; };
+		F05E30F321C2931F00FEEA81 /* MySendOrderListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySendOrderListVC.m; sourceTree = "<group>"; };
+		F05E30F521C2933B00FEEA81 /* MySendOrderDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySendOrderDetailVC.h; sourceTree = "<group>"; };
+		F05E30F621C2933B00FEEA81 /* MySendOrderDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySendOrderDetailVC.m; sourceTree = "<group>"; };
+		F05E30F721C2933B00FEEA81 /* MySendOrderDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySendOrderDetailVC.xib; sourceTree = "<group>"; };
+		F05E30FA21C293BA00FEEA81 /* MyReceiveOrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyReceiveOrderListVC.h; sourceTree = "<group>"; };
+		F05E30FB21C293BA00FEEA81 /* MyReceiveOrderListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyReceiveOrderListVC.m; sourceTree = "<group>"; };
+		F05E30FD21C2941100FEEA81 /* MyReceiveOrderDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyReceiveOrderDetailVC.h; sourceTree = "<group>"; };
+		F05E30FE21C2941100FEEA81 /* MyReceiveOrderDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyReceiveOrderDetailVC.m; sourceTree = "<group>"; };
+		F05E30FF21C2941100FEEA81 /* MyReceiveOrderDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyReceiveOrderDetailVC.xib; sourceTree = "<group>"; };
+		F05E310221C296AB00FEEA81 /* MyOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyOrderCell.h; sourceTree = "<group>"; };
+		F05E310321C296AB00FEEA81 /* MyOrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyOrderCell.m; sourceTree = "<group>"; };
+		F05E310421C296AB00FEEA81 /* MyOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrderCell.xib; sourceTree = "<group>"; };
+		F05E310721C297B600FEEA81 /* MyOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyOrderModel.h; sourceTree = "<group>"; };
+		F05E310821C297B600FEEA81 /* MyOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyOrderModel.m; sourceTree = "<group>"; };
 		F0B50A81218FF0F70027BB61 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		F0B50A82218FF0F70027BB61 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		F0B50A83218FF0F70027BB61 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
@@ -424,8 +480,8 @@
 		F0D073C621A68B69006BC623 /* SGQRCodeGenerateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeGenerateManager.h; sourceTree = "<group>"; };
 		F0D073D121A68CF9006BC623 /* HomeScanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScanVC.h; sourceTree = "<group>"; };
 		F0D073D221A68CF9006BC623 /* HomeScanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScanVC.m; sourceTree = "<group>"; };
-		F0D073D421A6A194006BC623 /* AddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressModel.h; sourceTree = "<group>"; };
-		F0D073D521A6A194006BC623 /* AddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressModel.m; sourceTree = "<group>"; };
+		F0D073D421A6A194006BC623 /* AddressModel2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressModel2.h; sourceTree = "<group>"; };
+		F0D073D521A6A194006BC623 /* AddressModel2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressModel2.m; sourceTree = "<group>"; };
 		F0D073DC21A6B3FA006BC623 /* HomeExamVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeExamVC.h; sourceTree = "<group>"; };
 		F0D073DD21A6B3FA006BC623 /* HomeExamVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeExamVC.m; sourceTree = "<group>"; };
 		F0D073DE21A6B3FA006BC623 /* HomeExamVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeExamVC.xib; sourceTree = "<group>"; };
@@ -647,6 +703,54 @@
 		F0F7855821AF915300F0251F /* HomeProductTypeDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeProductTypeDetailCell.h; sourceTree = "<group>"; };
 		F0F7855921AF915300F0251F /* HomeProductTypeDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeProductTypeDetailCell.m; sourceTree = "<group>"; };
 		F0F7855A21AF915300F0251F /* HomeProductTypeDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProductTypeDetailCell.xib; sourceTree = "<group>"; };
+		F0F7E1CA21BF4B6700DAF0D6 /* StoreProductModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreProductModel.h; sourceTree = "<group>"; };
+		F0F7E1CB21BF4B6700DAF0D6 /* StoreProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreProductModel.m; sourceTree = "<group>"; };
+		F0F7E1CD21BF5F3B00DAF0D6 /* EngineerLevelPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EngineerLevelPage.h; sourceTree = "<group>"; };
+		F0F7E1CE21BF5F3B00DAF0D6 /* EngineerLevelPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EngineerLevelPage.m; sourceTree = "<group>"; };
+		F0F7E1CF21BF5F3B00DAF0D6 /* EngineerLevelPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EngineerLevelPage.xib; sourceTree = "<group>"; };
+		F0F7E1D221BF5F5300DAF0D6 /* CompanyLevelPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyLevelPage.h; sourceTree = "<group>"; };
+		F0F7E1D321BF5F5300DAF0D6 /* CompanyLevelPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyLevelPage.m; sourceTree = "<group>"; };
+		F0F7E1D421BF5F5300DAF0D6 /* CompanyLevelPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyLevelPage.xib; sourceTree = "<group>"; };
+		F0F7E1D721BF5F7100DAF0D6 /* InsurancePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsurancePage.h; sourceTree = "<group>"; };
+		F0F7E1D821BF5F7100DAF0D6 /* InsurancePage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsurancePage.m; sourceTree = "<group>"; };
+		F0F7E1D921BF5F7100DAF0D6 /* InsurancePage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsurancePage.xib; sourceTree = "<group>"; };
+		F0F7E1DC21BF600400DAF0D6 /* InsurancesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsurancesModel.h; sourceTree = "<group>"; };
+		F0F7E1DD21BF600400DAF0D6 /* InsurancesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsurancesModel.m; sourceTree = "<group>"; };
+		F0F7E1DF21BF602900DAF0D6 /* GongZhongModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GongZhongModel.h; sourceTree = "<group>"; };
+		F0F7E1E021BF602900DAF0D6 /* GongZhongModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GongZhongModel.m; sourceTree = "<group>"; };
+		F0F7E1E221BF604000DAF0D6 /* EngineerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EngineerModel.h; sourceTree = "<group>"; };
+		F0F7E1E321BF604000DAF0D6 /* EngineerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EngineerModel.m; sourceTree = "<group>"; };
+		F0F7E1E521BF605D00DAF0D6 /* CompanyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyModel.h; sourceTree = "<group>"; };
+		F0F7E1E621BF605D00DAF0D6 /* CompanyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyModel.m; sourceTree = "<group>"; };
+		F0F7E1E821BF623500DAF0D6 /* ConditionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConditionCell.h; sourceTree = "<group>"; };
+		F0F7E1E921BF623500DAF0D6 /* ConditionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConditionCell.m; sourceTree = "<group>"; };
+		F0F7E1EA21BF623500DAF0D6 /* ConditionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionCell.xib; sourceTree = "<group>"; };
+		F0F7E1ED21BF9C8000DAF0D6 /* ServerBillingTotalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerBillingTotalCell.h; sourceTree = "<group>"; };
+		F0F7E1EE21BF9C8000DAF0D6 /* ServerBillingTotalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerBillingTotalCell.m; sourceTree = "<group>"; };
+		F0F7E1EF21BF9C8000DAF0D6 /* ServerBillingTotalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerBillingTotalCell.xib; sourceTree = "<group>"; };
+		F0F7E1F821BFCA8E00DAF0D6 /* SeverAcceptanceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeverAcceptanceVC.h; sourceTree = "<group>"; };
+		F0F7E1F921BFCA8E00DAF0D6 /* SeverAcceptanceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeverAcceptanceVC.m; sourceTree = "<group>"; };
+		F0F7E1FA21BFCA8E00DAF0D6 /* SeverAcceptanceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeverAcceptanceVC.xib; sourceTree = "<group>"; };
+		F0F7E20121BFCACF00DAF0D6 /* SeverJoinplatformVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeverJoinplatformVC.h; sourceTree = "<group>"; };
+		F0F7E20221BFCACF00DAF0D6 /* SeverJoinplatformVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeverJoinplatformVC.m; sourceTree = "<group>"; };
+		F0F7E20321BFCACF00DAF0D6 /* SeverJoinplatformVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeverJoinplatformVC.xib; sourceTree = "<group>"; };
+		F0F7E20621BFD7EA00DAF0D6 /* AddreeListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddreeListCell.xib; sourceTree = "<group>"; };
+		F0F7E20721BFD7EA00DAF0D6 /* AddSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSelectCell.h; sourceTree = "<group>"; };
+		F0F7E20821BFD7EA00DAF0D6 /* AddreeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddreeListCell.h; sourceTree = "<group>"; };
+		F0F7E20921BFD7EB00DAF0D6 /* AddreeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddreeListCell.m; sourceTree = "<group>"; };
+		F0F7E20A21BFD7EB00DAF0D6 /* AddSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSelectCell.m; sourceTree = "<group>"; };
+		F0F7E20B21BFD7EB00DAF0D6 /* AddSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSelectCell.xib; sourceTree = "<group>"; };
+		F0F7E21021BFF11800DAF0D6 /* SeverBillingRuleListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeverBillingRuleListVC.h; sourceTree = "<group>"; };
+		F0F7E21121BFF11800DAF0D6 /* SeverBillingRuleListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeverBillingRuleListVC.m; sourceTree = "<group>"; };
+		F0F7E21321BFF1D000DAF0D6 /* BillingRuleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BillingRuleModel.h; sourceTree = "<group>"; };
+		F0F7E21421BFF1D000DAF0D6 /* BillingRuleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BillingRuleModel.m; sourceTree = "<group>"; };
+		F0F7E21621BFF5CB00DAF0D6 /* ServerOrderruleListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerOrderruleListVC.h; sourceTree = "<group>"; };
+		F0F7E21721BFF5CB00DAF0D6 /* ServerOrderruleListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerOrderruleListVC.m; sourceTree = "<group>"; };
+		F0F7E21921BFF5F400DAF0D6 /* SeverAcceptanceListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeverAcceptanceListVC.h; sourceTree = "<group>"; };
+		F0F7E21A21BFF5F400DAF0D6 /* SeverAcceptanceListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeverAcceptanceListVC.m; sourceTree = "<group>"; };
+		F0F8708721BE076300B535BA /* ServerConditionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerConditionVC.h; sourceTree = "<group>"; };
+		F0F8708821BE076300B535BA /* ServerConditionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerConditionVC.m; sourceTree = "<group>"; };
+		F0F8708921BE076300B535BA /* ServerConditionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerConditionVC.xib; sourceTree = "<group>"; };
 		F0F8E30F21A2538C00DA2B35 /* AddOrEditAddreddVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddOrEditAddreddVC.h; sourceTree = "<group>"; };
 		F0F8E31021A2538C00DA2B35 /* AddOrEditAddreddVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddOrEditAddreddVC.m; sourceTree = "<group>"; };
 		F0F8E31121A2538C00DA2B35 /* AddOrEditAddreddVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOrEditAddreddVC.xib; sourceTree = "<group>"; };
@@ -825,9 +929,12 @@
 		F00D33FF219FAF1D00DB33A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F009C1CF21A2E9CA00EE828E /* AddressListCell.h */,
-				F009C1D021A2E9CA00EE828E /* AddressListCell.m */,
-				F009C1D121A2E9CA00EE828E /* AddressListCell.xib */,
+				F0F7E20821BFD7EA00DAF0D6 /* AddreeListCell.h */,
+				F0F7E20921BFD7EB00DAF0D6 /* AddreeListCell.m */,
+				F0F7E20621BFD7EA00DAF0D6 /* AddreeListCell.xib */,
+				F0F7E20721BFD7EA00DAF0D6 /* AddSelectCell.h */,
+				F0F7E20A21BFD7EB00DAF0D6 /* AddSelectCell.m */,
+				F0F7E20B21BFD7EB00DAF0D6 /* AddSelectCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -835,8 +942,8 @@
 		F00D3400219FAF2200DB33A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F0D073D421A6A194006BC623 /* AddressModel.h */,
-				F0D073D521A6A194006BC623 /* AddressModel.m */,
+				F0D073D421A6A194006BC623 /* AddressModel2.h */,
+				F0D073D521A6A194006BC623 /* AddressModel2.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -926,6 +1033,391 @@
 			children = (
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		F05E30D621C267E800FEEA81 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				F05E30DA21C2687700FEEA81 /* Other */,
+				F05E30D921C2686E00FEEA81 /* Model */,
+				F05E30D821C267FD00FEEA81 /* View */,
+				F05E30D721C267F600FEEA81 /* Controller */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		F05E30D721C267F600FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F05E30DB21C2689F00FEEA81 /* CommitOrder.h */,
+				F05E30DC21C2689F00FEEA81 /* CommitOrder.m */,
+				F05E30DD21C2689F00FEEA81 /* CommitOrder.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E30D821C267FD00FEEA81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F05E30D921C2686E00FEEA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F05E30DA21C2687700FEEA81 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F05E30E021C26F3600FEEA81 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F0FD36272196D46800F6C93B /* Other */,
+				F0FD36282196D46800F6C93B /* Controller */,
+				F0FD362C2196D46800F6C93B /* Model */,
+				F0FD362D2196D46800F6C93B /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F05E30E121C26F7D00FEEA81 /* 发单须知 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E30E321C26FA900FEEA81 /* Controller */,
+			);
+			path = "发单须知";
+			sourceTree = "<group>";
+		};
+		F05E30E221C26F8800FEEA81 /* 接单须知 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E30E421C26FB100FEEA81 /* Controller */,
+			);
+			path = "接单须知";
+			sourceTree = "<group>";
+		};
+		F05E30E321C26FA900FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7E21021BFF11800DAF0D6 /* SeverBillingRuleListVC.h */,
+				F0F7E21121BFF11800DAF0D6 /* SeverBillingRuleListVC.m */,
+				F0F6D4CD219E9C5E0004FCB3 /* ServerBillingruleVC.h */,
+				F0F6D4CE219E9C5E0004FCB3 /* ServerBillingruleVC.m */,
+				F0F6D4CF219E9C5E0004FCB3 /* ServerBillingruleVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E30E421C26FB100FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7E21621BFF5CB00DAF0D6 /* ServerOrderruleListVC.h */,
+				F0F7E21721BFF5CB00DAF0D6 /* ServerOrderruleListVC.m */,
+				F0F6D4D2219E9C910004FCB3 /* ServerOrderruleVC.h */,
+				F0F6D4D3219E9C910004FCB3 /* ServerOrderruleVC.m */,
+				F0F6D4D4219E9C910004FCB3 /* ServerOrderruleVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E30E821C2920700FEEA81 /* 我的接单 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E30F121C292FD00FEEA81 /* Other */,
+				F05E30F021C292FA00FEEA81 /* Model */,
+				F05E30EF21C292F500FEEA81 /* View */,
+				F05E30EE21C292EF00FEEA81 /* Contorller */,
+			);
+			path = "我的接单";
+			sourceTree = "<group>";
+		};
+		F05E30E921C2920F00FEEA81 /* 我的发单 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E30ED21C292EB00FEEA81 /* Other */,
+				F05E30EC21C292E500FEEA81 /* Model */,
+				F05E30EB21C2921E00FEEA81 /* View */,
+				F05E30EA21C2921600FEEA81 /* Controller */,
+			);
+			path = "我的发单";
+			sourceTree = "<group>";
+		};
+		F05E30EA21C2921600FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F05E30F221C2931F00FEEA81 /* MySendOrderListVC.h */,
+				F05E30F321C2931F00FEEA81 /* MySendOrderListVC.m */,
+				F05E30F521C2933B00FEEA81 /* MySendOrderDetailVC.h */,
+				F05E30F621C2933B00FEEA81 /* MySendOrderDetailVC.m */,
+				F05E30F721C2933B00FEEA81 /* MySendOrderDetailVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E30EB21C2921E00FEEA81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F05E310221C296AB00FEEA81 /* MyOrderCell.h */,
+				F05E310321C296AB00FEEA81 /* MyOrderCell.m */,
+				F05E310421C296AB00FEEA81 /* MyOrderCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F05E30EC21C292E500FEEA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F05E310721C297B600FEEA81 /* MyOrderModel.h */,
+				F05E310821C297B600FEEA81 /* MyOrderModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F05E30ED21C292EB00FEEA81 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F05E30EE21C292EF00FEEA81 /* Contorller */ = {
+			isa = PBXGroup;
+			children = (
+				F05E30FA21C293BA00FEEA81 /* MyReceiveOrderListVC.h */,
+				F05E30FB21C293BA00FEEA81 /* MyReceiveOrderListVC.m */,
+				F05E30FD21C2941100FEEA81 /* MyReceiveOrderDetailVC.h */,
+				F05E30FE21C2941100FEEA81 /* MyReceiveOrderDetailVC.m */,
+				F05E30FF21C2941100FEEA81 /* MyReceiveOrderDetailVC.xib */,
+			);
+			path = Contorller;
+			sourceTree = "<group>";
+		};
+		F05E30EF21C292F500FEEA81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F05E30F021C292FA00FEEA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F05E30F121C292FD00FEEA81 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F05E310A21C2A72E00FEEA81 /* 绑定银行卡 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E310E21C2A7B000FEEA81 /* Other */,
+				F05E310D21C2A7AB00FEEA81 /* Model */,
+				F05E310C21C2A7A300FEEA81 /* View */,
+				F05E310B21C2A79B00FEEA81 /* Controller */,
+			);
+			path = "绑定银行卡";
+			sourceTree = "<group>";
+		};
+		F05E310B21C2A79B00FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E310C21C2A7A300FEEA81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F05E310D21C2A7AB00FEEA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F05E310E21C2A7B000FEEA81 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F05E310F21C2A7BD00FEEA81 /* 消费券 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E311221C2A7D100FEEA81 /* Model */,
+				F05E311121C2A7CA00FEEA81 /* View */,
+				F05E311021C2A7C400FEEA81 /* Controller */,
+			);
+			path = "消费券";
+			sourceTree = "<group>";
+		};
+		F05E311021C2A7C400FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E311121C2A7CA00FEEA81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F05E311221C2A7D100FEEA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F05E311321C2A7E800FEEA81 /* 充值体现 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E311721C2A80500FEEA81 /* Other */,
+				F05E311621C2A7FE00FEEA81 /* Model */,
+				F05E311521C2A7FB00FEEA81 /* View */,
+				F05E311421C2A7F400FEEA81 /* Controller */,
+			);
+			path = "充值体现";
+			sourceTree = "<group>";
+		};
+		F05E311421C2A7F400FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E311521C2A7FB00FEEA81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F05E311621C2A7FE00FEEA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F05E311721C2A80500FEEA81 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F05E311821C2A81D00FEEA81 /* 发布商品 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E311C21C2A83700FEEA81 /* Other */,
+				F05E311B21C2A83200FEEA81 /* Model */,
+				F05E311A21C2A82D00FEEA81 /* View */,
+				F05E311921C2A82600FEEA81 /* Controller */,
+			);
+			path = "发布商品";
+			sourceTree = "<group>";
+		};
+		F05E311921C2A82600FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E311A21C2A82D00FEEA81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F05E311B21C2A83200FEEA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F05E311C21C2A83700FEEA81 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F05E311D21C2A85D00FEEA81 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F0FD362F2196D46800F6C93B /* Other */,
+				F0FD36302196D46800F6C93B /* Controller */,
+				F0FD36342196D46800F6C93B /* Model */,
+				F0FD36352196D46800F6C93B /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F05E311F21C2A89200FEEA81 /* 培训 */ = {
+			isa = PBXGroup;
+			children = (
+				F05E312321C2A8AC00FEEA81 /* Other */,
+				F05E312221C2A8A200FEEA81 /* Viiew */,
+				F05E312121C2A89E00FEEA81 /* Model */,
+				F05E312021C2A89700FEEA81 /* Controller */,
+			);
+			path = "培训";
+			sourceTree = "<group>";
+		};
+		F05E312021C2A89700FEEA81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05E312121C2A89E00FEEA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F05E312221C2A8A200FEEA81 /* Viiew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viiew;
+			sourceTree = "<group>";
+		};
+		F05E312321C2A8AC00FEEA81 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Other;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		F0B50A7C218FF0F70027BB61 /* SDK */ = {
@@ -1209,6 +1701,7 @@
 		F0F0E453218D51F300B4ABCE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F05E30D621C267E800FEEA81 /* Order */,
 				F0F6D4C4219E99EE0004FCB3 /* 发单 */,
 				F0F6D4C3219E99E40004FCB3 /* 接单 */,
 				F0FD36262196D46800F6C93B /* Server */,
@@ -1226,6 +1719,7 @@
 		F0F0E459218D51F300B4ABCE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F05E311F21C2A89200FEEA81 /* 培训 */,
 				F0D073D721A6B239006BC623 /* 考试 */,
 				F0FA0B2E219D4E2B0022B567 /* 推荐列表 */,
 				F0FA0B2C219D4E180022B567 /* 师傅列表 */,
@@ -1313,6 +1807,12 @@
 		F0F0E45E218D51F300B4ABCE /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				F05E311821C2A81D00FEEA81 /* 发布商品 */,
+				F05E311321C2A7E800FEEA81 /* 充值体现 */,
+				F05E310F21C2A7BD00FEEA81 /* 消费券 */,
+				F05E310A21C2A72E00FEEA81 /* 绑定银行卡 */,
+				F05E30E921C2920F00FEEA81 /* 我的发单 */,
+				F05E30E821C2920700FEEA81 /* 我的接单 */,
 				F0BDE7D421BD54CE0078D1C1 /* 名片 */,
 				F02FF21021B8F6ED0051F3C0 /* 开店 */,
 				F0F9C0B521B655EB00DEDBC3 /* 认证 */,
@@ -1948,12 +2448,21 @@
 		F0F6D4C5219E9A060004FCB3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F0F6D4CD219E9C5E0004FCB3 /* ServerBillingruleVC.h */,
-				F0F6D4CE219E9C5E0004FCB3 /* ServerBillingruleVC.m */,
-				F0F6D4CF219E9C5E0004FCB3 /* ServerBillingruleVC.xib */,
 				F00CF85521B7CC8200121892 /* ServerBillinghallVC.h */,
 				F00CF85621B7CC8200121892 /* ServerBillinghallVC.m */,
 				F00CF85721B7CC8200121892 /* ServerBillinghallVC.xib */,
+				F0F8708721BE076300B535BA /* ServerConditionVC.h */,
+				F0F8708821BE076300B535BA /* ServerConditionVC.m */,
+				F0F8708921BE076300B535BA /* ServerConditionVC.xib */,
+				F0F7E1CD21BF5F3B00DAF0D6 /* EngineerLevelPage.h */,
+				F0F7E1CE21BF5F3B00DAF0D6 /* EngineerLevelPage.m */,
+				F0F7E1CF21BF5F3B00DAF0D6 /* EngineerLevelPage.xib */,
+				F0F7E1D221BF5F5300DAF0D6 /* CompanyLevelPage.h */,
+				F0F7E1D321BF5F5300DAF0D6 /* CompanyLevelPage.m */,
+				F0F7E1D421BF5F5300DAF0D6 /* CompanyLevelPage.xib */,
+				F0F7E1D721BF5F7100DAF0D6 /* InsurancePage.h */,
+				F0F7E1D821BF5F7100DAF0D6 /* InsurancePage.m */,
+				F0F7E1D921BF5F7100DAF0D6 /* InsurancePage.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1961,6 +2470,16 @@
 		F0F6D4C6219E9A0E0004FCB3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0F7E1DC21BF600400DAF0D6 /* InsurancesModel.h */,
+				F0F7E1DD21BF600400DAF0D6 /* InsurancesModel.m */,
+				F0F7E1DF21BF602900DAF0D6 /* GongZhongModel.h */,
+				F0F7E1E021BF602900DAF0D6 /* GongZhongModel.m */,
+				F0F7E1E221BF604000DAF0D6 /* EngineerModel.h */,
+				F0F7E1E321BF604000DAF0D6 /* EngineerModel.m */,
+				F0F7E1E521BF605D00DAF0D6 /* CompanyModel.h */,
+				F0F7E1E621BF605D00DAF0D6 /* CompanyModel.m */,
+				F0F7E21321BFF1D000DAF0D6 /* BillingRuleModel.h */,
+				F0F7E21421BFF1D000DAF0D6 /* BillingRuleModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1995,6 +2514,9 @@
 				F00CF85F21B7D4C700121892 /* ZFSquareCollectionViewCell.h */,
 				F00CF86021B7D4C700121892 /* ZFSquareCollectionViewCell.m */,
 				F00CF86121B7D4C700121892 /* ZFSquareCollectionViewCell.xib */,
+				F0F7E1ED21BF9C8000DAF0D6 /* ServerBillingTotalCell.h */,
+				F0F7E1EE21BF9C8000DAF0D6 /* ServerBillingTotalCell.m */,
+				F0F7E1EF21BF9C8000DAF0D6 /* ServerBillingTotalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2002,6 +2524,9 @@
 		F0F6D4C8219E9A200004FCB3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F0F7E1E821BF623500DAF0D6 /* ConditionCell.h */,
+				F0F7E1E921BF623500DAF0D6 /* ConditionCell.m */,
+				F0F7E1EA21BF623500DAF0D6 /* ConditionCell.xib */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -2012,9 +2537,6 @@
 				F0F6D4B9219E99940004FCB3 /* ServerOrdehallVC.h */,
 				F0F6D4BA219E99940004FCB3 /* ServerOrdehallVC.m */,
 				F0F6D4BB219E99940004FCB3 /* ServerOrdehallVC.xib */,
-				F0F6D4D2219E9C910004FCB3 /* ServerOrderruleVC.h */,
-				F0F6D4D3219E9C910004FCB3 /* ServerOrderruleVC.m */,
-				F0F6D4D4219E9C910004FCB3 /* ServerOrderruleVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2038,6 +2560,44 @@
 			children = (
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		F0F7E1F221BFCA2800DAF0D6 /* 验收须知 */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7E1F421BFCA4B00DAF0D6 /* Controller */,
+			);
+			path = "验收须知";
+			sourceTree = "<group>";
+		};
+		F0F7E1F321BFCA3700DAF0D6 /* 加入平台 */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7E1FD21BFCA9E00DAF0D6 /* Controller */,
+			);
+			path = "加入平台";
+			sourceTree = "<group>";
+		};
+		F0F7E1F421BFCA4B00DAF0D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7E21921BFF5F400DAF0D6 /* SeverAcceptanceListVC.h */,
+				F0F7E21A21BFF5F400DAF0D6 /* SeverAcceptanceListVC.m */,
+				F0F7E1F821BFCA8E00DAF0D6 /* SeverAcceptanceVC.h */,
+				F0F7E1F921BFCA8E00DAF0D6 /* SeverAcceptanceVC.m */,
+				F0F7E1FA21BFCA8E00DAF0D6 /* SeverAcceptanceVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0F7E1FD21BFCA9E00DAF0D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7E20121BFCACF00DAF0D6 /* SeverJoinplatformVC.h */,
+				F0F7E20221BFCACF00DAF0D6 /* SeverJoinplatformVC.m */,
+				F0F7E20321BFCACF00DAF0D6 /* SeverJoinplatformVC.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F0F9C0B521B655EB00DEDBC3 /* 认证 */ = {
@@ -2401,6 +2961,8 @@
 			children = (
 				F0D0739F21A645BF006BC623 /* HomeProjectDetailModel.h */,
 				F0D073A021A645BF006BC623 /* HomeProjectDetailModel.m */,
+				F05E30E521C277F400FEEA81 /* ProjectDetailModel.h */,
+				F05E30E621C277F400FEEA81 /* ProjectDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2523,10 +3085,11 @@
 		F0FD36262196D46800F6C93B /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				F0FD36272196D46800F6C93B /* Other */,
-				F0FD36282196D46800F6C93B /* Controller */,
-				F0FD362C2196D46800F6C93B /* Model */,
-				F0FD362D2196D46800F6C93B /* View */,
+				F05E30E021C26F3600FEEA81 /* Main */,
+				F05E30E121C26F7D00FEEA81 /* 发单须知 */,
+				F05E30E221C26F8800FEEA81 /* 接单须知 */,
+				F0F7E1F321BFCA3700DAF0D6 /* 加入平台 */,
+				F0F7E1F221BFCA2800DAF0D6 /* 验收须知 */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -2565,11 +3128,8 @@
 		F0FD362E2196D46800F6C93B /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				F05E311D21C2A85D00FEEA81 /* Main */,
 				F00D33FD219FAF0800DB33A9 /* 地址 */,
-				F0FD362F2196D46800F6C93B /* Other */,
-				F0FD36302196D46800F6C93B /* Controller */,
-				F0FD36342196D46800F6C93B /* Model */,
-				F0FD36352196D46800F6C93B /* View */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -2604,6 +3164,8 @@
 			children = (
 				F0F5F8D921BB9DE800829148 /* StoreDetailModel.h */,
 				F0F5F8DA21BB9DE800829148 /* StoreDetailModel.m */,
+				F0F7E1CA21BF4B6700DAF0D6 /* StoreProductModel.h */,
+				F0F7E1CB21BF4B6700DAF0D6 /* StoreProductModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2677,18 +3239,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F7E1D621BF5F5300DAF0D6 /* CompanyLevelPage.xib in Resources */,
 				F0F6200B21AA357800D2B61D /* HomeMasterDetailVC.xib in Resources */,
 				F0FA0B70219D51450022B567 /* HomeRecommendVC.xib in Resources */,
 				F0FA0B4E219D4FED0022B567 /* HomeAddressVC.xib in Resources */,
+				F0F7E20C21BFD7EB00DAF0D6 /* AddreeListCell.xib in Resources */,
 				F0F6203621AA646700D2B61D /* UserInfoCenterVC.xib in Resources */,
+				F05E310121C2941100FEEA81 /* MyReceiveOrderDetailVC.xib in Resources */,
 				F0F9C0CA21B67AB600DEDBC3 /* ServerBillingIntroductionCell.xib in Resources */,
 				F0F0E48F218D559E00B4ABCE /* ResigterVC.xib in Resources */,
+				F0F7E1EC21BF623500DAF0D6 /* ConditionCell.xib in Resources */,
 				F0FA0B98219D5AE40022B567 /* ProjectCell.xib in Resources */,
+				F0F8708B21BE076300B535BA /* ServerConditionVC.xib in Resources */,
+				F0F7E1D121BF5F3B00DAF0D6 /* EngineerLevelPage.xib in Resources */,
+				F0F7E20F21BFD7EB00DAF0D6 /* AddSelectCell.xib in Resources */,
 				F0BDE7C321BD4D9E0078D1C1 /* ProjectDetailHeaderCell.xib in Resources */,
 				F0F0E5CA218D77E200B4ABCE /* 成功图片@2x.png in Resources */,
 				F0F0E5CB218D77E200B4ABCE /* car5@2x.png in Resources */,
 				F0F9C0F121B683A500DEDBC3 /* SettingPersonAuthonVC.xib in Resources */,
-				F009C1D321A2E9CA00EE828E /* AddressListCell.xib in Resources */,
+				F0F7E1F121BF9C8000DAF0D6 /* ServerBillingTotalCell.xib in Resources */,
 				F0B50AA5218FF0F70027BB61 /* ShareSDKUI.bundle in Resources */,
 				F0F9C0C521B66DDB00DEDBC3 /* ServerBillingHeaderCell.xib in Resources */,
 				F0F0E5C8218D77E200B4ABCE /* car4@2x.png in Resources */,
@@ -2717,6 +3286,7 @@
 				F0F6204021AA64BC00D2B61D /* UserAmountVC.xib in Resources */,
 				F0BDE7E721BD5B1D0078D1C1 /* InformationAvavtorCell.xib in Resources */,
 				F0FD363E2196D49700F6C93B /* ServerVC.xib in Resources */,
+				F0F7E1FC21BFCA8E00DAF0D6 /* SeverAcceptanceVC.xib in Resources */,
 				F0007EBA21995F5700854DA3 /* HomeProjectCell.xib in Resources */,
 				F00CF85E21B7D46300121892 /* ZFSquareAddCollectionCell.xib in Resources */,
 				F0FA0BCD219D8C080022B567 /* GuideVC.xib in Resources */,
@@ -2731,7 +3301,9 @@
 				F0F9C0F621B683CD00DEDBC3 /* SettingCompanyAuthonVC.xib in Resources */,
 				F0F0E597218D77E200B4ABCE /* IQKeyboardManager.bundle in Resources */,
 				F0F6D4B4219E5E4D0004FCB3 /* HomeRecommendTtileCell.xib in Resources */,
+				F05E30DF21C2689F00FEEA81 /* CommitOrder.xib in Resources */,
 				F00D3406219FAF5A00DB33A9 /* AddressListVC.xib in Resources */,
+				F05E310621C296AB00FEEA81 /* MyOrderCell.xib in Resources */,
 				F0F0E48A218D558D00B4ABCE /* LoginVC.xib in Resources */,
 				F0F9C0D421B67CFF00DEDBC3 /* ServerBillingTypeCell.xib in Resources */,
 				F0007EC921995FF600854DA3 /* HomeMainCell.xib in Resources */,
@@ -2757,6 +3329,7 @@
 				F0007EB021995E3200854DA3 /* HomeTitleCell.xib in Resources */,
 				F0F0E612218D959600B4ABCE /* HomeVC.xib in Resources */,
 				F0F6D4D1219E9C5E0004FCB3 /* ServerBillingruleVC.xib in Resources */,
+				F0F7E1DB21BF5F7100DAF0D6 /* InsurancePage.xib in Resources */,
 				F0B50AA9218FF0F80027BB61 /* ShareSDKConfigFile.bundle in Resources */,
 				F0BDE7EC21BD5B400078D1C1 /* InformationPhoneCell.xib in Resources */,
 				F0FD36242196C0B600F6C93B /* 协议.html in Resources */,
@@ -2764,9 +3337,11 @@
 				F0FA0B75219D51910022B567 /* HomeProjectVC.xib in Resources */,
 				F0F0E5D7218D77E200B4ABCE /* TZImagePickerController.bundle in Resources */,
 				F0F5F8D021BB945800829148 /* UpdatePwdVC.xib in Resources */,
+				F05E30F921C2933B00FEEA81 /* MySendOrderDetailVC.xib in Resources */,
 				F0F9C0DE21B67E3600DEDBC3 /* ServerBillingAcceptanceCell.xib in Resources */,
 				F00CF86321B7D4C700121892 /* ZFSquareCollectionViewCell.xib in Resources */,
 				F0FA0B8E219D590A0022B567 /* RecommadnCell.xib in Resources */,
+				F0F7E20521BFCACF00DAF0D6 /* SeverJoinplatformVC.xib in Resources */,
 				F0B50AA1218FF0F70027BB61 /* README.txt in Resources */,
 				F0FA0BD2219D94460022B567 /* HomeSGAdvertCell.xib in Resources */,
 				F0F0E5CF218D77E200B4ABCE /* car1@2x.png in Resources */,
@@ -2804,12 +3379,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-aboluo/Pods-aboluo-resources.sh",
 				"${PODS_ROOT}/Bugtags/Bugtags.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/MOFSPickerManager/MOFSPickerManagerDemo/MOFSPickerManager/province_data.xml",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Bugtags.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/province_data.xml",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2834,8 +3411,10 @@
 				F0FA0BC7219D834D0022B567 /* MLMenuItem.m in Sources */,
 				F0D073CA21A68B69006BC623 /* SGQRCodeScanningView.m in Sources */,
 				F0F0E5AA218D77E200B4ABCE /* UIButton+POImagePosition.m in Sources */,
+				F0F7E21821BFF5CB00DAF0D6 /* ServerOrderruleListVC.m in Sources */,
 				F0D073DF21A6B3FA006BC623 /* HomeExamVC.m in Sources */,
-				F0D073D621A6A194006BC623 /* AddressModel.m in Sources */,
+				F0F7E21B21BFF5F400DAF0D6 /* SeverAcceptanceListVC.m in Sources */,
+				F0D073D621A6A194006BC623 /* AddressModel2.m in Sources */,
 				F0007EB421995E6100854DA3 /* HomeRecommandCell.m in Sources */,
 				F02FF21821B8F7430051F3C0 /* OpenshopVC.m in Sources */,
 				F0F5F8D321BB991900829148 /* HomeXiangmuModel.m in Sources */,
@@ -2856,6 +3435,8 @@
 				F0F7855721AF8E1800F0251F /* HomeProductTypeCell.m in Sources */,
 				F00D3405219FAF5A00DB33A9 /* AddressListVC.m in Sources */,
 				F0F6D4B3219E5E4D0004FCB3 /* HomeRecommendTtileCell.m in Sources */,
+				F0F7E1D521BF5F5300DAF0D6 /* CompanyLevelPage.m in Sources */,
+				F0F7E1D021BF5F3B00DAF0D6 /* EngineerLevelPage.m in Sources */,
 				F0F7855121AF89D600F0251F /* HomeProductTypeModel.m in Sources */,
 				F0BDE7BC21BD46250078D1C1 /* MasterDetailPhoneCell.m in Sources */,
 				F0F7855B21AF915300F0251F /* HomeProductTypeDetailCell.m in Sources */,
@@ -2868,12 +3449,15 @@
 				F0FBC89B21A5643A00B8ADE9 /* HomeNoticeModel.m in Sources */,
 				F0F0E5C4218D77E200B4ABCE /* YTKNetworkAgent.m in Sources */,
 				F0F0E593218D77E200B4ABCE /* IQTitleBarButtonItem.m in Sources */,
+				F0F7E21221BFF11800DAF0D6 /* SeverBillingRuleListVC.m in Sources */,
 				F0F0E59F218D77E200B4ABCE /* IQKeyboardReturnKeyHandler.m in Sources */,
 				F0F0E5D8218D77E200B4ABCE /* TZProgressView.m in Sources */,
 				F0FD36212196BF5800F6C93B /* AgreeProtolVC.m in Sources */,
 				F0F0E5C7218D77E200B4ABCE /* YTKRequest.m in Sources */,
 				F0F0E5D3218D77E200B4ABCE /* TZAssetModel.m in Sources */,
+				F05E310921C297B600FEEA81 /* MyOrderModel.m in Sources */,
 				F0D073CC21A68B69006BC623 /* SGQRCodeGenerateManager.m in Sources */,
+				F05E30E721C277F400FEEA81 /* ProjectDetailModel.m in Sources */,
 				F0007EB921995F5700854DA3 /* HomeProjectCell.m in Sources */,
 				F0F0E5EB218D77F800B4ABCE /* NetWorkTool.m in Sources */,
 				F00E07CC218D2A930079D952 /* main.m in Sources */,
@@ -2885,8 +3469,11 @@
 				F0BDE7EB21BD5B400078D1C1 /* InformationPhoneCell.m in Sources */,
 				F00CF86221B7D4C700121892 /* ZFSquareCollectionViewCell.m in Sources */,
 				F0007ECC2199799600854DA3 /* HomeTopView.m in Sources */,
+				F0F7E20421BFCACF00DAF0D6 /* SeverJoinplatformVC.m in Sources */,
+				F05E310521C296AB00FEEA81 /* MyOrderCell.m in Sources */,
 				F0F6D4DA219EACFA0004FCB3 /* StoreDetailVC.m in Sources */,
 				F0F5F8D721BB9A6E00829148 /* StorePruductListVC.m in Sources */,
+				F05E30DE21C2689F00FEEA81 /* CommitOrder.m in Sources */,
 				F0FD36422196D4B700F6C93B /* StoreVC.m in Sources */,
 				F0F0E5BF218D77E200B4ABCE /* YTKNetworkConfig.m in Sources */,
 				F0F6D4BC219E99940004FCB3 /* ServerOrdehallVC.m in Sources */,
@@ -2897,16 +3484,20 @@
 				F0F0E5C3218D77E200B4ABCE /* YTKBatchRequest.m in Sources */,
 				F0F0E5A4218D77E200B4ABCE /* ZJCollectionView.m in Sources */,
 				F0F0E5A6218D77E200B4ABCE /* ZJScrollSegmentView.m in Sources */,
+				F0F7E1E421BF604000DAF0D6 /* EngineerModel.m in Sources */,
 				F0D073A421A65D7F006BC623 /* HomeMasterModel.m in Sources */,
 				F0BDE7CC21BD4DEB0078D1C1 /* ProjectDetailNumberCell.m in Sources */,
 				F0F0E59A218D77E200B4ABCE /* IQUIWindow+Hierarchy.m in Sources */,
+				F0F7E20D21BFD7EB00DAF0D6 /* AddreeListCell.m in Sources */,
 				F0F0E595218D77E200B4ABCE /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				F0F7E20E21BFD7EB00DAF0D6 /* AddSelectCell.m in Sources */,
 				F0F0E5C1218D77E200B4ABCE /* YTKNetworkPrivate.m in Sources */,
 				F0F0E599218D77E200B4ABCE /* IQNSArray+Sort.m in Sources */,
 				F0FA0B83219D52150022B567 /* HomeRayVC.m in Sources */,
 				F0FA0BD6219D97640022B567 /* SGAdvertScrollView.m in Sources */,
 				F0FA0BCC219D8C080022B567 /* GuideVC.m in Sources */,
 				F0F0E5C5218D77E200B4ABCE /* YTKChainRequestAgent.m in Sources */,
+				F0F8708A21BE076300B535BA /* ServerConditionVC.m in Sources */,
 				F0FBC88F21A5626100B8ADE9 /* BaseModel.m in Sources */,
 				F0F9C0DD21B67E3600DEDBC3 /* ServerBillingAcceptanceCell.m in Sources */,
 				F0F0E5D4218D77E200B4ABCE /* NSBundle+TZImagePicker.m in Sources */,
@@ -2914,6 +3505,7 @@
 				F0D073D321A68CF9006BC623 /* HomeScanVC.m in Sources */,
 				F0FA0B74219D51910022B567 /* HomeProjectVC.m in Sources */,
 				F0F0E598218D77E200B4ABCE /* IQKeyboardManager.m in Sources */,
+				F0F7E21521BFF1D000DAF0D6 /* BillingRuleModel.m in Sources */,
 				F0F0E489218D558D00B4ABCE /* LoginVC.m in Sources */,
 				F0F9C0F521B683CD00DEDBC3 /* SettingCompanyAuthonVC.m in Sources */,
 				F0F0E61F218D964800B4ABCE /* MyNavigationController.m in Sources */,
@@ -2932,6 +3524,7 @@
 				F0D073CB21A68B69006BC623 /* SGQRCodeScanManager.m in Sources */,
 				F02FF20E21B8F4680051F3C0 /* SettingLogoutCell.m in Sources */,
 				F0FBC89221A562A900B8ADE9 /* HomeBanner.m in Sources */,
+				F0F7E1CC21BF4B6700DAF0D6 /* StoreProductModel.m in Sources */,
 				F0F9C0F021B683A500DEDBC3 /* SettingPersonAuthonVC.m in Sources */,
 				F0F0E5C2218D77E200B4ABCE /* YTKBaseRequest.m in Sources */,
 				F0F0E5D2218D77E200B4ABCE /* TZVideoPlayerController.m in Sources */,
@@ -2939,12 +3532,17 @@
 				F0F6201421AA4EEC00D2B61D /* SettingHeaderCell.m in Sources */,
 				F0F0E5A0218D77E200B4ABCE /* UIView+ZJFrame.m in Sources */,
 				F0D073C821A68B69006BC623 /* UIImage+ImageSize.m in Sources */,
+				F05E310021C2941100FEEA81 /* MyReceiveOrderDetailVC.m in Sources */,
 				F0F0E5DD218D77E200B4ABCE /* TZLocationManager.m in Sources */,
 				F0F9C0E221B67E5B00DEDBC3 /* ServerBillingInsuranceCell.m in Sources */,
+				F05E30F821C2933B00FEEA81 /* MySendOrderDetailVC.m in Sources */,
+				F05E30F421C2931F00FEEA81 /* MySendOrderListVC.m in Sources */,
+				F0F7E1E121BF602900DAF0D6 /* GongZhongModel.m in Sources */,
 				F0F0E611218D959600B4ABCE /* HomeVC.m in Sources */,
 				F0D073AD21A67333006BC623 /* HomeProjectTypeVC.m in Sources */,
 				F00E07BE218D2A920079D952 /* AppDelegate.m in Sources */,
 				F0F0E59D218D77E200B4ABCE /* IQUIView+Hierarchy.m in Sources */,
+				F0F7E1F021BF9C8000DAF0D6 /* ServerBillingTotalCell.m in Sources */,
 				F0F0E5C6218D77E200B4ABCE /* YTKBatchRequestAgent.m in Sources */,
 				F0D073C921A68B69006BC623 /* SGQRCodeHelperTool.m in Sources */,
 				F0F0E5A5218D77E200B4ABCE /* ZJSegmentStyle.m in Sources */,
@@ -2961,9 +3559,14 @@
 				F0F0E4C2218D669800B4ABCE /* ResponeModel.m in Sources */,
 				F0F0E5D5218D77E200B4ABCE /* UIView+Layout.m in Sources */,
 				F0BDE7C221BD4D9E0078D1C1 /* ProjectDetailHeaderCell.m in Sources */,
+				F05E30FC21C293BA00FEEA81 /* MyReceiveOrderListVC.m in Sources */,
+				F0F7E1DA21BF5F7100DAF0D6 /* InsurancePage.m in Sources */,
 				F0FD363D2196D49700F6C93B /* ServerVC.m in Sources */,
 				F0F0E484218D557100B4ABCE /* BaseVC.m in Sources */,
+				F0F7E1EB21BF623500DAF0D6 /* ConditionCell.m in Sources */,
 				F0BDE7AE21BD45940078D1C1 /* BaseCell.m in Sources */,
+				F0F7E1FB21BFCA8E00DAF0D6 /* SeverAcceptanceVC.m in Sources */,
+				F0F7E1E721BF605D00DAF0D6 /* CompanyModel.m in Sources */,
 				F0FA0B6A219D51130022B567 /* HomeMasterVC.m in Sources */,
 				F0F0E5DC218D77E200B4ABCE /* TZImagePickerController.m in Sources */,
 				F0BDE7E121BD57930078D1C1 /* linformationUpdatePhonePage.m in Sources */,
@@ -2979,10 +3582,10 @@
 				F0F0E5A7218D77E200B4ABCE /* ZJScrollPageView.m in Sources */,
 				F0D073E421A6BA1C006BC623 /* HomeExamCell.m in Sources */,
 				F0FA0B8D219D590A0022B567 /* RecommadnCell.m in Sources */,
-				F009C1D221A2E9CA00EE828E /* AddressListCell.m in Sources */,
 				F0F5F8DB21BB9DE800829148 /* StoreDetailModel.m in Sources */,
 				F0007EAA21995E0700854DA3 /* HomeAdCell.m in Sources */,
 				F0F0E5AC218D77E200B4ABCE /* UIScrollView+EmptyDataSet.m in Sources */,
+				F0F7E1DE21BF600400DAF0D6 /* InsurancesModel.m in Sources */,
 				F0F9C0C421B66DDB00DEDBC3 /* ServerBillingHeaderCell.m in Sources */,
 				F0F0E493218D55B000B4ABCE /* ForgetPwdVC.m in Sources */,
 				F0FA0B4D219D4FED0022B567 /* HomeAddressVC.m in Sources */,
@@ -3153,7 +3756,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/aboluo/Vendor/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/aboluo/Vendor/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/aboluo/Vendor/JsmsSDK",
 					"$(PROJECT_DIR)/aboluo/Vendor/SDK/ShareSDK/Support/PlatformSDK/WeChatSDKFull",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bailing.aboluo;
@@ -3189,7 +3791,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/aboluo/Vendor/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/aboluo/Vendor/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/aboluo/Vendor/JsmsSDK",
 					"$(PROJECT_DIR)/aboluo/Vendor/SDK/ShareSDK/Support/PlatformSDK/WeChatSDKFull",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bailing.aboluo;

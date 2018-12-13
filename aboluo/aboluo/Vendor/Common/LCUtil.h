@@ -44,14 +44,11 @@
 + (NSString *)getPhone;
 + (NSString *)getPwd;
 + (void)clearPhoneAndPwd;
-
 + (NSString*)getDocumentPath;
 + (NSString*)getDocumentFolderByName:(NSString *)foldername;
 //时间戳转换成时间
 +(NSString *)timestampSwitchTime:(NSString *)timeStr andFormatter:(NSString *)format;
-
 +(NSString *)getImagePath:(UIImage *)Image;
-
 //计算时间的工具类
 + (NSString *)setupCreateTime:(NSString *)timeStr;
 //判断上午中午下午
@@ -60,4 +57,6 @@
 +(BOOL)isVaildNetWorkStatus;
 
 +(NSString *)convertHexStrToString:(NSString *)str;
+///计算两个时间的相差多少天
++(int)CalculatedifferenceWithStarTime:(NSString *)startTime WithEndTime:(NSString *)endTime;
 @end

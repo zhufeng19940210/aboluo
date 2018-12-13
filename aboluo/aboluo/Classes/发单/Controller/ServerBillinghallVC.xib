@@ -22,19 +22,55 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="kPs-8P-Pmn">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJ9-cV-7mG">
+                    <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKu-KA-C1y">
+                            <rect key="frame" x="20" y="18" width="335" height="45"/>
+                            <color key="backgroundColor" red="0.87058823529999996" green="0.70980392160000005" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="0EY-k7-5Bg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="发布">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="actionPushBtn:" destination="-1" eventType="touchUpInside" id="06t-Fj-h1w"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="cKu-KA-C1y" firstAttribute="leading" secondItem="AJ9-cV-7mG" secondAttribute="leading" constant="20" id="38E-K9-TXk"/>
+                        <constraint firstItem="cKu-KA-C1y" firstAttribute="centerX" secondItem="AJ9-cV-7mG" secondAttribute="centerX" id="8iw-oC-ijX"/>
+                        <constraint firstItem="cKu-KA-C1y" firstAttribute="centerY" secondItem="AJ9-cV-7mG" secondAttribute="centerY" id="DBy-ct-3dO"/>
+                        <constraint firstAttribute="trailing" secondItem="cKu-KA-C1y" secondAttribute="trailing" constant="20" id="Z1Z-zh-AWc"/>
+                        <constraint firstAttribute="height" constant="80" id="nJx-Dz-Pux"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kPs-8P-Pmn" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="8dU-sw-649"/>
-                <constraint firstItem="kPs-8P-Pmn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gdz-9p-GBa"/>
-                <constraint firstItem="kPs-8P-Pmn" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Oqa-Vw-tK0"/>
-                <constraint firstItem="kPs-8P-Pmn" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="XtC-U4-PM8"/>
+                <constraint firstItem="kPs-8P-Pmn" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="3xs-Xf-R1w"/>
+                <constraint firstItem="kPs-8P-Pmn" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Mfp-0h-8en"/>
+                <constraint firstItem="AJ9-cV-7mG" firstAttribute="top" secondItem="kPs-8P-Pmn" secondAttribute="bottom" id="QuD-nb-UhH"/>
+                <constraint firstItem="AJ9-cV-7mG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="SpT-uR-bQN"/>
+                <constraint firstItem="kPs-8P-Pmn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="v7B-4b-OHv"/>
+                <constraint firstItem="AJ9-cV-7mG" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="yIl-L4-kTS"/>
+                <constraint firstItem="AJ9-cV-7mG" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="zG4-DN-OYS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-7" y="22"/>
+            <point key="canvasLocation" x="-7.5" y="21.5"/>
         </view>
     </objects>
 </document>

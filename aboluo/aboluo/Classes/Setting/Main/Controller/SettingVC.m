@@ -16,6 +16,8 @@
 #import "AppDelegate.h"
 #import "OpenshopVC.h"
 #import "PersonalinformationPage.h"
+#import "MySendOrderListVC.h"
+#import "MyReceiveOrderListVC.h"
 @interface SettingVC ()<UITableViewDelegate,UITableViewDataSource,TZImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *personimagArray;
@@ -144,6 +146,7 @@
                     if (type == SettingHeaderTypeIcon) {
                         //头像
                         NSLog(@"头像");
+                        [self changeIconMethod];
                     }else if(type == SettingHeaderTypeCode){
                         //二维码
                         NSLog(@"二维码");
@@ -199,13 +202,18 @@
         if ([self.usermodel.roleId isEqualToString:@"0"]) {
             //个人
             if (indexPath.row == 1) {
+                
+                MySendOrderListVC *sendlistvc =[[MySendOrderListVC alloc]init];
+                [self.navigationController pushViewController:sendlistvc animated:YES];
                 //余额
-                UserAmountVC *amountvc = [[UserAmountVC alloc]init];
-                [self.navigationController pushViewController:amountvc animated:YES];
+               // UserAmountVC *amountvc = [[UserAmountVC alloc]init];
+               //[self.navigationController pushViewController:amountvc animated:YES];
             }else if(indexPath.row == 2){
                 //等级
-                UserLevelVC *levelvc = [[UserLevelVC alloc]init];
-                [self.navigationController pushViewController:levelvc animated:YES];
+                MyReceiveOrderListVC *lisvc = [[MyReceiveOrderListVC alloc]init];
+                [self.navigationController pushViewController:lisvc animated:YES];
+                //UserLevelVC *levelvc = [[UserLevelVC alloc]init];
+                //[self.navigationController pushViewController:levelvc animated:YES];
             }else if (indexPath.row == 3){
                 //证书
                 UserCertificateVC *certificatevc = [[UserCertificateVC alloc]init];

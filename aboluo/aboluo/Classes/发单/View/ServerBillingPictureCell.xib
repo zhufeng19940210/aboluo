@@ -35,14 +35,22 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(图片最多为3张)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ta-ff-YS3">
+                        <rect key="frame" x="80" y="14.5" width="105" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6ta-ff-YS3" firstAttribute="leading" secondItem="mGJ-Sr-0Su" secondAttribute="trailing" constant="8" id="7Qc-5z-dSo"/>
                     <constraint firstItem="9gV-6K-cbE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LKD-mq-fNc"/>
                     <constraint firstItem="9gV-6K-cbE" firstAttribute="top" secondItem="mGJ-Sr-0Su" secondAttribute="bottom" constant="10" id="NX4-xc-VSJ"/>
                     <constraint firstAttribute="bottom" secondItem="9gV-6K-cbE" secondAttribute="bottom" constant="5" id="UTF-5w-glj"/>
                     <constraint firstItem="mGJ-Sr-0Su" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="bTX-DK-ZxI"/>
                     <constraint firstAttribute="trailing" secondItem="9gV-6K-cbE" secondAttribute="trailing" id="bpy-6w-Rqc"/>
                     <constraint firstItem="mGJ-Sr-0Su" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gei-lv-Afp"/>
+                    <constraint firstItem="6ta-ff-YS3" firstAttribute="centerY" secondItem="mGJ-Sr-0Su" secondAttribute="centerY" id="t5y-aL-1bV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>

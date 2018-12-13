@@ -26,4 +26,8 @@ target 'aboluo' do
   pod 'Bugtags'  
   #导入提示框
   pod 'MBProgressHUD'
+  #遮盖
+  pod 'GKCover' ,'~>2.4.9'
+  #选择器
+  pod 'MOFSPickerManager'
 end

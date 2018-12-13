@@ -6,5 +6,7 @@
 typedef void(^PushBlock)(UIButton *btn);
 @interface HomeTitleCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *title_lab;
+@property (weak, nonatomic) IBOutlet UIImageView *home_img;
+
 @property (nonatomic,copy)PushBlock pushblock;
 @end

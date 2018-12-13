@@ -21,7 +21,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@",self.xiangmumodel.name];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@项目",self.xiangmumodel.name];
     NSLog(@"xiangmuid:%@",self.xiangmumodel.wid);
     self.page = 1;
     [self acitonProjectNewData];

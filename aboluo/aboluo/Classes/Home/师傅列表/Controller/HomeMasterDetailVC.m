@@ -21,11 +21,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"";
+    self.navigationItem.title = [NSString stringWithFormat:@"%@详情",self.masterModel.name];
     self.view.backgroundColor = RGB(240, 240, 240);
     [self actionMasterDetailNewData];
     [self setupRefresh];
-    [self setupTableView];
+    //[self setupTableView];
 }
 -(void)setupRefresh
 {
@@ -90,7 +90,6 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 /**
  请求数据
  */
@@ -98,7 +97,8 @@
 {
     [SVProgressHUD showWithStatus:ShowSuccessTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"userId"] = @"";
+    NSLog(@"userid:%@",self.masterModel.userId);
+    param[@"userId"] = self.masterModel.userId;
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:Home_Master_Deatil parameters:param success:^(id  _Nonnull responseObject) {
         NSLog(@"师傅详情:%@",responseObject);

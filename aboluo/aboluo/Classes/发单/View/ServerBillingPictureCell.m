@@ -46,27 +46,26 @@
 #pragma mark  - collectionFlowlayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat width = (IPHONE_WIDTH-20)/4;
-    return CGSizeMake(width,width);
+    return CGSizeMake(IPHONE_WIDTH/5,IPHONE_WIDTH/5);
 }
 //cell的最小行间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 10.0f;
+    return 5.0f;
 }
 //cell的最小列间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 10.0f;
+    return 5.0f;
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(10, 10, 10, 10);
+    return UIEdgeInsetsMake(5, 5, 5, 5);
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == self.selectArray.count) {
         if (self.delegate) {
-            if ([self.delegate respondsToSelector:@selector(BCYPhotoPushSelectWithType:)]) {
+            if ([self.delegate respondsToSelector:@selector(BCYPhotoPushSelectWithType)]) {
                 [self.delegate BCYPhotoPushSelectWithType];
             }
         }

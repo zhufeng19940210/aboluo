@@ -10,11 +10,19 @@
     [super awakeFromNib];
     // Initialization code
 }
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
-
+/**
+ 选择工作
+ @param sender 选择工种
+ */
+- (IBAction)actionPushSelectTypeBtn:(UIButton *)sender
+{
+    if (self.deelgate) {
+        if ([self.deelgate respondsToSelector:@selector(pushSelectTypeMethod)]) {
+            [self.deelgate pushSelectTypeMethod];
+        }
+    }
+}
 @end

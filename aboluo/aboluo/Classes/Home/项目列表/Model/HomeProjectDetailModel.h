@@ -24,6 +24,8 @@
 @property (nonatomic,copy) NSString *startTime;
 @property (nonatomic,copy) NSString *state;
 @property (nonatomic,copy) NSString *total;
+@property (nonatomic,copy) NSString *projectId;
+@property (nonatomic,strong) NSString *product;
 
 /*
  address = "\U5730\U7406\U4f4d\U7f6e\U597d";

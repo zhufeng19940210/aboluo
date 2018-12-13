@@ -12,10 +12,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *eye_btn1;
 @property (weak, nonatomic) IBOutlet UIButton *eye_btn2;
 @property (nonatomic,copy)NSString *code_str; // 验证码Str
+@property (nonatomic,copy)NSString *phoneStr; //保存下手机号码
 @end
 @implementation ForgetPwdVC
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.phoneStr = nil;
     self.navigationItem.title = @"忘记密码";
 }
 - (void)didReceiveMemoryWarning {
@@ -40,12 +42,14 @@
     [SVProgressHUD showWithStatus:@"获取验证"];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"phone"] = phone;
+    WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:User_Update_Code parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         NSLog(@"responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
             [SVProgressHUD showSuccessWithStatus:@"获取成功"];
+            weakSelf.phoneStr = phone;
             self.code_str = res.data[@"msg"];
             [sender startWithTime:59 title:@"获取验证码" countDownTitle:@"秒" mainColor:MainThemeColor countColor:[UIColor clearColor]];
         }else{
@@ -80,6 +84,10 @@
         [self showHint:@"手机号码有误" yOffset:-200];
         return;
     }
+    if (![phone isEqualToString:self.phoneStr]) {
+        [self showHint:@"手机号码有误" yOffset:-200];
+        return;
+    }
     if (code.length == 0 || [code isEqualToString:@""]) {
         [self showHint:@"验证码不能为空" yOffset:-200];
         return;
@@ -101,7 +109,7 @@
         return;
     }
     //开始去做修改密码
-    [SVProgressHUD showWithStatus:@"修改密码"];
+    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"phone"] = phone;
     param[@"password"] = pwd;
@@ -109,10 +117,10 @@
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [ZFCustomView showWithText:@"修改成功" WithDurations:0.5];
+            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [self.navigationController popViewControllerAnimated:YES];
         }else{
-            [ZFCustomView showWithText:@"修改失败" WithDurations:0.5];
+            [SVProgressHUD showErrorWithStatus:res.msg];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
@@ -130,7 +138,7 @@
     sender.selected = !sender.selected;
     if (sender.selected) {
         self.pwd_tf.secureTextEntry = NO;
-        [self.eye_btn2 setImage:[UIImage imageNamed:@"eye_sel"] forState:UIControlStateNormal];
+        [self.eye_btn1 setImage:[UIImage imageNamed:@"eye_sel"] forState:UIControlStateNormal];
     }else{
         self.pwd_tf.secureTextEntry = YES;
         [self.eye_btn1 setImage:[UIImage imageNamed:@"eye_nor"] forState:UIControlStateNormal];

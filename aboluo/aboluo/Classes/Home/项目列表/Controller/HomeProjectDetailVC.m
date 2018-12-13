@@ -42,7 +42,7 @@
     self.view.backgroundColor = RGB(240, 240, 240);
     [self actionProjectDetailNewData];
     [self setupRefreh];
-    [self setupTableView];
+   // [self setupTableView];
 }
 
 -(void)setupTableView
@@ -112,7 +112,7 @@
 {
     [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"projectId"] = self.detailModel.productId ;
+    param[@"projectId"] = self.detailModel.projectId;
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:Home_Project_Detail parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];

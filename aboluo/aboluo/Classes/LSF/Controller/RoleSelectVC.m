@@ -27,8 +27,8 @@
  */
 - (IBAction)actionPersonBtn:(UIButton *)sender
 {
-    self.geren_img.image = [UIImage imageNamed:@"geren_sel"];
-    self.qiye_img.image  = [UIImage imageNamed:@"qiye_nor"];
+    self.geren_img.image = [UIImage imageNamed:@"zf_circle_select"];
+    self.qiye_img.image  = [UIImage imageNamed:@"zf_circle_nor"];
     self.geren_lab.textColor =  MainThemeColor;
     self.qiye_lab.textColor = [UIColor blackColor];
     self.isSelect = YES;
@@ -42,8 +42,8 @@
  */
 - (IBAction)actionQiyeBtn:(UIButton *)sender
 {
-    self.geren_img.image = [UIImage imageNamed:@"geren_nor"];
-    self.qiye_img.image  = [UIImage imageNamed:@"qiye_sel"];
+    self.geren_img.image = [UIImage imageNamed:@"zf_circle_select"];
+    self.qiye_img.image  = [UIImage imageNamed:@"zf_circle_nor"];
     self.geren_lab.textColor =  [UIColor blackColor];
     self.qiye_lab.textColor = MainThemeColor;
     self.isSelect = YES;

@@ -102,14 +102,14 @@
                         <action selector="actionNextBtn:" destination="-1" eventType="touchUpInside" id="scZ-Ga-gD7"/>
                     </connections>
                 </button>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agree_sel" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-aR-D7O">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zf_circle_select" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-aR-D7O">
                     <rect key="frame" x="333" y="75" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="8bs-ra-0en"/>
                         <constraint firstAttribute="width" constant="25" id="Vuj-iH-dFR"/>
                     </constraints>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agree_sel" translatesAutoresizingMaskIntoConstraints="NO" id="kXv-17-hE1">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zf_circle_select" translatesAutoresizingMaskIntoConstraints="NO" id="kXv-17-hE1">
                     <rect key="frame" x="333" y="227" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="L5y-L2-5t3"/>
@@ -153,8 +153,8 @@
         </view>
     </objects>
     <resources>
-        <image name="agree_sel" width="25" height="25"/>
         <image name="geren_nor" width="88" height="88"/>
         <image name="qiye_nor" width="88" height="88"/>
+        <image name="zf_circle_select" width="32" height="32"/>
     </resources>
 </document>

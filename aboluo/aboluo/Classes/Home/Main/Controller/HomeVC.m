@@ -285,6 +285,7 @@
         ///2.找项目
         HomeTitleCell *titleCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeTitleCell" forIndexPath:indexPath];
         titleCell.title_lab.text = @"找项目";
+        titleCell.home_img.image = [UIImage imageNamed:@"home_back"];
         ///TODO这里是找项目更多的数据了
         titleCell.pushblock = ^(UIButton *btn) {
             HomeProjectTypeVC *projecttpyevc = [[HomeProjectTypeVC alloc]init];
@@ -304,6 +305,7 @@
         //4.个人找师傅标题
         HomeTitleCell *titleCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeTitleCell" forIndexPath:indexPath];
         titleCell.title_lab.text = @"找师傅";
+        titleCell.home_img.image = [UIImage imageNamed:@"home_back"];
         ///TODO找师傅更多数据
         titleCell.pushblock = ^(UIButton *btn) {
             HomeProjectTypeVC *projecttpyevc = [[HomeProjectTypeVC alloc]init];
@@ -322,6 +324,7 @@
         ///6.商城标题
         HomeTitleCell *titleCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeTitleCell" forIndexPath:indexPath];
         titleCell.title_lab.text = @"商品列表";
+        titleCell.home_img.image = [UIImage imageNamed:@"home_sort"];
         ///TODO找师傅更多数据
         WEAKSELF
         titleCell.pushblock = ^(UIButton *btn) {

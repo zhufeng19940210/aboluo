@@ -4,23 +4,26 @@
 //  Copyright © 2018 zhufeng. All rights reserved.
 #import "AddOrEditAddreddVC.h"
 #import "IQTextView.h"
+#import "AddressModel2.h"
 @interface AddOrEditAddreddVC ()
 @property (weak, nonatomic) IBOutlet UITextField *name_tf;
 @property (weak, nonatomic) IBOutlet UITextField *phone_tf;
 @property (weak, nonatomic) IBOutlet IQTextView *detail_txt;
 @property (weak, nonatomic) IBOutlet UIButton *default_btn;
 @property (nonatomic,assign)NSInteger default_type; //默认地址
+@property (nonatomic,strong)UserModel *usermodel;
 @end
 @implementation AddOrEditAddreddVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.usermodel = [UserModel getInfo];
     if (self.isAdd == YES) {
         //添加状态
         self.navigationItem.title = @"添加收货地址";
-        self.name_tf.text     =  self.addressmodel.name;
+        self.name_tf.text     =  self.addressmodel.receName;
         self.phone_tf.text   =  self.addressmodel.phone;
-        self.detail_txt.text =  self.addressmodel.detail;
+        self.detail_txt.text =  self.addressmodel.detailAddr;
         if (self.addressmodel.isDefault  == 1) {
             //是默认地址
             [self.default_btn setImage:[UIImage imageNamed:@"zf_circle_select"] forState:UIControlStateNormal];
@@ -79,11 +82,12 @@
     }
     [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"receName"] = name;
+    param[@"userId"] = self.usermodel.aid;
+    param[@"name"] = name;
     param[@"phone"] = phone;
-    param[@"detailAddr"] = addres;
-    param[@"isDefault"] = [NSString stringWithFormat:@"%ld",(long)self.default_type];
-    [[NetWorkTool shareInstacne]postWithURLString:@"" parameters:param success:^(id  _Nonnull responseObject) {
+    param[@"location"] = addres;
+    param[@"turn"] = [NSString stringWithFormat:@"%ld",(long)self.default_type];
+    [[NetWorkTool shareInstacne]postWithURLString:Address_Add_Url parameters:param success:^(id  _Nonnull responseObject) {
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code==1) {

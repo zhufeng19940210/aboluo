@@ -66,8 +66,6 @@
         [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
-    
-    
 }
 /**
  下一步

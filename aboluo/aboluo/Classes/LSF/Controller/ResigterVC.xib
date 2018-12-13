@@ -150,9 +150,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBE-sC-prL">
-                    <rect key="frame" x="50" y="343.5" width="293" height="26"/>
+                    <rect key="frame" x="50" y="343.5" width="259" height="26"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                    <state key="normal" title="注册表示已同意《阿波罗平台使用协议》和《隐私权条款》">
+                    <state key="normal" title="注册表示已同意《平台使用协议》和《隐私权条款》">
                         <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
