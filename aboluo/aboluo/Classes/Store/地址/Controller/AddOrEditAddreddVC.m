@@ -80,7 +80,6 @@
         [self showHint:@"详细地址不能为空" yOffset:-200];
         return;
     }
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] = self.usermodel.aid;
     param[@"name"] = name;
@@ -113,7 +112,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

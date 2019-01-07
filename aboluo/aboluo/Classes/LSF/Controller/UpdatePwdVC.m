@@ -87,7 +87,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }
@@ -140,7 +139,6 @@
         return;
     }
     //开始去做修改密码
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] = self.usermodel.aid;
     param[@"password"] = pwd;
@@ -155,11 +153,9 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }
-
 /**
  提交订单
  @param sender 提交订单
@@ -171,7 +167,6 @@
         [self showHint:@"请输入新密码" yOffset:-200];
         return;
     }
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"password"] = pwd;
     WEAKSELF
@@ -180,7 +175,6 @@
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.navigationController popViewControllerAnimated:YES];
         }else{
             [SVProgressHUD showErrorWithStatus:res.msg];
@@ -188,7 +182,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

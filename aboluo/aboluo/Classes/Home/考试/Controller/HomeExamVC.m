@@ -57,7 +57,6 @@
 }
 -(void)setupData
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] = @"";
     param[@"productId"] = @"";
@@ -67,16 +66,13 @@
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             weakSelf.examArray = [ExamModel mj_objectArrayWithKeyValuesArray:res.data[@"exam"]];
             [weakSelf.tableview reloadData];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }
@@ -86,7 +82,6 @@
  */
 - (IBAction)actionCommintBtn:(UIButton *)sender
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] = @"";
     param[@"productId"] = @"";
@@ -96,15 +91,12 @@
         NSLog(@"考试responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [self.navigationController popViewControllerAnimated:YES];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

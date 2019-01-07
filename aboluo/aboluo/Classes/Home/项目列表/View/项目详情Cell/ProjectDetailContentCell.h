@@ -9,5 +9,7 @@
 #import "BaseCell.h"
 
 @interface ProjectDetailContentCell : BaseCell
+@property (weak, nonatomic) IBOutlet UILabel *title_lab;
+@property (weak, nonatomic) IBOutlet UILabel *content_lab;
 
 @end

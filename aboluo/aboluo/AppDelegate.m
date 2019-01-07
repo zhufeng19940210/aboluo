@@ -13,30 +13,34 @@
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //定位的调用
-    [self initLocation];
+    //[self initLocation];
     //三方工具的初始化
     [self seutpThirdInitlation];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor  = [UIColor whiteColor];
     UIViewController *rootController = nil;
-    BOOL isFirst = [[NSUserDefaults standardUserDefaults]boolForKey:ISFirst];
-    if (isFirst) {
-        if ([UserModel isOnline]) {
-            //登录成功
-            TabBarController *tabbarvc = [[TabBarController alloc]init];
-            rootController =  tabbarvc;
-        }else{
-            //登录界面
-            LoginVC *loginvc = [[LoginVC alloc]init];
-            MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:loginvc];
-            rootController = nav;
-        }
-    }else{
-        //引导页
-        GuideVC *guidevc = [[GuideVC alloc]init];
-        MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:guidevc];
-        rootController = nav;
-    }
+    TabBarController *tabbarvc = [[TabBarController alloc]init];
+    rootController =  tabbarvc;
+//    BOOL isFirst = [[NSUserDefaults standardUserDefaults]boolForKey:ISFirst];
+//    if (isFirst) {
+////        if ([UserModel isOnline]) {
+////            //登录成功
+////            TabBarController *tabbarvc = [[TabBarController alloc]init];
+////            rootController =  tabbarvc;
+////        }else{
+////            //登录界面
+////            LoginVC *loginvc = [[LoginVC alloc]init];
+////            MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:loginvc];
+////            rootController = nav;
+////        }
+//        TabBarController *tabbarvc = [[TabBarController alloc]init];
+//        rootController =  tabbarvc;
+//    }else{
+//        //引导页
+//        GuideVC *guidevc = [[GuideVC alloc]init];
+//        MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:guidevc];
+//        rootController = nav;
+//    }
     self.window.rootViewController = rootController;
     [self.window makeKeyAndVisible];
     return YES;

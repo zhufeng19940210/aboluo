@@ -5,17 +5,27 @@
 #import "HomeMasterDetailVC.h"
 #import "MasterDetailHeaderCell.h"
 #import "MasterDetailConetnCell.h"
-#import "MasterDetailPhoneCell.h"
+#import "HomeMasterDetailModel.h"
 @interface HomeMasterDetailVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)NSDictionary *resParam;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *titleArray;
+@property (nonatomic,strong)NSMutableArray *contentArray;
+@property (nonatomic,strong)HomeMasterDetailModel *detailmodel;
+@property (nonatomic,copy)NSString *head;
 @end
 @implementation HomeMasterDetailVC
+-(NSMutableArray *)contentArray
+{
+    if (!_contentArray) {
+        _contentArray = [NSMutableArray array];
+    }
+    return _contentArray;
+}
 -(NSMutableArray *)titleArray
 {
     if (!_titleArray) {
-        _titleArray = [NSMutableArray arrayWithObjects:@"",@"",@"", nil];
+        _titleArray = [NSMutableArray arrayWithObjects:@"联系人:",@"工程师等级:",@"联系人电话:",@"诚信值:",@"工程量:", nil];
     }
     return _titleArray;
 }
@@ -25,7 +35,7 @@
     self.view.backgroundColor = RGB(240, 240, 240);
     [self actionMasterDetailNewData];
     [self setupRefresh];
-    //[self setupTableView];
+    [self setupTableView];
 }
 -(void)setupRefresh
 {
@@ -41,7 +51,7 @@
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -49,8 +59,6 @@
         return 1;
     }else if (section == 1){
         return self.titleArray.count;
-    }else if(section == 2){
-        return 1;
     }else{
         return 0;
     }
@@ -62,25 +70,24 @@
         return 180;
     }else if (indexPath.section == 1){
         return 50;
-    }else if(indexPath.section == 2){
-        return  50;
     }else{
         return 0;
     }
 }
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *detailCell = nil;
     if (indexPath.section == 0) {
         MasterDetailHeaderCell *headerCell = [MasterDetailHeaderCell BaseCellWithTableView:tableView];
+         [headerCell.icon_img sd_setImageWithURL:[NSURL URLWithString:self.head] placeholderImage:[UIImage imageNamed:Default_Img]];
         detailCell = headerCell;
     }if (indexPath.section == 1) {
         MasterDetailConetnCell *contentCell = [MasterDetailConetnCell BaseCellWithTableView:tableView];
+        contentCell.title_lab.text = self.titleArray[indexPath.row];
+        if (self.contentArray.count>0) {
+            contentCell.content_lab.text = self.contentArray[indexPath.row];
+        }
         detailCell = contentCell;
-    }if (indexPath.section == 2) {
-        MasterDetailPhoneCell *phoneCell = [MasterDetailPhoneCell BaseCellWithTableView:tableView];
-        detailCell = phoneCell;
     }
     detailCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return detailCell;
@@ -95,7 +102,6 @@
  */
 -(void)actionMasterDetailNewData
 {
-    [SVProgressHUD showWithStatus:ShowSuccessTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     NSLog(@"userid:%@",self.masterModel.userId);
     param[@"userId"] = self.masterModel.userId;
@@ -105,42 +111,28 @@
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
-            weakSelf.resParam = res.data[@""];
+            [weakSelf.contentArray removeAllObjects];
+            NSDictionary *dict = res.data;
+            NSString *name = dict[@"user"][@"commerce"][@"name"];
+            NSString *level =[NSString stringWithFormat:@"%@",dict[@"user"][@"levelId"]];
+            NSString *phone = dict[@"user"][@"phone"];
+            NSString *score = [NSString stringWithFormat:@"%@",dict[@"user"][@"credit"]];
+            NSString *nubmer2 = [NSString stringWithFormat:@"%d",dict[@"projectAmount"]];
+            weakSelf.head = dict[@"user"][@"head"];
+            [weakSelf.contentArray addObject:name];
+            [weakSelf.contentArray addObject:level];
+            [weakSelf.contentArray addObject:phone];
+            [weakSelf.contentArray addObject:score];
+            [weakSelf.contentArray addObject:nubmer2];
+            [weakSelf.tableview reloadData];
+            [weakSelf.tableview.mj_header endRefreshing];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        [weakSelf.tableview.mj_header endRefreshing];
         return ;
-    }];
-}
-/**
- 预约师傅
- @param sender 预约师傅
- */
-- (IBAction)actionYuyueBtn:(UIButton *)sender
-{
-    [SVProgressHUD showWithStatus:ShowTitleTip];
-    NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@""] = @"";
-    WEAKSELF
-    [[NetWorkTool shareInstacne]postWithURLString:@"" parameters:param success:^(id  _Nonnull responseObject) {
-        NSLog(@"responseObject:%@",responseObject);
-        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
-        if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:@"预约成功"];
-            [weakSelf.navigationController popViewControllerAnimated:YES];
-        }else{
-            [SVProgressHUD showErrorWithStatus:res.msg];
-            return;
-        }
-    } failure:^(NSError * _Nonnull error) {
-        [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
-        return;
     }];
 }
 @end

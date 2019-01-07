@@ -94,7 +94,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }
@@ -177,5 +176,14 @@
                 break;
         }
     }];
+}
+
+/**
+ 关闭button
+ @param sender 关闭的button
+ */
+- (IBAction)actionCloseBtn:(UIButton *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

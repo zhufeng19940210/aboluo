@@ -5,20 +5,19 @@
 #import "HomeProjectDetailVC.h"
 #import "ProjectDetailHeaderCell.h"
 #import "ProjectDetailContentCell.h"
-#import "ProjectDetailNumberCell.h"
-#import "ProjectDetailMasterCell.h"
 @interface HomeProjectDetailVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)NSMutableDictionary *resParam;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *titleArray;
 @property (nonatomic,strong)NSMutableArray *contentArray;
 @property (nonatomic,strong)NSMutableArray *masterArray;
+@property (nonatomic,copy)NSString *name;
 @end
 @implementation HomeProjectDetailVC
 -(NSMutableArray *)titleArray
 {
     if (!_titleArray) {
-        _titleArray = [NSMutableArray array];
+        _titleArray = [NSMutableArray arrayWithObjects:@"开始时间:",@"结束时间:",@"总费用:",@"联系人:",@"联系电话:", nil];
     }
     return _titleArray;
 }
@@ -42,7 +41,7 @@
     self.view.backgroundColor = RGB(240, 240, 240);
     [self actionProjectDetailNewData];
     [self setupRefreh];
-   // [self setupTableView];
+    [self setupTableView];
 }
 
 -(void)setupTableView
@@ -54,7 +53,7 @@
 #pragma mark -- uitableviewdelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -62,32 +61,38 @@
         return 1;
     }else if (section == 1){
         return self.titleArray.count;
-    }else if(section == 2){
-        return 2;
     }else{
         return 0;
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    if (indexPath.section == 0) {
+        return 180;
+    }else{
+        return 50;
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 10;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *projectCell = nil;
     if (indexPath.section == 0) {
         ProjectDetailHeaderCell *headerCell = [ProjectDetailHeaderCell BaseCellWithTableView:tableView];
+        headerCell.content_lab.text = self.name;
+        headerCell.adscrollview.placeholderImage =[UIImage imageNamed:Default_Img2];
+        headerCell.adscrollview.imageURLStringsGroup = self.masterArray;
         projectCell = headerCell;
     }else if(indexPath.section == 1){
         ProjectDetailContentCell *contnetCell = [ProjectDetailContentCell BaseCellWithTableView:tableView];
-        projectCell = contnetCell;
-    }else if(indexPath.section == 2){
-        if (indexPath.row == 0) {
-            ProjectDetailNumberCell *numberCell = [ProjectDetailNumberCell BaseCellWithTableView:tableView];
-            projectCell = numberCell;
-        }else{
-            ProjectDetailMasterCell *masterCell = [ProjectDetailMasterCell BaseCellWithTableView:tableView];
-            projectCell = masterCell;
+        contnetCell.title_lab.text = self.titleArray[indexPath.row];
+        if (self.contentArray.count>0) {
+            contnetCell.content_lab.text = self.contentArray[indexPath.row];
         }
+        projectCell = contnetCell;
     }
     projectCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return projectCell;
@@ -110,7 +115,6 @@
  */
 -(void)actionProjectDetailNewData
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"projectId"] = self.detailModel.projectId;
     WEAKSELF
@@ -119,15 +123,30 @@
         NSLog(@"项目详情responseobject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
-            weakSelf.resParam = res.data[@"data"];
+            [weakSelf.contentArray removeAllObjects];
+            [weakSelf.masterArray removeAllObjects];
+            NSDictionary *dict = res.data[@"project"];
+            weakSelf.name = dict[@"name"];
+            NSString *img  = dict[@"img"];
+            NSString *cost = [NSString stringWithFormat:@"%d",dict[@"cost"]];
+            NSString *startTime  = dict[@"startTime"];
+            NSString *overTime   = dict[@"overTime"];
+            NSString *contact    = dict[@"contact"];
+            NSString *phone      = dict[@"phone"];
+            [weakSelf.contentArray addObject:startTime];
+            [weakSelf.contentArray addObject:overTime];
+            [weakSelf.contentArray addObject:cost];
+            [weakSelf.contentArray addObject:contact];
+            [weakSelf.contentArray addObject:phone];
+            [weakSelf.tableview reloadData];
+            [weakSelf.masterArray addObject:img];
+            [weakSelf.tableview.mj_header endRefreshing];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return ;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
+        [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
 }

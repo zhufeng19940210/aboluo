@@ -76,15 +76,10 @@
 		F0BDE7B321BD45E20078D1C1 /* MasterDetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BDE7B121BD45E20078D1C1 /* MasterDetailHeaderCell.xib */; };
 		F0BDE7B721BD46120078D1C1 /* MasterDetailConetnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BDE7B521BD46120078D1C1 /* MasterDetailConetnCell.m */; };
 		F0BDE7B821BD46120078D1C1 /* MasterDetailConetnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BDE7B621BD46120078D1C1 /* MasterDetailConetnCell.xib */; };
-		F0BDE7BC21BD46250078D1C1 /* MasterDetailPhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BDE7BA21BD46250078D1C1 /* MasterDetailPhoneCell.m */; };
-		F0BDE7BD21BD46250078D1C1 /* MasterDetailPhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BDE7BB21BD46250078D1C1 /* MasterDetailPhoneCell.xib */; };
 		F0BDE7C221BD4D9E0078D1C1 /* ProjectDetailHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BDE7C021BD4D9E0078D1C1 /* ProjectDetailHeaderCell.m */; };
 		F0BDE7C321BD4D9E0078D1C1 /* ProjectDetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BDE7C121BD4D9E0078D1C1 /* ProjectDetailHeaderCell.xib */; };
 		F0BDE7C721BD4DCF0078D1C1 /* ProjectDetailContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BDE7C521BD4DCF0078D1C1 /* ProjectDetailContentCell.m */; };
 		F0BDE7C821BD4DCF0078D1C1 /* ProjectDetailContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BDE7C621BD4DCF0078D1C1 /* ProjectDetailContentCell.xib */; };
-		F0BDE7CC21BD4DEB0078D1C1 /* ProjectDetailNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BDE7CA21BD4DEB0078D1C1 /* ProjectDetailNumberCell.m */; };
-		F0BDE7CD21BD4DEB0078D1C1 /* ProjectDetailNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BDE7CB21BD4DEB0078D1C1 /* ProjectDetailNumberCell.xib */; };
-		F0BDE7D121BD4E0B0078D1C1 /* ProjectDetailMasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BDE7CF21BD4E0B0078D1C1 /* ProjectDetailMasterCell.m */; };
 		F0BDE7D821BD54FE0078D1C1 /* PersonalinformationPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BDE7D621BD54FE0078D1C1 /* PersonalinformationPage.m */; };
 		F0BDE7D921BD54FE0078D1C1 /* PersonalinformationPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BDE7D721BD54FE0078D1C1 /* PersonalinformationPage.xib */; };
 		F0BDE7E121BD57930078D1C1 /* linformationUpdatePhonePage.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BDE7DF21BD57930078D1C1 /* linformationUpdatePhonePage.m */; };
@@ -310,6 +305,7 @@
 		F0FA0BD1219D94460022B567 /* HomeSGAdvertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0BCF219D94460022B567 /* HomeSGAdvertCell.m */; };
 		F0FA0BD2219D94460022B567 /* HomeSGAdvertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FA0BD0219D94460022B567 /* HomeSGAdvertCell.xib */; };
 		F0FA0BD6219D97640022B567 /* SGAdvertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA0BD4219D97640022B567 /* SGAdvertScrollView.m */; };
+		F0FACF6621CB97FF0082A914 /* HomeMasterDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FACF6521CB97FF0082A914 /* HomeMasterDetailModel.m */; };
 		F0FBC88F21A5626100B8ADE9 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FBC88E21A5626100B8ADE9 /* BaseModel.m */; };
 		F0FBC89221A562A900B8ADE9 /* HomeBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FBC89121A562A900B8ADE9 /* HomeBanner.m */; };
 		F0FBC89B21A5643A00B8ADE9 /* HomeNoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FBC89A21A5643A00B8ADE9 /* HomeNoticeModel.m */; };
@@ -429,20 +425,12 @@
 		F0BDE7B421BD46120078D1C1 /* MasterDetailConetnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterDetailConetnCell.h; sourceTree = "<group>"; };
 		F0BDE7B521BD46120078D1C1 /* MasterDetailConetnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterDetailConetnCell.m; sourceTree = "<group>"; };
 		F0BDE7B621BD46120078D1C1 /* MasterDetailConetnCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterDetailConetnCell.xib; sourceTree = "<group>"; };
-		F0BDE7B921BD46250078D1C1 /* MasterDetailPhoneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterDetailPhoneCell.h; sourceTree = "<group>"; };
-		F0BDE7BA21BD46250078D1C1 /* MasterDetailPhoneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterDetailPhoneCell.m; sourceTree = "<group>"; };
-		F0BDE7BB21BD46250078D1C1 /* MasterDetailPhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterDetailPhoneCell.xib; sourceTree = "<group>"; };
 		F0BDE7BF21BD4D9E0078D1C1 /* ProjectDetailHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectDetailHeaderCell.h; sourceTree = "<group>"; };
 		F0BDE7C021BD4D9E0078D1C1 /* ProjectDetailHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailHeaderCell.m; sourceTree = "<group>"; };
 		F0BDE7C121BD4D9E0078D1C1 /* ProjectDetailHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailHeaderCell.xib; sourceTree = "<group>"; };
 		F0BDE7C421BD4DCF0078D1C1 /* ProjectDetailContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectDetailContentCell.h; sourceTree = "<group>"; };
 		F0BDE7C521BD4DCF0078D1C1 /* ProjectDetailContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailContentCell.m; sourceTree = "<group>"; };
 		F0BDE7C621BD4DCF0078D1C1 /* ProjectDetailContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailContentCell.xib; sourceTree = "<group>"; };
-		F0BDE7C921BD4DEB0078D1C1 /* ProjectDetailNumberCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectDetailNumberCell.h; sourceTree = "<group>"; };
-		F0BDE7CA21BD4DEB0078D1C1 /* ProjectDetailNumberCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailNumberCell.m; sourceTree = "<group>"; };
-		F0BDE7CB21BD4DEB0078D1C1 /* ProjectDetailNumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectDetailNumberCell.xib; sourceTree = "<group>"; };
-		F0BDE7CE21BD4E0B0078D1C1 /* ProjectDetailMasterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectDetailMasterCell.h; sourceTree = "<group>"; };
-		F0BDE7CF21BD4E0B0078D1C1 /* ProjectDetailMasterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailMasterCell.m; sourceTree = "<group>"; };
 		F0BDE7D521BD54FE0078D1C1 /* PersonalinformationPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalinformationPage.h; sourceTree = "<group>"; };
 		F0BDE7D621BD54FE0078D1C1 /* PersonalinformationPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalinformationPage.m; sourceTree = "<group>"; };
 		F0BDE7D721BD54FE0078D1C1 /* PersonalinformationPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalinformationPage.xib; sourceTree = "<group>"; };
@@ -829,6 +817,8 @@
 		F0FA0BD0219D94460022B567 /* HomeSGAdvertCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSGAdvertCell.xib; sourceTree = "<group>"; };
 		F0FA0BD4219D97640022B567 /* SGAdvertScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAdvertScrollView.m; sourceTree = "<group>"; };
 		F0FA0BD5219D97640022B567 /* SGAdvertScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAdvertScrollView.h; sourceTree = "<group>"; };
+		F0FACF6421CB97FF0082A914 /* HomeMasterDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMasterDetailModel.h; sourceTree = "<group>"; };
+		F0FACF6521CB97FF0082A914 /* HomeMasterDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMasterDetailModel.m; sourceTree = "<group>"; };
 		F0FBC88D21A5626000B8ADE9 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		F0FBC88E21A5626100B8ADE9 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		F0FBC89021A562A900B8ADE9 /* HomeBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBanner.h; sourceTree = "<group>"; };
@@ -1539,9 +1529,6 @@
 				F0BDE7B421BD46120078D1C1 /* MasterDetailConetnCell.h */,
 				F0BDE7B521BD46120078D1C1 /* MasterDetailConetnCell.m */,
 				F0BDE7B621BD46120078D1C1 /* MasterDetailConetnCell.xib */,
-				F0BDE7B921BD46250078D1C1 /* MasterDetailPhoneCell.h */,
-				F0BDE7BA21BD46250078D1C1 /* MasterDetailPhoneCell.m */,
-				F0BDE7BB21BD46250078D1C1 /* MasterDetailPhoneCell.xib */,
 			);
 			path = "师傅详情Cell";
 			sourceTree = "<group>";
@@ -1555,11 +1542,6 @@
 				F0BDE7C421BD4DCF0078D1C1 /* ProjectDetailContentCell.h */,
 				F0BDE7C521BD4DCF0078D1C1 /* ProjectDetailContentCell.m */,
 				F0BDE7C621BD4DCF0078D1C1 /* ProjectDetailContentCell.xib */,
-				F0BDE7C921BD4DEB0078D1C1 /* ProjectDetailNumberCell.h */,
-				F0BDE7CA21BD4DEB0078D1C1 /* ProjectDetailNumberCell.m */,
-				F0BDE7CB21BD4DEB0078D1C1 /* ProjectDetailNumberCell.xib */,
-				F0BDE7CE21BD4E0B0078D1C1 /* ProjectDetailMasterCell.h */,
-				F0BDE7CF21BD4E0B0078D1C1 /* ProjectDetailMasterCell.m */,
 			);
 			path = "项目详情Cell";
 			sourceTree = "<group>";
@@ -3014,6 +2996,8 @@
 			children = (
 				F0D073A221A65D7F006BC623 /* HomeMasterModel.h */,
 				F0D073A321A65D7F006BC623 /* HomeMasterModel.m */,
+				F0FACF6421CB97FF0082A914 /* HomeMasterDetailModel.h */,
+				F0FACF6521CB97FF0082A914 /* HomeMasterDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3312,7 +3296,6 @@
 				F0F0E5C9218D77E200B4ABCE /* car2@2x.png in Resources */,
 				F0F6200621AA31FD00D2B61D /* HomeProjectDetailVC.xib in Resources */,
 				F0F0E5CE218D77E200B4ABCE /* 失败图片@2x.png in Resources */,
-				F0BDE7BD21BD46250078D1C1 /* MasterDetailPhoneCell.xib in Resources */,
 				F02FF21921B8F7430051F3C0 /* OpenshopVC.xib in Resources */,
 				F0F0E61C218D95C300B4ABCE /* SettingVC.xib in Resources */,
 				F0F9C0CF21B67B8E00DEDBC3 /* ServerBillingPictureCell.xib in Resources */,
@@ -3325,7 +3308,6 @@
 				F0F9C0E321B67E5B00DEDBC3 /* ServerBillingInsuranceCell.xib in Resources */,
 				F0FA0B49219D4FD30022B567 /* HomeSearchVC.xib in Resources */,
 				F0F6203B21AA64A800D2B61D /* UserLevelVC.xib in Resources */,
-				F0BDE7CD21BD4DEB0078D1C1 /* ProjectDetailNumberCell.xib in Resources */,
 				F0007EB021995E3200854DA3 /* HomeTitleCell.xib in Resources */,
 				F0F0E612218D959600B4ABCE /* HomeVC.xib in Resources */,
 				F0F6D4D1219E9C5E0004FCB3 /* ServerBillingruleVC.xib in Resources */,
@@ -3438,7 +3420,6 @@
 				F0F7E1D521BF5F5300DAF0D6 /* CompanyLevelPage.m in Sources */,
 				F0F7E1D021BF5F3B00DAF0D6 /* EngineerLevelPage.m in Sources */,
 				F0F7855121AF89D600F0251F /* HomeProductTypeModel.m in Sources */,
-				F0BDE7BC21BD46250078D1C1 /* MasterDetailPhoneCell.m in Sources */,
 				F0F7855B21AF915300F0251F /* HomeProductTypeDetailCell.m in Sources */,
 				F0F6D4D0219E9C5E0004FCB3 /* ServerBillingruleVC.m in Sources */,
 				F0BDE7E621BD5B1D0078D1C1 /* InformationAvavtorCell.m in Sources */,
@@ -3486,7 +3467,6 @@
 				F0F0E5A6218D77E200B4ABCE /* ZJScrollSegmentView.m in Sources */,
 				F0F7E1E421BF604000DAF0D6 /* EngineerModel.m in Sources */,
 				F0D073A421A65D7F006BC623 /* HomeMasterModel.m in Sources */,
-				F0BDE7CC21BD4DEB0078D1C1 /* ProjectDetailNumberCell.m in Sources */,
 				F0F0E59A218D77E200B4ABCE /* IQUIWindow+Hierarchy.m in Sources */,
 				F0F7E20D21BFD7EB00DAF0D6 /* AddreeListCell.m in Sources */,
 				F0F0E595218D77E200B4ABCE /* IQUIView+IQKeyboardToolbar.m in Sources */,
@@ -3501,7 +3481,6 @@
 				F0FBC88F21A5626100B8ADE9 /* BaseModel.m in Sources */,
 				F0F9C0DD21B67E3600DEDBC3 /* ServerBillingAcceptanceCell.m in Sources */,
 				F0F0E5D4218D77E200B4ABCE /* NSBundle+TZImagePicker.m in Sources */,
-				F0BDE7D121BD4E0B0078D1C1 /* ProjectDetailMasterCell.m in Sources */,
 				F0D073D321A68CF9006BC623 /* HomeScanVC.m in Sources */,
 				F0FA0B74219D51910022B567 /* HomeProjectVC.m in Sources */,
 				F0F0E598218D77E200B4ABCE /* IQKeyboardManager.m in Sources */,
@@ -3523,6 +3502,7 @@
 				F0FA0B92219D596E0022B567 /* MasterCell.m in Sources */,
 				F0D073CB21A68B69006BC623 /* SGQRCodeScanManager.m in Sources */,
 				F02FF20E21B8F4680051F3C0 /* SettingLogoutCell.m in Sources */,
+				F0FACF6621CB97FF0082A914 /* HomeMasterDetailModel.m in Sources */,
 				F0FBC89221A562A900B8ADE9 /* HomeBanner.m in Sources */,
 				F0F7E1CC21BF4B6700DAF0D6 /* StoreProductModel.m in Sources */,
 				F0F9C0F021B683A500DEDBC3 /* SettingPersonAuthonVC.m in Sources */,
@@ -3652,6 +3632,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3711,6 +3692,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3734,8 +3716,9 @@
 			baseConfigurationReference = 77038B9CAC5E9EAA5922D6FA /* Pods-aboluo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3R48RV923F;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/aboluo/Vendor/SDK/ShareSDK/Support/PlatformSDK/QQSDK",
@@ -3760,6 +3743,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bailing.aboluo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34f4c011-ce0f-40d1-bac8-bc0e67f7b561";
+				PROVISIONING_PROFILE_SPECIFIER = abuluo_dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3769,8 +3754,10 @@
 			baseConfigurationReference = AFCCC73D04ECCD08DB93DCC5 /* Pods-aboluo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3R48RV923F;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/aboluo/Vendor/SDK/ShareSDK/Support/PlatformSDK/QQSDK",
@@ -3795,6 +3782,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bailing.aboluo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ff7b7610-0a57-42e1-8d87-51d08d948da2";
+				PROVISIONING_PROFILE_SPECIFIER = abuluo_dis;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

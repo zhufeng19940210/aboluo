@@ -9,5 +9,7 @@
 #import "BaseCell.h"
 
 @interface MasterDetailHeaderCell : BaseCell
+@property (weak, nonatomic) IBOutlet UIImageView *icon_img;
+@property (weak, nonatomic) IBOutlet UILabel *content_lab;
 
 @end

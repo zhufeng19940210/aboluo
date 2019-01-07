@@ -31,16 +31,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKD-u1-gXb">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="fsH-oS-Aiz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QE5-aI-GWv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6jC-9u-kQq"/>
                     <constraint firstItem="vQa-d1-pfv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="7tx-7t-xlI"/>
                     <constraint firstItem="vQa-d1-pfv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dlz-gh-3JX"/>
+                    <constraint firstItem="pKD-u1-gXb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ng1-uc-FdF"/>
+                    <constraint firstAttribute="bottom" secondItem="pKD-u1-gXb" secondAttribute="bottom" id="XQn-oX-GGM"/>
                     <constraint firstAttribute="trailing" secondItem="QE5-aI-GWv" secondAttribute="trailing" constant="10" id="YUe-bC-Ro9"/>
+                    <constraint firstAttribute="trailing" secondItem="pKD-u1-gXb" secondAttribute="trailing" id="az0-QF-NbB"/>
                     <constraint firstItem="QE5-aI-GWv" firstAttribute="leading" secondItem="vQa-d1-pfv" secondAttribute="trailing" constant="13" id="zyJ-j2-tWq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="content_lab" destination="QE5-aI-GWv" id="yMV-7e-Gqr"/>
+                <outlet property="title_lab" destination="vQa-d1-pfv" id="Ruv-An-jt6"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

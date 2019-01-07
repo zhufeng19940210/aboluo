@@ -58,7 +58,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }
@@ -109,7 +108,6 @@
         return;
     }
     //开始去做修改密码
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"phone"] = phone;
     param[@"password"] = pwd;
@@ -117,7 +115,6 @@
         [SVProgressHUD dismiss];
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [self.navigationController popViewControllerAnimated:YES];
         }else{
             [SVProgressHUD showErrorWithStatus:res.msg];
@@ -125,7 +122,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [ZFCustomView showWithText:FailRequestTip WithDurations:0.5];
         return;
     }];
 }

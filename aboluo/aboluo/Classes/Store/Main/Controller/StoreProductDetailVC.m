@@ -22,7 +22,6 @@
 }
 -(void)actionNewData
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"itemId"] = self.orderId;
     WEAKSELF
@@ -31,7 +30,6 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
         }else{
             [SVProgressHUD showErrorWithStatus:res.msg];
             return;
@@ -40,7 +38,6 @@
         [weakSelf.tableview.mj_header endRefreshing];
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

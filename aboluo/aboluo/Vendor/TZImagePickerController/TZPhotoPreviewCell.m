@@ -90,7 +90,6 @@
 
 @end
 
-
 @interface TZPhotoPreviewView ()<UIScrollViewDelegate>
 
 @end

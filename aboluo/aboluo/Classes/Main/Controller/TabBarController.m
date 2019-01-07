@@ -8,7 +8,8 @@
 #import "ServerVC.h"
 #import "StoreVC.h"
 #import "MyNavigationController.h"
-@interface TabBarController ()
+#import "LoginVC.h"
+@interface TabBarController () <UITabBarControllerDelegate>
 @end
 @implementation TabBarController
 +(void)initialize{
@@ -49,6 +50,8 @@
 //    [self.tabBar setShadowImage:img];
     // 初始化子控制器
     [self setupAllControllers];
+    
+    self.delegate = self;
 }
 
 #pragma mark - 初始化界面的方法
@@ -64,8 +67,8 @@
     ServerVC *servervc = [[ServerVC alloc]init];
     [self setupChildViewVC:servervc title:@"服务" norImage:@"tabbar_server_nor" selectImage:@"tabbar_server_sel"];
     //商城
-    StoreVC *storevc = [[StoreVC alloc]init];
-    [self setupChildViewVC:storevc title:@"商城" norImage:@"tabbar_store_nor" selectImage:@"tabbar_store_sel"];
+    //StoreVC *storevc = [[StoreVC alloc]init];
+    //[self setupChildViewVC:storevc title:@"商城" norImage:@"tabbar_store_nor" selectImage:@"tabbar_store_sel"];
     //会员
     SettingVC  *settingvc = [[SettingVC alloc]init];
     [self setupChildViewVC:settingvc title:@"设置" norImage:@"tabbar_setting_nor" selectImage:@"tabbar_setting_sel"];
@@ -88,5 +91,25 @@
     MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:childVC];
     // 添加tarBarController的子控制器
     [self addChildViewController:nav];
+}
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController NS_AVAILABLE_IOS(3_0)
+{
+    NSLog(@"%ld == %@ == %@",tabBarController.selectedIndex,tabBarController,viewController);
+    if ([self.viewControllers objectAtIndex:2] == viewController)
+    {
+        NSLog(@"settingVC is default");
+        if ([UserModel isOnline]) {
+            //登录成功
+            return YES;
+        }else{
+            //失败成功
+            LoginVC *loginvc = [[LoginVC alloc]init];
+            MyNavigationController *nav = [[MyNavigationController alloc]initWithRootViewController:loginvc];
+            [self presentViewController:nav animated:YES completion:nil];
+            return NO;
+        }
+    }
+    return YES;
 }
 @end

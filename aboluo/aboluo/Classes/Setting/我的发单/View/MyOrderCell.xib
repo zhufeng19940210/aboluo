@@ -44,25 +44,29 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-iM-6rs">
-                        <rect key="frame" x="260" y="25" width="50" height="50"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yf-xF-Md8">
+                        <rect key="frame" x="0.0" y="98" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="WsT-F7-OGp"/>
-                            <constraint firstAttribute="width" constant="50" id="cmS-OS-iXf"/>
+                            <constraint firstAttribute="height" constant="1" id="EbC-gF-843"/>
                         </constraints>
-                    </imageView>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="1IS-iM-6rs" secondAttribute="trailing" constant="10" id="0lT-Yj-vYn"/>
                     <constraint firstItem="e2O-W0-LVw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6b2-8A-zuf"/>
                     <constraint firstItem="1be-xA-eJy" firstAttribute="leading" secondItem="e2O-W0-LVw" secondAttribute="trailing" constant="10" id="AVD-RI-hiC"/>
+                    <constraint firstAttribute="bottom" secondItem="0Yf-xF-Md8" secondAttribute="bottom" id="E9Z-9R-wCh"/>
                     <constraint firstItem="l7N-ze-uvG" firstAttribute="leading" secondItem="e2O-W0-LVw" secondAttribute="trailing" constant="10" id="LYs-iT-mGO"/>
                     <constraint firstItem="q0F-Ck-N1T" firstAttribute="leading" secondItem="e2O-W0-LVw" secondAttribute="trailing" constant="10" id="SPW-uQ-ldn"/>
                     <constraint firstItem="q0F-Ck-N1T" firstAttribute="top" secondItem="e2O-W0-LVw" secondAttribute="top" id="Z5c-ge-DBe"/>
                     <constraint firstItem="1be-xA-eJy" firstAttribute="bottom" secondItem="e2O-W0-LVw" secondAttribute="bottom" id="gfW-P1-eU4"/>
                     <constraint firstItem="e2O-W0-LVw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kKm-uI-viY"/>
                     <constraint firstItem="l7N-ze-uvG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mke-R6-Ne1"/>
-                    <constraint firstItem="1IS-iM-6rs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="z9T-XB-fXM"/>
+                    <constraint firstAttribute="trailing" secondItem="0Yf-xF-Md8" secondAttribute="trailing" id="rzh-jJ-Pu5"/>
+                    <constraint firstItem="0Yf-xF-Md8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vqW-ow-utg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
@@ -71,7 +75,6 @@
                 <outlet property="area_lab" destination="l7N-ze-uvG" id="L7N-vn-TRA"/>
                 <outlet property="icon_img" destination="e2O-W0-LVw" id="VjC-i9-ZCZ"/>
                 <outlet property="name_lab" destination="q0F-Ck-N1T" id="L1A-be-Wg3"/>
-                <outlet property="status_img" destination="1IS-iM-6rs" id="wqC-lP-mwa"/>
             </connections>
         </tableViewCell>
     </objects>

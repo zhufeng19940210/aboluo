@@ -76,7 +76,6 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.titleArray removeAllObjects];
             weakSelf.titleArray  = [GongZhongModel mj_objectArrayWithKeyValuesArray:res.data[@"products"]];
             [weakSelf refreshStore];
@@ -87,7 +86,6 @@
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"error:%@",error);
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

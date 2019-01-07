@@ -39,29 +39,27 @@
 -(void)acitonSendNewData
 {
     self.page = 1;
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] = self.usermodel.aid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
     param[@"pageSize"] = @10;
     param[@"state"]   = self.typeStr;
     WEAKSELF
-    [[NetWorkTool shareInstacne]postWithURLString:Mine_Send_List_Url parameters:param success:^(id  _Nonnull responseObject) {
+    [[NetWorkTool shareInstacne]postWithURLString:Mine_Recevice_List_Url parameters:param success:^(id  _Nonnull responseObject) {
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.orderArray removeAllObjects];
             weakSelf.orderArray = [MyOrderModel mj_objectArrayWithKeyValuesArray:res.data[@"projects"]];
         }else{
             [SVProgressHUD showErrorWithStatus:res.msg];
+            [weakSelf.tableview.mj_header endRefreshing];
             return;
         }
         [weakSelf.tableview reloadData];
         [weakSelf.tableview.mj_header endRefreshing];
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
@@ -69,18 +67,16 @@
 -(void)acitonSendMoreData
 {
     self.page ++ ;
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] = self.usermodel.aid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
     param[@"pageSize"] = @10;
     param[@"state"]   = self.typeStr;
     WEAKSELF
-    [[NetWorkTool shareInstacne]postWithURLString:@"" parameters:param success:^(id  _Nonnull responseObject) {
+    [[NetWorkTool shareInstacne]postWithURLString:Mine_Recevice_List_Url parameters:param success:^(id  _Nonnull responseObject) {
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             NSMutableArray *array = [NSMutableArray array];
             array = [MyOrderModel mj_objectArrayWithKeyValuesArray:res.data[@"projects"]];
             [weakSelf.orderArray addObjectsFromArray:array];
@@ -92,7 +88,6 @@
         [weakSelf.tableview.mj_header endRefreshing];
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
@@ -107,7 +102,7 @@
 #pragma mark -- uitableviewdelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.dataArray.count;
+    return self.orderArray.count;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

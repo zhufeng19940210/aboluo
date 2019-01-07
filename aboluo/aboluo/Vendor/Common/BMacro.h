@@ -101,10 +101,10 @@
 #define Height_NavBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 88.0 : 64.0)
 #define Height_TabBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 83.0 : 49.0)
 //通用的协议
-#define FailRequestTip      @"服务器繁忙"
-#define ShowTitleTip        @"正在请求"
-#define ShowSuccessTip      @"请求成功"
-#define ShowErrorTip        @"请求失败"
+//#define FailRequestTip      @"服务器繁忙"
+//#define ShowTitleTip        @"正在请求"
+//#define ShowSuccessTip      @"请求成功"
+//#define ShowErrorTip        @"请求失败"
 #define Default_Img         @"app_placher"
 #define Default_Img2        @"app_placher2"
 //经纬度

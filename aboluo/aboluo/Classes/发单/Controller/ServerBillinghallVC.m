@@ -65,7 +65,6 @@
     if (![self isPushOrder]) {
         return;
     }
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     UserModel *usermodel = [UserModel getInfo];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"projectId"] = @"0";
@@ -116,7 +115,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error:%@",error);
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }
@@ -431,7 +429,6 @@
     if (![self isPushOrder]) {
         return;
     }
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     UserModel *usermodel = [UserModel getInfo];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"projectId"] = @"0";
@@ -482,7 +479,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error:%@",error);
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

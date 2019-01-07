@@ -122,7 +122,6 @@
  */
 -(void)actionHomeNewData
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:Home_Index parameters:param success:^(id  _Nonnull responseObject) {
@@ -130,7 +129,6 @@
         [SVProgressHUD dismiss];
         ResponeModel *res =  [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             ///移除全部
             [weakSelf.baanerArray removeAllObjects];
             [weakSelf.noticArray removeAllObjects];
@@ -153,12 +151,10 @@
             [weakSelf.collectionview reloadData];
             [weakSelf.collectionview.mj_header endRefreshing];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.collectionview.mj_header endRefreshing];
         return;
     }];
@@ -329,7 +325,7 @@
         WEAKSELF
         titleCell.pushblock = ^(UIButton *btn) {
             ///调整
-            weakSelf.tabBarController.selectedIndex = 2;
+          // weakSelf.tabBarController.selectedIndex = 2;
         };
         homeCell = titleCell;
     }if (indexPath.section == 7) {
@@ -381,7 +377,9 @@
     }
     if (indexPath.section == 9) {
         //项目详情
+         HomeProjectDetailModel *detailModel = self.remmendProjectArray[indexPath.row];
         HomeProjectDetailVC *projectdetailvc = [[HomeProjectDetailVC alloc]init];
+        projectdetailvc.detailModel = detailModel;
         [self.navigationController pushViewController:projectdetailvc animated:YES];
     }
 }
@@ -408,7 +406,6 @@
 -(void)qingdanWithModel:(HomeProjectDetailModel *)detailmodel
 {
     UserModel *usermodel = [UserModel getInfo];
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"projectId"] = detailmodel.productId;
     param[@"userId"]    = usermodel.aid;
@@ -423,7 +420,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

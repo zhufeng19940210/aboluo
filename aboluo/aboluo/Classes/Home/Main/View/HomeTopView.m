@@ -46,14 +46,7 @@ CGFloat const DCMargin = 10;
     //先创建新的东西
     _leftBarItem = ({
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:@"home_location"] forState:UIControlStateNormal];
-        [button setTitle:@"南昌市" forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        button.titleLabel.font = [UIFont systemFontOfSize:17];
-        button.titleLabel.textAlignment = NSTextAlignmentLeft;
-        [button addTarget:self action:@selector(actionLeftBtn:) forControlEvents:UIControlEventTouchUpInside];
-        [button setImagePosition:0 withInset:-5];
-        [button sizeToFit];
+        [button setImage:[UIImage imageNamed:@"nil"] forState:UIControlStateNormal];
         button;
     });
     _rightBarItem = ({
@@ -113,8 +106,8 @@ CGFloat const DCMargin = 10;
         make.width.equalTo(@44);
     }];
     [_topSearchView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self->_leftBarItem.mas_right).offset(5);
-        make.right.equalTo(self->_rightBarItem.mas_left).offset(30);
+        make.left.equalTo(self).offset(30);
+        make.right.equalTo(self).offset(-30);
         make.height.equalTo(@32);
         make.centerY.equalTo(self->_rightBarItem.mas_centerY);
     }];
@@ -125,7 +118,6 @@ CGFloat const DCMargin = 10;
         make.right.equalTo(self->_topSearchView);
     }];
 }
-
 /**
  地址button点击
  @param button 地址button的点击

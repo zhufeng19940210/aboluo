@@ -36,7 +36,6 @@
         [self showHint:@"手机号码有误" yOffset:-200];
         return;
     }
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] =  usermodel.aid;
     param[@"phone"]  = phone;
@@ -53,7 +52,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

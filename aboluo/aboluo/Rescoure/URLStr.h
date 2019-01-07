@@ -6,7 +6,7 @@
 #define URLStr_h
 /*=====================定义一些宏=================*/
 #define UPDATESUCCESS       @"updatesuccess"
-#define BaseUrl @"http://47.93.238.67/lanpangzi"
+#define BaseUrl @"http://106.12.192.149:8080/lanpangzi"
 /*====================用户接口 Start==================*/
 ///登录注册接口
 #define User_Login_URL [BaseUrl stringByAppendingString:@"/user/login"]
@@ -121,7 +121,5 @@
 ///我的接单
 #define Mine_Recevice_List_Url [BaseUrl stringByAppendingString:@"/project/myRecevice"]
 /*====================个人设置 End==================*/
-
-
 
 #endif /* URLStr_h */

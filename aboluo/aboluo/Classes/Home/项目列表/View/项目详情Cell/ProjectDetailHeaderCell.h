@@ -9,5 +9,6 @@
 #import "BaseCell.h"
 
 @interface ProjectDetailHeaderCell : BaseCell
-
+@property (weak, nonatomic) IBOutlet SDCycleScrollView *adscrollview;
+@property (weak, nonatomic) IBOutlet UILabel *content_lab;
 @end

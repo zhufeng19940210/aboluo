@@ -47,7 +47,6 @@
 //请求数据
 -(void)setupData
 {
-    [SVProgressHUD showSuccessWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] = self.usermodel.aid;
     [[NetWorkTool shareInstacne]postWithURLString:Address_List_Url parameters:param success:^(id  _Nonnull responseObject) {
@@ -59,12 +58,10 @@
             self.addreeArray = [AddressModel2 mj_objectArrayWithKeyValuesArray:res.data[@"address"]];
             [self.tableview reloadData];
         }else{
-            [SVProgressHUD showErrorWithStatus:@"获取失败"];
             return;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
     }];
 }
 -(void)seutpTableView
@@ -157,7 +154,6 @@
             }
         } failure:^(NSError * _Nonnull error) {
             [SVProgressHUD dismiss];
-            [SVProgressHUD showErrorWithStatus:FailRequestTip];
             return;
         }];
     }
@@ -202,7 +198,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

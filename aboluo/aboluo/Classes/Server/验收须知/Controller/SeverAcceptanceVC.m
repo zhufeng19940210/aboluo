@@ -18,7 +18,6 @@
 }
 -(void)setupData
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"productId"] = @"";
     param[@"style"] = self.typeStr;
@@ -27,7 +26,6 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             weakSelf.textview.text = res.data[@"notice"][@"contents"];
         }else{
             [SVProgressHUD showErrorWithStatus:res.msg];
@@ -35,7 +33,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

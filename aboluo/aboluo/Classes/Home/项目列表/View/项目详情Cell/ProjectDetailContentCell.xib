@@ -31,16 +31,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNg-pu-7gB">
+                        <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dBN-Kv-2n3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="cRm-SH-3TW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0NN-nK-04c"/>
                     <constraint firstItem="cRm-SH-3TW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LBe-Qi-kDH"/>
                     <constraint firstItem="Fpt-ZA-RWv" firstAttribute="leading" secondItem="cRm-SH-3TW" secondAttribute="trailing" constant="8" id="Q1I-33-MNz"/>
+                    <constraint firstItem="WNg-pu-7gB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="T08-9v-en4"/>
+                    <constraint firstAttribute="bottom" secondItem="WNg-pu-7gB" secondAttribute="bottom" id="TeD-rG-YGk"/>
                     <constraint firstAttribute="trailing" secondItem="Fpt-ZA-RWv" secondAttribute="trailing" constant="10" id="UvU-xN-1p8"/>
+                    <constraint firstAttribute="trailing" secondItem="WNg-pu-7gB" secondAttribute="trailing" id="ixf-Kq-mFH"/>
                     <constraint firstItem="Fpt-ZA-RWv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sG0-za-iIG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="content_lab" destination="Fpt-ZA-RWv" id="zcx-kG-BIa"/>
+                <outlet property="title_lab" destination="cRm-SH-3TW" id="aHP-yi-z2G"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

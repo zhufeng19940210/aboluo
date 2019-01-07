@@ -18,6 +18,8 @@
 #import "PersonalinformationPage.h"
 #import "MySendOrderListVC.h"
 #import "MyReceiveOrderListVC.h"
+#import "PersonalinformationPage.h"
+#import "TabBarController.h"
 @interface SettingVC ()<UITableViewDelegate,UITableViewDataSource,TZImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong)NSMutableArray *personimagArray;
@@ -37,7 +39,7 @@
 -(NSMutableArray *)persontitleArray
 {
     if (!_persontitleArray) {
-        _persontitleArray = [NSMutableArray arrayWithObjects:@"余额",@"等级",@"证书",@"个人中心",@"去认证", nil];
+        _persontitleArray = [NSMutableArray arrayWithObjects:@"我的发单",@"我的接单",@"证书",@"我的资料",@"去认证", nil];
     }
     return _persontitleArray;
 }
@@ -59,8 +61,12 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self refresh];
+}
+
+-(void)refresh{
     self.usermodel = [UserModel getInfo];
-    [self setupData];
+    [self.tableview reloadData];
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -73,29 +79,7 @@
     self.view.backgroundColor = RGB(240, 240, 240);
     [self setupTableView];
 }
-/**
- 请求数据
- */
--(void)setupData
-{
-    [SVProgressHUD show];
-    NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    [[NetWorkTool shareInstacne]postWithURLString:@"" parameters:param success:^(id  _Nonnull responseObject) {
-        [SVProgressHUD dismiss];
-        NSLog(@"responobject:%@",responseObject);
-        ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
-        if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
-        }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
-            return;
-        }
-    } failure:^(NSError * _Nonnull error) {
-        [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
-        return;
-    }];
-}
+
 /**
  seutpTableview
  */
@@ -134,6 +118,7 @@
         return 50;
     }
 }
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
@@ -142,6 +127,8 @@
             if ([self.usermodel.roleId isEqualToString:@"0"]) {
                 //个人
                 headercell.setting_bg.image = [UIImage imageNamed:@"setting_bg.png"];
+                [headercell.icon_img sd_setImageWithURL:[NSURL URLWithString:self.usermodel.head] placeholderImage:[UIImage imageNamed:Default_Img]];
+                headercell.name_lab.text = self.usermodel.phone;
                 headercell.actionBlock = ^(SettingHeaderType type) {
                     if (type == SettingHeaderTypeIcon) {
                         //头像
@@ -161,7 +148,8 @@
                 headercell.actionBlock = ^(SettingHeaderType type) {
                     if (type == SettingHeaderTypeIcon) {
                         //头像
-                        NSLog(@"头像");
+                        //NSLog(@"头像");
+                        [self changeIconMethod];
                     }else if(type == SettingHeaderTypeCode){
                         //二维码
                         NSLog(@"二维码");
@@ -202,26 +190,22 @@
         if ([self.usermodel.roleId isEqualToString:@"0"]) {
             //个人
             if (indexPath.row == 1) {
-                
                 MySendOrderListVC *sendlistvc =[[MySendOrderListVC alloc]init];
                 [self.navigationController pushViewController:sendlistvc animated:YES];
-                //余额
-               // UserAmountVC *amountvc = [[UserAmountVC alloc]init];
-               //[self.navigationController pushViewController:amountvc animated:YES];
             }else if(indexPath.row == 2){
                 //等级
                 MyReceiveOrderListVC *lisvc = [[MyReceiveOrderListVC alloc]init];
                 [self.navigationController pushViewController:lisvc animated:YES];
-                //UserLevelVC *levelvc = [[UserLevelVC alloc]init];
-                //[self.navigationController pushViewController:levelvc animated:YES];
             }else if (indexPath.row == 3){
                 //证书
                 UserCertificateVC *certificatevc = [[UserCertificateVC alloc]init];
                 [self.navigationController pushViewController:certificatevc animated:YES];
             }else if (indexPath.row == 4){
                 //个人中心
-                UserInfoCenterVC *centervc = [[UserInfoCenterVC alloc]init];
-                [self.navigationController pushViewController:centervc animated:YES];
+                PersonalinformationPage *peronpagevc = [[PersonalinformationPage alloc]init];
+                [self.navigationController pushViewController:peronpagevc animated:YES];
+                //UserInfoCenterVC *centervc = [[UserInfoCenterVC alloc]init];
+                //[self.navigationController pushViewController:centervc animated:YES];
             }else if(indexPath.row == 5){
                 //去认证
                 SettingPersonAuthonVC *personauthonvc = [[SettingPersonAuthonVC alloc]init];
@@ -269,11 +253,11 @@
 {
     //情况数据
     [UserModel logout];
-    LoginVC *loginVC = [[LoginVC alloc]init];
+    //LoginVC *loginVC = [[LoginVC alloc]init];
+    TabBarController *tabbarvc = [[TabBarController alloc]init];
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginVC];
     app.window.backgroundColor = [UIColor whiteColor];
-    app.window.rootViewController = nav;
+    app.window.rootViewController = tabbarvc;
     [app.window makeKeyAndVisible];
     [SVProgressHUD showSuccessWithStatus:@"退出成功"];
 }
@@ -317,11 +301,12 @@
         NSLog(@"success:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            NSString *avtorpath = res.data[@"photo"];
+            NSString *avtorpath = res.data[@"head"];
             [SVProgressHUD showSuccessWithStatus:@"上传成功"];
             UserModel *model = [UserModel getInfo];
             model.head = avtorpath;
             [UserModel save:model];
+            [self refresh];
         }else{
             [SVProgressHUD showErrorWithStatus:@"上传失败"];
             return;
@@ -332,5 +317,4 @@
         return;
     }];
 }
-
 @end

@@ -57,7 +57,6 @@
         [self showHint:@"所属行业不能为空" yOffset:-200];
         return;
     }
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"userId"] = self.userModel;
     param[@"name"]   = commpanyStr;
@@ -89,7 +88,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error:%@",error);
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

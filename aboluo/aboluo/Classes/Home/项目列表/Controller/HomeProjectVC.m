@@ -39,7 +39,6 @@
  */
 -(void)acitonProjectNewData
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     self.page = 1;
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"productId"] = self.xiangmumodel.wid;
@@ -51,18 +50,15 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.projectArray removeAllObjects];
             weakSelf.projectArray = [HomeProjectDetailModel mj_objectArrayWithKeyValuesArray:res.data[@"projects"]];
             [weakSelf.tableview reloadData];
             [weakSelf.tableview.mj_header endRefreshing];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return ;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
@@ -73,7 +69,6 @@
 -(void)acitonProjectMoreData
 {
     self.page++;
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"productId"] = self.xiangmumodel.wid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
@@ -84,19 +79,16 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             NSMutableArray *array = [NSMutableArray array];
             array = [HomeProjectDetailModel mj_objectArrayWithKeyValuesArray:res.data[@"projects"]];
             [weakSelf.projectArray addObjectsFromArray:array];
             [weakSelf.tableview reloadData];
             [weakSelf.tableview.mj_header endRefreshing];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return ;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
@@ -148,7 +140,6 @@
 -(void)recviceWithModel:(HomeProjectDetailModel *)model
 {
     UserModel *usermodel = [UserModel getInfo];
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"projectId"] = model.productId;
     param[@"userId"]    = usermodel.aid;
@@ -165,7 +156,6 @@
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

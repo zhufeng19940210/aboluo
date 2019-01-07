@@ -42,14 +42,12 @@
 }
 -(void)setupData
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     WEAKSELF
     [[NetWorkTool shareInstacne]postWithURLString:FanDan_GongChenShi_Url parameters:param success:^(id  _Nonnull responseObject) {
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-             [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.insuranceArray removeAllObjects];
             weakSelf.insuranceArray = [EngineerModel mj_objectArrayWithKeyValuesArray:res.data[@"engineers"]];
            
@@ -61,7 +59,6 @@
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"error:%@",error);
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         return;
     }];
 }

@@ -40,7 +40,6 @@
 -(void)acitonNewData
 {
     self.page = 1;
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     NSLog(@"self.typeStr:%@",self.typeStr);
     param[@"categoryId"]  = self.typeStr;
@@ -52,7 +51,6 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.storeArray removeAllObjects];
             weakSelf.storeArray = [StoreProductModel mj_objectArrayWithKeyValuesArray:res.data[@"itemList"]];
         }else{
@@ -63,7 +61,6 @@
         [weakSelf.tableview.mj_header endRefreshing];
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
@@ -74,7 +71,6 @@
 -(void)acitonMoreData
 {
     self.page++;
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"categoryId"]  = self.typeStr;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
@@ -85,7 +81,6 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             NSMutableArray *array = [NSMutableArray array];
             array = [StoreDetailModel mj_objectArrayWithKeyValuesArray:res.data[@"itemList"]];
             [weakSelf.storeArray addObjectsFromArray:array];
@@ -97,7 +92,6 @@
         [weakSelf.tableview.mj_header endRefreshing];
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];

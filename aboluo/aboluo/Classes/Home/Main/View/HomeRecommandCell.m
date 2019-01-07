@@ -21,7 +21,7 @@
     [_icon_img sd_setImageWithURL:[NSURL URLWithString:productModel.img] placeholderImage:[UIImage imageNamed:Default_Img]];
     _name_lab.text = [NSString stringWithFormat:@"%@",productModel.name];
     _total_lab.text = [NSString stringWithFormat:@"施工总费用:%.2f元",[productModel.cost doubleValue]];
-    _type_lab.text = [NSString stringWithFormat:@"工种:%@",productModel.productId];
+    _type_lab.text = [NSString stringWithFormat:@"工种:%@",productModel.product[@"name"]];
     _time_lab.text = [NSString stringWithFormat:@"时间:%@至%@",productModel.startTime,productModel.overTime];
 }
 /**

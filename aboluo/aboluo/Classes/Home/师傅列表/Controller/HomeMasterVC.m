@@ -40,7 +40,6 @@
  */
 -(void)acitonMasterNewData
 {
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     self.page = 1;
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"productId"] = self.typemodel.wid;
@@ -52,18 +51,15 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.masterArray removeAllObjects];
             weakSelf.masterArray = [HomeMasterModel mj_objectArrayWithKeyValuesArray:res.data[@"list"]];
             [weakSelf.tableview reloadData];
             [weakSelf.tableview.mj_header endRefreshing];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return ;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
@@ -74,7 +70,6 @@
 -(void)acitonMaterMoreData
 {
     self.page++;
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"productId"] = self.typemodel.wid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
@@ -85,19 +80,16 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code == 1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             NSMutableArray *array = [NSMutableArray array];
             array = [HomeMasterModel mj_objectArrayWithKeyValuesArray:res.data[@"list"]];
             [weakSelf.masterArray addObjectsFromArray:array];
             [weakSelf.tableview reloadData];
             [weakSelf.tableview.mj_header endRefreshing];
         }else{
-            [SVProgressHUD showErrorWithStatus:ShowErrorTip];
             return ;
         }
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];

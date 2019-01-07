@@ -20,19 +20,39 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dyl-SS-Xpb" customClass="SDCycleScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="337" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="337" height="169"/>
                         <color key="backgroundColor" red="0.87058823529999996" green="0.70980392160000005" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-sM-sBX">
+                        <rect key="frame" x="0.0" y="170" width="337" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="nnr-Pf-ceW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Dyl-SS-Xpb" secondAttribute="trailing" id="4DM-cW-T7l"/>
-                    <constraint firstItem="Dyl-SS-Xpb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CEa-gx-hRf"/>
-                    <constraint firstAttribute="bottom" secondItem="Dyl-SS-Xpb" secondAttribute="bottom" constant="-0.5" id="X5L-hO-EV5"/>
-                    <constraint firstItem="Dyl-SS-Xpb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b3m-XO-k51"/>
+                    <constraint firstAttribute="trailing" secondItem="Dyl-SS-Xpb" secondAttribute="trailing" id="685-bT-D1B"/>
+                    <constraint firstItem="Dyl-SS-Xpb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Pva-qW-Gyr"/>
+                    <constraint firstAttribute="trailing" secondItem="Dyl-SS-Xpb" secondAttribute="trailing" id="QB2-Rb-cCE"/>
+                    <constraint firstItem="Dyl-SS-Xpb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Y8e-1o-eAU"/>
+                    <constraint firstItem="Dyl-SS-Xpb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hZt-me-65V"/>
+                    <constraint firstAttribute="bottom" secondItem="OMQ-sM-sBX" secondAttribute="bottom" constant="-0.5" id="kgR-i8-KHI"/>
+                    <constraint firstAttribute="trailing" secondItem="OMQ-sM-sBX" secondAttribute="trailing" id="o82-Yo-Byd"/>
+                    <constraint firstItem="OMQ-sM-sBX" firstAttribute="top" secondItem="Dyl-SS-Xpb" secondAttribute="bottom" constant="1" id="pfI-fT-nyQ"/>
+                    <constraint firstItem="Dyl-SS-Xpb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sjH-3k-llM"/>
+                    <constraint firstItem="OMQ-sM-sBX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vts-4x-ZJz"/>
+                    <constraint firstItem="Dyl-SS-Xpb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="x3O-Lc-uet"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="36.5" y="112.5"/>
+            <connections>
+                <outlet property="adscrollview" destination="Dyl-SS-Xpb" id="uKg-Uq-X8A"/>
+                <outlet property="content_lab" destination="OMQ-sM-sBX" id="pH5-C7-1NC"/>
+            </connections>
+            <point key="canvasLocation" x="36.5" y="112"/>
         </tableViewCell>
     </objects>
 </document>

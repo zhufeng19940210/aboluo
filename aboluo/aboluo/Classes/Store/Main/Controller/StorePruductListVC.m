@@ -40,7 +40,6 @@
 -(void)actionNewData
 {
     self.page = 1;
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"categoryId"] = self.typeModel.pid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
@@ -50,7 +49,6 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code ==1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             [weakSelf.categoryArray removeAllObjects];
             weakSelf.categoryArray = [StoreProductModel mj_objectArrayWithKeyValuesArray:res.data[@"itemList"]];
         }else{
@@ -61,7 +59,6 @@
         [weakSelf.tableview.mj_header endRefreshing];
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
@@ -72,7 +69,6 @@
 -(void)actionNoreData
 {
     self.page++;
-    [SVProgressHUD showWithStatus:ShowTitleTip];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"categoryId"] = self.typeModel.pid;
     param[@"currPage"] = [NSString stringWithFormat:@"%d",self.page];
@@ -82,7 +78,6 @@
         NSLog(@"responseObject:%@",responseObject);
         ResponeModel *res = [ResponeModel mj_objectWithKeyValues:responseObject];
         if (res.code ==1) {
-            [SVProgressHUD showSuccessWithStatus:ShowSuccessTip];
             NSMutableArray *arry = [NSMutableArray array];
             arry = [StoreProductModel mj_objectArrayWithKeyValuesArray:res.data[@"itemList"]];
             [weakSelf.categoryArray addObjectsFromArray:arry];
@@ -94,7 +89,6 @@
         [weakSelf.tableview.mj_header endRefreshing];
     } failure:^(NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
-        [SVProgressHUD showErrorWithStatus:FailRequestTip];
         [weakSelf.tableview.mj_header endRefreshing];
         return;
     }];
